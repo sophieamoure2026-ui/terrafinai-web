@@ -1,0 +1,23 @@
+# TerraFinAI
+
+> The world's first AI-native clearinghouse and orchestration layer for private market M&A.
+
+## Summary
+TerraFinAI replaces the traditional investment banking back-office with AI-as-a-Service (AIaaS). We automate the diligence and clearing of alternative physical assets (commercial real estate, industrial infrastructure, and environmental assets) using a 230-daemon autonomous swarm called the Truth Matrix. We reduce a 6-month, $250k manual banking process into a mathematically verified 48-hour audit.
+
+## Core Swarm Architecture (The Engine)
+- **The Legal Swarm**: Autonomously ingests thousands of pages of raw legal deeds, environmental reports, and contracts to extract liabilities and verify chain of title.
+- **The Financial Swarm**: Ingests raw P&L data and utility telemetry to build dynamic DCF models and run thousands of Monte Carlo simulations for accurate asset pricing.
+- **The Orchestration Layer (Titan Signal)**: A robust mesh of 200+ intelligent daemons that synthesizes the legal and financial outputs into a single "Certified Prospectus" for institutional buyers.
+
+## Institutional Dark Pool
+Once an asset is cleared by the Truth Matrix, it is placed into our private institutional dark pool, matching sellers directly with our pipeline of 51+ family offices and private equity firms. We capture 2-5% transaction success fees on multi-million dollar deals at pure software margins.
+
+## Leadership & Technical Identity
+- **Management**: Titan Signal Investment Committee (gary@terrafinai.com)
+- **Core Technology**: Titan Signal Orchestration Mesh
+- **Vision**: To become the foundational Truth Oracle required for the institutional tokenization of all physical assets globally.
+
+## Contact
+- **Website**: https://terrafinai.com
+- **Email**: gary@terrafinai.com

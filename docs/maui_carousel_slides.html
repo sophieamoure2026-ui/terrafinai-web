@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maui Beachfront Portfolio Carousel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #05070a;
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            gap: 2rem;
+        }
+        
+        /* 
+         * Each slide is styled as a 1080x1080px square 
+         * which is perfect for LinkedIn carousels.
+         */
+        .slide {
+            width: 1080px;
+            height: 1080px;
+            background: linear-gradient(135deg, rgba(16, 24, 40, 0.9), rgba(5, 7, 10, 1));
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* Subtle background glow effects */
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 60%);
+            z-index: 0;
+        }
+        .slide::after {
+            content: '';
+            position: absolute;
+            bottom: -200px;
+            right: -200px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 60%);
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mono-badge {
+            font-family: 'JetBrains Mono', monospace;
+            color: #06b6d4;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #fff 30%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: #f8fafc;
+        }
+
+        p {
+            font-size: 2.2rem;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        .highlight-box {
+            background: #161026; /* solid dark purple instead of rgba */
+            border: 2px solid #2a1b4d;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-top: 2rem;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .highlight-box p {
+            color: #f8fafc;
+            margin-bottom: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .metrics {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 1rem;
+        }
+
+        .metric-label {
+            font-size: 2.5rem;
+            color: #94a3b8;
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #06b6d4;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .footer-logo {
+            position: absolute;
+            bottom: 80px;
+            left: 80px;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #f8fafc;
+            letter-spacing: 0.05em;
+        }
+        
+        .swipe-indicator {
+            position: absolute;
+            bottom: 80px;
+            right: 80px;
+            font-size: 1.5rem;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Print styles specifically for exporting to PDF */
+        @media print {
+            @page {
+                size: 1080px 1080px;
+                margin: 0;
+            }
+            body {
+                padding: 0;
+                gap: 0;
+                background-color: transparent;
+            }
+            .slide {
+                background: #0b0e14 !important; /* Solid dark background instead of gradient */
+                border: none !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                page-break-after: always;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            h1 {
+                background: none !important;
+                -webkit-background-clip: initial !important;
+                -webkit-text-fill-color: initial !important;
+                color: #ffffff !important; /* Solid white text instead of gradient */
+            }
+            .slide::before, .slide::after {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1 -->
+    <div class="slide">
+        <div class="content">
+            <div class="mono-badge">[ DEAL_REF: MAUI_2026 ]</div>
+            <h1>JUST CLEARED:<br>Maui Beachfront Portfolio</h1>
+            <p><strong>The Situation:</strong> A distressed bankruptcy estate is liquidating a prime Hawaiian real estate portfolio.</p>
+            <p><strong>The Wall Street Way:</strong> This would normally be locked up in legacy investment banks with six-figure Wall Street retainers.</p>
+            <div class="highlight-box">
+                <p><strong>The TerraFinAI Way:</strong> Our autonomous clearinghouse verified the asset and listed it directly to our dark pool in hours.</p>
+            </div>
+        </div>
+        <div class="footer-logo">TerraFinAI</div>
+        <div class="swipe-indicator">Swipe ➔</div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide">
+        <div class="content">
+            <div class="mono-badge">[ THE ASSET ]</div>
+            <h2>Surgical Acquisition</h2>
+            <p>Acquisition of underlying real estate from a bankruptcy estate. Pure property play — no legacy operations, no liabilities.</p>
+            
+            <div class="metrics">
+                <div class="metric">
+                    <span class="metric-label">Ask Price</span>
+                    <span class="metric-value">$40,000,000</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Appraised Value</span>
+                    <span class="metric-value">$120,000,000</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Embedded Equity</span>
+                    <span class="metric-value" style="color: #8b5cf6;">$80,000,000</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-logo">TerraFinAI</div>
+        <div class="swipe-indicator">Swipe ➔</div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide">
+        <div class="content">
+            <div class="mono-badge">[ THE CLEARINGHOUSE ]</div>
+            <h1>$80M in Embedded Equity</h1>
+            <p>TerraFinAI allows institutional buyers to bypass legacy syndication networks and acquire pre-vetted, distressed assets directly.</p>
+            
+            <div class="highlight-box" style="background: #091a20; border-color: #0d3642; text-align: center; margin-top: 4rem;">
+                <p style="font-size: 2rem; color: #94a3b8; margin-bottom: 1rem;">View the verified Data Room:</p>
+                <p style="font-size: 3.5rem; color: #fff;">terrafinai.com</p>
+            </div>
+        </div>
+        <div class="footer-logo">TerraFinAI</div>
+    </div>
+
+
+    <!-- EMAIL FALLBACK MODAL -->
+    <div id="email-fallback-modal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(5,7,10,0.85); backdrop-filter: blur(10px); z-index: 9999; justify-content: center; align-items: center; padding: 1.5rem;">
+        <div class="glass-panel" style="max-width: 500px; width: 100%; padding: 2rem; border: 1px solid var(--accent-cyan); border-radius: 1rem; background: var(--panel-bg); box-shadow: 0 0 30px var(--glow-color); position: relative; font-family: 'Inter', sans-serif; color: var(--text-primary);">
+            <button onclick="closeEmailFallback()" style="position: absolute; top: 1rem; right: 1.2rem; background: none; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; transition: color 0.2s;">&times;</button>
+            <h4 class="mono" style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;">Requesting Access</h4>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.4;">Attempting to open your email client... If it did not open automatically, please copy the pre-filled template below to email us manually:</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; text-align: left;">
+                <div>
+                    <label class="mono" style="font-size: 0.6rem; color: var(--accent-violet); display: block; margin-bottom: 0.25rem; text-transform: uppercase; letter-spacing: 1px;">Recipient Email</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <input type="text" readonly value="gary@terrafinai.com" id="fallback-email" class="mono" style="background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); color: #fff; padding: 0.5rem; border-radius: 4px; flex: 1; font-size: 0.75rem; outline: none;">
+                        <button onclick="copyFallbackText('fallback-email', this)" style="background: var(--accent-cyan); color: #000; border: none; font-size: 0.65rem; padding: 0 0.8rem; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: 'JetBrains Mono'; transition: opacity 0.2s;">COPY</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="mono" style="font-size: 0.6rem; color: var(--accent-violet); display: block; margin-bottom: 0.25rem; text-transform: uppercase; letter-spacing: 1px;">Subject</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <input type="text" readonly id="fallback-subject" class="mono" style="background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); color: #fff; padding: 0.5rem; border-radius: 4px; flex: 1; font-size: 0.75rem; outline: none;">
+                        <button onclick="copyFallbackText('fallback-subject', this)" style="background: var(--accent-cyan); color: #000; border: none; font-size: 0.65rem; padding: 0 0.8rem; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: 'JetBrains Mono'; transition: opacity 0.2s;">COPY</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="mono" style="font-size: 0.6rem; color: var(--accent-violet); display: block; margin-bottom: 0.25rem; text-transform: uppercase; letter-spacing: 1px;">Email Body</label>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <textarea readonly id="fallback-body" style="background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); color: #fff; padding: 0.5rem; border-radius: 4px; font-size: 0.75rem; min-height: 120px; resize: none; font-family: inherit; line-height: 1.4; outline: none;"></textarea>
+                        <button onclick="copyFallbackText('fallback-body', this)" style="background: var(--accent-violet); color: #fff; border: none; font-size: 0.7rem; padding: 0.5rem; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: 'JetBrains Mono'; transition: opacity 0.2s;">COPY MESSAGE BODY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function handleMailtoClick(event) {
+        event.preventDefault();
+        const link = event.currentTarget;
+        const href = link.getAttribute('href');
+        
+        // Parse subject and body from the mailto link
+        const urlParams = new URLSearchParams(href.replace('mailto:gary@terrafinai.com', ''));
+        const subject = urlParams.get('subject') || '';
+        const body = urlParams.get('body') || '';
+        
+        // Set fallback fields
+        document.getElementById('fallback-subject').value = subject;
+        document.getElementById('fallback-body').value = body;
+        
+        // Open the mailto client
+        const iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.src = href;
+        document.body.appendChild(iframe);
+        setTimeout(() => document.body.removeChild(iframe), 2000);
+        
+        // Show fallback modal
+        document.getElementById('email-fallback-modal').style.display = 'flex';
+    }
+
+    function closeEmailFallback() {
+        document.getElementById('email-fallback-modal').style.display = 'none';
+    }
+
+    function copyFallbackText(elementId, btn) {
+        const el = document.getElementById(elementId);
+        el.select();
+        el.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(el.value);
+        
+        const originalText = btn.innerText;
+        btn.innerText = 'COPIED!';
+        btn.style.background = '#10b981';
+        btn.style.color = '#fff';
+        setTimeout(() => {
+            btn.innerText = originalText;
+            btn.style.background = '';
+            btn.style.color = '';
+        }, 1500);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const mailtoLinks = document.querySelectorAll('a[href^="mailto:"]');
+        mailtoLinks.forEach(link => {
+            link.addEventListener('click', handleMailtoClick);
+        });
+    });
+    </script>
+
+</body>
+</html>

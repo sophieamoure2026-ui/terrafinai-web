@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson Pollock - Private Placement Executive Summary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #05070a;
+            --panel-bg: rgba(16, 24, 40, 0.6);
+            --accent-cyan: #06b6d4;
+            --accent-violet: #8b5cf6;
+            --accent-indigo: #6366f1;
+            --text-primary: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glow-color: rgba(6, 182, 212, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-deep);
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(6, 182, 212, 0.08) 0%, transparent 40%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 3rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg-grid {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .summary-container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--panel-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 30px var(--glow-color);
+            position: relative;
+        }
+
+        .header {
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--accent-violet);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .badge-cyan {
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--accent-cyan);
+            border-color: rgba(6, 182, 212, 0.2);
+        }
+
+        .mono-id {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff 30%, var(--text-muted) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 0.875rem;
+            color: var(--accent-cyan);
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover {
+            border-color: rgba(6, 182, 212, 0.3);
+            background: rgba(6, 182, 212, 0.02);
+            transform: translateY(-2px);
+        }
+
+        .metric-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            margin-bottom: 0.25rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .metric-value {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--accent-cyan);
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--accent-violet);
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+            font-family: 'JetBrains Mono', monospace;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(139, 92, 246, 0.2), transparent);
+        }
+
+        p.description {
+            font-size: 1rem;
+            color: var(--text-primary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        ul.detail-list {
+            list-style: none;
+        }
+
+        ul.detail-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        ul.detail-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+        }
+
+        .contact-box {
+            background: rgba(139, 92, 246, 0.03);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .contact-info h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-info p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .btn-action {
+            background: linear-gradient(135deg, var(--accent-violet), var(--accent-indigo));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.75rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-action:hover {
+            filter: brightness(1.1);
+            transform: translateY(-1px);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .footer {
+            margin-top: 4rem;
+            border-top: 1px solid var(--glass-border);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .confidentiality {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #ef4444;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .summary-container {
+                padding: 1.5rem;
+            }
+            .contact-box {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .btn-action {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="summary-container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="top-row">
+                <div class="badges">
+                    <span class="badge badge-cyan">BLUE-CHIP ART</span>
+                    <span class="badge">MUSEUM QUALITY</span>
+                    <span class="badge">NEW YORK</span>
+                </div>
+                <div class="mono-id">[ DEAL_REF: POLLOCK_300 ]</div>
+            </div>
+            <h1>JACKSON POLLOCK — PRIVATE PLACEMENT</h1>
+            <div class="subtitle">TerraFinAI / VaultBridge Alternative Assets Desk</div>
+        </div>
+
+        <!-- KEY METRICS -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-label">Catalog No.</div>
+                <div class="metric-value" style="font-size: 1rem;">Raisonné No. 300</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Medium</div>
+                <div class="metric-value" style="font-size: 1rem;">Oil on Canvas</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Provenance</div>
+                <div class="metric-value" style="font-size: 1rem;">Museum-Grade</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Settlement</div>
+                <div class="metric-value" style="font-size: 1rem;">Escrow (NYC)</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Classification</div>
+                <div class="metric-value" style="font-size: 1rem;">Blue-Chip</div>
+            </div>
+        </div>
+
+        <!-- OPPORTUNITY OVERVIEW -->
+        <div class="section">
+            <div class="section-title">01 / The Opportunity</div>
+            <p class="description">Museum-quality blue-chip masterpiece by Jackson Pollock. Catalog Raisonné authenticated, with provenance fully and immaculately documented. The transaction is structured as an escrow-settled private placement through New York legal counsel. Represents one of the most defensible alternative asset stores of value available to institutional collectors.</p>
+        </div>
+
+        <!-- PROCESS DETAILS -->
+        <div class="section">
+            <div class="section-title">02 / Placement & Verification</div>
+            <ul class="detail-list">
+                <li>Strictly off-market private placement to cleared principals.</li>
+                <li>Full provenance log, condition report, and authentication certificate available to qualified buyers.</li>
+                <li>Transaction and asset handoff managed through specialized NYC escrow counsel.</li>
+                <li>Zero public auction exposure or historical price dilution.</li>
+            </ul>
+        </div>
+
+        <!-- CONTACT & ACTION -->
+        <div class="contact-box">
+            <div class="contact-info">
+                <h4>Mandate Coordinator</h4>
+                <p>TerraFinAI Mandate Desk</p>
+            </div>
+            <a href="mailto:gary@terrafinai.com?subject=Inquiry%3A%20Jackson%20Pollock%20Private%20Placement&body=Dear%20Gary%2C%0A%0AI%20am%20writing%20to%20request%20due%20diligence%20and%20data%20room%20access%20for%3A%20Jackson%20Pollock%20Private%20Placement.%0A%0APlease%20let%20us%20know%20the%20requirements%20and%20next%20steps%20to%20clear%20our%20institution%20for%20access.%0A%0ABest%20regards%2C%0A%0A%5BName%5D%0A%5BInstitution/Firm%5D" class="btn-action">Request Full Access</a>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="confidentiality">STRICTLY CONFIDENTIAL</div>
+            <div>&copy; 2026 TerraFinAI Clearinghouse. All rights reserved.</div>
+        </div>
+    </div>
+
+    <!-- EMAIL FALLBACK MODAL -->
+    <div id="email-fallback-modal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(5,7,10,0.85); backdrop-filter: blur(10px); z-index: 9999; justify-content: center; align-items: center; padding: 1.5rem;">
+        <div class="glass-panel" style="max-width: 500px; width: 100%; padding: 2rem; border: 1px solid var(--accent-cyan); border-radius: 1rem; background: var(--panel-bg); box-shadow: 0 0 30px var(--glow-color); position: relative; font-family: 'Inter', sans-serif; color: var(--text-primary);">
+            <button onclick="closeEmailFallback()" style="position: absolute; top: 1rem; right: 1.2rem; background: none; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; transition: color 0.2s;">&times;</button>
+            <h4 class="mono" style="color: var(--accent-cyan); font-size: 0.9rem; margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase;">Requesting Access</h4>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.4;">Attempting to open your email client... If it did not open automatically, please copy the pre-filled template below to email us manually:</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; text-align: left;">
+                <div>
+                    <label class="mono" style="font-size: 0.6rem; color: var(--accent-violet); display: block; margin-bottom: 0.25rem; text-transform: uppercase; letter-spacing: 1px;">Recipient Email</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <input type="text" readonly value="gary@terrafinai.com" id="fallback-email" class="mono" style="background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); color: #fff; padding: 0.5rem; border-radius: 4px; flex: 1; font-size: 0.75rem; outline: none;">
+                        <button onclick="copyFallbackText('fallback-email', this)" style="background: var(--accent-cyan); color: #000; border: none; font-size: 0.65rem; padding: 0 0.8rem; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: 'JetBrains Mono'; transition: opacity 0.2s;">COPY</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="mono" style="font-size: 0.6rem; color: var(--accent-violet); display: block; margin-bottom: 0.25rem; text-transform: uppercase; letter-spacing: 1px;">Subject</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <input type="text" readonly id="fallback-subject" class="mono" style="background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); color: #fff; padding: 0.5rem; border-radius: 4px; flex: 1; font-size: 0.75rem; outline: none;">
+                        <button onclick="copyFallbackText('fallback-subject', this)" style="background: var(--accent-cyan); color: #000; border: none; font-size: 0.65rem; padding: 0 0.8rem; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: 'JetBrains Mono'; transition: opacity 0.2s;">COPY</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="mono" style="font-size: 0.6rem; color: var(--accent-violet); display: block; margin-bottom: 0.25rem; text-transform: uppercase; letter-spacing: 1px;">Email Body</label>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <textarea readonly id="fallback-body" style="background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); color: #fff; padding: 0.5rem; border-radius: 4px; font-size: 0.75rem; min-height: 120px; resize: none; font-family: inherit; line-height: 1.4; outline: none;"></textarea>
+                        <button onclick="copyFallbackText('fallback-body', this)" style="background: var(--accent-violet); color: #fff; border: none; font-size: 0.7rem; padding: 0.5rem; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: 'JetBrains Mono'; transition: opacity 0.2s;">COPY MESSAGE BODY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function handleMailtoClick(event) {
+        event.preventDefault();
+        const link = event.currentTarget;
+        const href = link.getAttribute('href');
+        
+        // Parse subject and body from the mailto link
+        const urlParams = new URLSearchParams(href.replace('mailto:gary@terrafinai.com', ''));
+        const subject = urlParams.get('subject') || '';
+        const body = urlParams.get('body') || '';
+        
+        // Set fallback fields
+        document.getElementById('fallback-subject').value = subject;
+        document.getElementById('fallback-body').value = body;
+        
+        // Open the mailto client
+        const iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.src = href;
+        document.body.appendChild(iframe);
+        setTimeout(() => document.body.removeChild(iframe), 2000);
+        
+        // Show fallback modal
+        document.getElementById('email-fallback-modal').style.display = 'flex';
+    }
+
+    function closeEmailFallback() {
+        document.getElementById('email-fallback-modal').style.display = 'none';
+    }
+
+    function copyFallbackText(elementId, btn) {
+        const el = document.getElementById(elementId);
+        el.select();
+        el.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(el.value);
+        
+        const originalText = btn.innerText;
+        btn.innerText = 'COPIED!';
+        btn.style.background = '#10b981';
+        btn.style.color = '#fff';
+        setTimeout(() => {
+            btn.innerText = originalText;
+            btn.style.background = '';
+            btn.style.color = '';
+        }, 1500);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const mailtoLinks = document.querySelectorAll('a[href^="mailto:"]');
+        mailtoLinks.forEach(link => {
+            link.addEventListener('click', handleMailtoClick);
+        });
+    });
+    </script>
+
+</body>
+</html>

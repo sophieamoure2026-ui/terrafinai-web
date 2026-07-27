@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraFinA\</title>
+    <meta name="description" content="Direct institutional access to $2.6B+ in off-market trophy assets and industrial extraction mandates. Powered by the AI Foundry.">
+    <link rel="canonical" href="https://terrafinai.com" />
+    
+    <!-- Open Graph / LinkedIn Preview Tags -->
+    <meta property="og:title" content="TerraFinAI - The AI-Native Clearinghouse">
+    <meta property="og:description" content="Direct institutional access to $2.6B+ in off-market trophy assets and industrial extraction mandates. Powered by the AI Foundry.">
+    <meta property="og:image" content="https://terrafinai.com/assets/logo.png">
+    <meta property="og:url" content="https://terrafinai.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FinancialService",
+          "name": "TerraFinAI",
+          "url": "https://terrafinai.com",
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "Titan Signal"
+          },
+          "description": "AI-native clearinghouse for private market M&A. Autonomous due diligence using a 230-daemon swarm.",
+          "offers": {
+            "@type": "Offer",
+            "name": "Institutional Asset Mandates",
+            "description": "Access to $2B+ in mathematically verified, off-market distressed assets and infrastructure deals."
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is TerraFinAI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "TerraFinAI is an AI-native clearinghouse for private market M&A. It uses a 230-daemon swarm to perform autonomous due diligence on distressed assets, replacing the legacy investment bank back-office."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does TerraFinAI verify assets?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "TerraFinAI uses the Truth Matrix, an orchestration layer that ingests unstructured data like geological surveys, PDFs, and legal deeds, cross-references claims against public records, and structures the data into a certified institutional profile."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the cost of TerraFinAI?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fee structures are custom and tailored to each institutional transaction. Please contact our mandate desk directly for a customized proposal and fee agreement."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="bg-grid"></div>
+
+    <nav class="universal-nav">
+        <div class="nav-container">
+            <div class="nav-tier">
+                <a href="https://titansignal.io" class="parent-brand mono">TITAN SIGNAL</a>
+                <span style="color: var(--glass-border);">/</span>
+                <a href="index.html" class="active">TerraFinA\</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+                <button onclick="openBuySidePortal()" class="btn-primary" style="font-size: 0.62rem; padding: 0.4rem 0.9rem; border-radius: 4px; background: transparent; border: 1px solid var(--accent-cyan); color: var(--accent-cyan); cursor: pointer; letter-spacing: 1px; font-weight: bold; box-shadow: none; white-space: nowrap;">BUY-SIDE REGISTRATION</button>
+                <button onclick="openSellSidePortal()" class="btn-primary" style="font-size: 0.62rem; padding: 0.4rem 0.9rem; border-radius: 4px; background: var(--accent-cyan); border: 1px solid var(--accent-cyan); color: #000; cursor: pointer; letter-spacing: 1px; font-weight: bold; box-shadow: none; white-space: nowrap;">SUBMIT ASSET</button>
+                <div class="nav-status">
+                    <div class="status-pulse"></div>
+                    <span class="mono" style="font-size: 0.6rem;">MISSION_READY</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 3.2rem;">
+        <header class="hero-section">
+            <div class="hero-grid">
+                <!-- Left Side: Brand, Pitch, Stats & Interaction -->
+                <div class="hero-left">
+                    <div style="display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1rem;">
+                        <img src="assets/logo.png" alt="TerraFinA\ Logo" style="height: 55px; border-radius: 12px; box-shadow: 0 4px 30px rgba(255, 0, 0, 0.1);">
+                        <div class="deal-badge" style="background: var(--accent-violet); color: white; margin: 0; display: inline-block;">THE AI-NATIVE ORCHESTRATION LAYER</div>
+                    </div>
+                    <h1>Global Capital, Powered by Autonomous AI</h1>
+                    <p>TerraFinA\ is the world's first AI-native clearinghouse. Powered by Titan Signal—our proprietary intelligence engine of over 200 autonomous agents—we programmatically source M&A deals, verify asset integrity in real-time, and match them with global institutional capital at an unprecedented scale.</p>
+                    
+                    <div class="hero-stats mono" style="margin-top: 0.5rem; margin-bottom: 1.2rem; justify-content: flex-start; gap: 2rem; display: flex;">
+                        <div class="stat-item">
+                            <span class="stat-value">200+</span>
+                            <span class="stat-label">AI Agents</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">$3.5B+</span>
+                            <span class="stat-label">Active Mandates</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">99.4%</span>
+                            <span class="stat-label">Match Fit</span>
+                        </div>
+                    </div>
+
+                    <!-- RUN AUDIT FORM -->
+                    <div class="glass-panel" style="padding: 1.2rem; border-color: rgba(255, 255, 255, 0.15); margin-bottom: 1rem; position: relative;">
+                        <h4 class="mono" style="font-size: 0.75rem; color: var(--accent-cyan); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em;">Run Autonomous Due Diligence</h4>
+                        <form action="javascript:void(0);" onsubmit="openDemo();" style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
+                            <input type="text" id="demo-address" placeholder="Enter Asset Address or Name..." class="mono" style="flex: 1; background: rgba(0,0,0,0.4); border: 1px solid var(--accent-cyan); color: #fff; padding: 0.6rem; border-radius: 6px; font-size: 0.8rem;" required>
+                            <button type="submit" class="btn-primary" style="font-size: 0.8rem; padding: 0.6rem 1.1rem; display: flex; align-items: center; gap: 0.5rem; justify-content: center; white-space: nowrap;">
+                                <span style="display: inline-block; width: 6px; height: 6px; background: #fff; border-radius: 50%; box-shadow: 0 0 10px #fff; animation: pulse 1s infinite;"></span>
+                                RUN AUDIT
+                            </button>
+                        </form>
+                        <p style="font-size: 0.62rem; color: var(--text-dim); margin-bottom: 0.75rem;">Enter any US property address for a live AVM audit — or click one of our active pipeline deals below.</p>
+                        
+                        <!-- Featured Pipeline Assets Quick Trigger -->
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                            <div class="mono" style="font-size: 0.62rem; color: var(--accent-cyan); letter-spacing: 1.5px; display: flex; align-items: center; gap: 0.4rem; font-weight: bold; text-shadow: 0 0 8px rgba(6, 182, 212, 0.3);">
+                                <span style="display: inline-block; width: 6px; height: 6px; background: var(--accent-cyan); border-radius: 50%; box-shadow: 0 0 8px var(--accent-cyan); animation: pulse 1s infinite;"></span>
+                                SELECT ACTIVE LISTING TO RUN SWARM AUDIT:
+                            </div>
+                            <div class="quick-deals-container" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem;">
+                                <!-- Chiba DC Card -->
+                                <div class="quick-deal-card mono" onclick="openDealDemo('chiba')" style="cursor: pointer; background: rgba(5,7,10,0.6); border: 1px solid rgba(6, 182, 212, 0.2); padding: 0.6rem; border-radius: 8px; transition: all 0.3s ease; position: relative;">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.3rem;">
+                                        <span style="font-size: 0.62rem; font-weight: bold; color: #fff; line-height: 1.2;">CHIBA 100MW DC</span>
+                                        <span style="font-size: 0.58rem; color: var(--accent-cyan); font-weight: bold;">$1.12B</span>
+                                    </div>
+                                    <div style="font-size: 0.5rem; color: #555; margin-top: 0.35rem; display: flex; justify-content: space-between; align-items: center;">
+                                        <span>TOKYO, JP</span>
+                                        <span style="color: var(--accent-violet); font-size: 0.48rem; text-transform: uppercase;">[RUN AUDIT]</span>
+                                    </div>
+                                </div>
+                                <!-- Maui Card -->
+                                <div class="quick-deal-card mono" onclick="openDealDemo('maui')" style="cursor: pointer; background: rgba(5,7,10,0.6); border: 1px solid rgba(6, 182, 212, 0.2); padding: 0.6rem; border-radius: 8px; transition: all 0.3s ease; position: relative;">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.3rem;">
+                                        <span style="font-size: 0.62rem; font-weight: bold; color: #fff; line-height: 1.2;">MAUI PORTFOLIO</span>
+                                        <span style="font-size: 0.58rem; color: var(--accent-cyan); font-weight: bold;">$40M</span>
+                                    </div>
+                                    <div style="font-size: 0.5rem; color: #555; margin-top: 0.35rem; display: flex; justify-content: space-between; align-items: center;">
+                                        <span>HAWAII, USA</span>
+                                        <span style="color: var(--accent-violet); font-size: 0.48rem; text-transform: uppercase;">[RUN AUDIT]</span>
+                                    </div>
+                                </div>
+                                <!-- Brazil EME Card -->
+                                <div class="quick-deal-card mono" onclick="openDealDemo('brazil_payment_eme')" style="cursor: pointer; background: rgba(5,7,10,0.6); border: 1px solid rgba(6, 182, 212, 0.2); padding: 0.6rem; border-radius: 8px; transition: all 0.3s ease; position: relative;">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.3rem;">
+                                        <span style="font-size: 0.62rem; font-weight: bold; color: #fff; line-height: 1.2;">BRAZIL PAYMENTS</span>
+                                        <span style="font-size: 0.58rem; color: var(--accent-cyan); font-weight: bold;">$25M</span>
+                                    </div>
+                                    <div style="font-size: 0.5rem; color: #555; margin-top: 0.35rem; display: flex; justify-content: space-between; align-items: center;">
+                                        <span>BRAZIL, LATAM</span>
+                                        <span style="color: var(--accent-violet); font-size: 0.48rem; text-transform: uppercase;">[RUN AUDIT]</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: The Interactive Truth Matrix Wow Widget -->
+                <div class="hero-right" style="position: relative;">
+                    <div class="glass-panel truth-matrix-widget" style="padding: 0; overflow: hidden; border-color: var(--accent-cyan); height: 100%; min-height: 400px; display: flex; flex-direction: column; box-shadow: 0 0 40px rgba(6, 182, 212, 0.15); position: relative; z-index: 1;">
+                        <!-- Canvas Swarm Background (Floating) -->
+                        <div id="canvas-container" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; pointer-events: none; opacity: 0.65; transition: opacity 0.5s ease;">
+                            <canvas id="truth-matrix-canvas" style="width: 100%; height: 100%; background: transparent; display: block;"></canvas>
+                        </div>
+                        
+                        <!-- Widget Interface (Z-Index 1) -->
+                        <div class="widget-header" style="position: relative; z-index: 1; padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(5, 7, 10, 0.85); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center;">
+                            <div class="section-title" style="margin: 0; font-size: 0.75rem; letter-spacing: 1px; display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="display: inline-block; width: 8px; height: 8px; background: #06b6d4; border-radius: 50%; box-shadow: 0 0 8px #06b6d4; animation: pulse 1.5s infinite;"></span>
+                                TRUTH MATRIX ENGINE
+                            </div>
+                            <div class="mono" style="font-size: 0.65rem; color: var(--accent-violet); font-weight: bold;" id="swarm-status">MONITORING</div>
+                        </div>
+                        
+                        <!-- Main Content Split Screen -->
+                        <div class="widget-body" style="position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1.2fr; flex: 1; min-height: 0; background: rgba(0, 0, 0, 0.15);">
+                            <!-- Doc Scanner Panel -->
+                            <div style="border-right: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; overflow: hidden; position: relative;">
+                                <div id="demo-target-title" class="mono" style="font-size: 0.55rem; color: #555; padding: 0.4rem 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.5);">
+                                    > AWAITING DEAL MANDATE
+                                </div>
+                                <div id="doc-viewer" class="mono" style="flex: 1; padding: 1rem; font-size: 0.65rem; color: rgba(255, 255, 255, 0.85); overflow-y: auto; display: flex; flex-direction: column; gap: 0.5rem; line-height: 1.4; word-break: break-word; overflow-wrap: break-word;">
+                                    <div style="color: #444;">[No active matching process]</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Swarm CLI Terminal Panel -->
+                            <div class="terminal-crt" style="display: flex; flex-direction: column; background: rgba(0, 0, 0, 0.6); overflow: hidden; position: relative;">
+                                <div class="mono" style="font-size: 0.55rem; color: var(--accent-cyan); padding: 0.4rem 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; position: relative; z-index: 3;">
+                                    <span>> DAEMON_SWARM_CLI</span>
+                                </div>
+                                <div id="terminal-output" class="mono" style="flex: 1; padding: 1rem; font-size: 0.7rem; color: #06b6d4; overflow-y: auto; display: flex; flex-direction: column; gap: 0.4rem; line-height: 1.4; word-break: break-all; overflow-wrap: break-word; position: relative; z-index: 3;">
+                                    <div style="color: #444;">System operational. Awaiting due diligence command...</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- High-Tech HUD Telemetry Footer -->
+                        <div class="widget-hud mono" style="position: relative; z-index: 1; padding: 0.5rem 1rem; border-top: 1px solid rgba(255,255,255,0.08); background: rgba(5, 7, 10, 0.9); display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; font-size: 0.52rem; color: #555; gap: 0.5rem;">
+                            <div>SYS_PING: <span id="hud-ping" style="color: var(--accent-cyan);">14ms</span></div>
+                            <div>DAEMONS: <span id="hud-daemons" style="color: var(--accent-violet);">230/250</span></div>
+                            <div>BANDWIDTH: <span id="hud-band" style="color: #fbbf24;">1.48 TB/S</span></div>
+                            <div>LOCK_STATUS: <span style="color: #10b981;">SECURE</span></div>
+                        </div>
+
+                        <!-- Certified Result Wow Output stamp -->
+                        <div id="verification-stamp" style="position: relative; z-index: 2; display: none; padding: 1rem 0.5rem; background: linear-gradient(135deg, var(--accent-violet), var(--accent-indigo)); color: #fff; text-align: center; border-top: 1px solid rgba(255,255,255,0.2);">
+                            <div style="font-size: 0.85rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;">Certified Prospectus Secured</div>
+                            <div id="demo-wow-text" class="mono" style="font-size: 0.75rem; margin-top: 0.4rem; color: #10b981; font-weight: bold; white-space: nowrap; line-height: 1.4;">AVM VALUATION CONFIRMED</div>
+                            <div style="margin-top: 0.7rem;">
+                                <button class="btn-primary" onclick="openDD('chiba')" style="font-size: 0.65rem; padding: 0.5rem 1.2rem; background: #fff; color: var(--accent-violet); border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                                    VIEW PRIVATE DATA ROOM
+                                </button>
+                            </div>
+                            <div style="font-size: 0.52rem; color: rgba(255,255,255,0.45); margin-top: 0.6rem; letter-spacing: 0.5px;" class="mono">
+                                *MODEL ESTIMATES FOR INFORMATIONAL PURPOSES ONLY. NO INVESTMENT OR APPRAISAL RELIANCE.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <!-- JUST LISTED -->
+        <section class="deals glass-panel" style="margin-bottom: 2rem;">
+            <div class="section-title">
+                <span>01</span> Just Listed / New Opportunities
+            </div>
+            <div class="deal-grid">
+                <!-- EME Payment Institution -->
+                <div class="glass-panel deal-card flagship" style="border-color: #fbbf24; background: rgba(251, 191, 36, 0.03);">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #fbbf24; color: #000;">FINTECH / PIX</span>
+                        <span class="deal-value mono">~$25M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Brazil Payment Institution (EME)</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Authorized Payment Institution (EME) & Direct Participant in PIX. 100% equity acquisition.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #fbbf24;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('brazil_payment_eme')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Westin Tokyo -->
+                <div class="glass-panel deal-card flagship" style="border-color: #fbbf24; background: rgba(251, 191, 36, 0.03);">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #fbbf24; color: #000;">HOTEL / TROPHY</span>
+                        <span class="deal-value mono">~$860M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">The Westin Tokyo</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Landmark 438-room luxury hospitality asset in Ebisu, Tokyo. Prime off-market acquisition opportunity.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #fbbf24;">STATUS: OFF-MARKET</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('westin_tokyo')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Amara Energy AB -->
+                <div class="glass-panel deal-card flagship" style="border-color: #fbbf24; background: rgba(251, 191, 36, 0.03);">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #fbbf24; color: #000;">GEOTHERMAL / ESG</span>
+                        <span class="deal-value mono">SEK 30M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Amara Energy AB</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Nordic geothermal platform built around a proven acquisition-led consolidation strategy. Sweden and Norway footprint. Raising SEK 30 million.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #fbbf24;">STATUS: EQUITY ROUND</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('amara_energy')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- CityClinic Group -->
+                <div class="glass-panel deal-card flagship" style="border-color: #fbbf24; background: rgba(251, 191, 36, 0.03);">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #fbbf24; color: #000;">MEDTECH / ESG</span>
+                        <span class="deal-value mono">€12.5M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">CityClinic Group</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Vertically integrated European dental & medical aesthetics roll-up. Gated drawdown Series A raise with Agentic AI SaaS technology multiplier.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #fbbf24;">STATUS: SERIES A</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('cityclinic')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- TOKE Utility Token -->
+                <div class="glass-panel deal-card flagship" style="border-color: #fbbf24; background: rgba(251, 191, 36, 0.03);">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #fbbf24; color: #000;">WEB3 / PAYMENTS</span>
+                        <span class="deal-value mono">LP SEED</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">TOKE Utility Token</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Ethereum Base-built utility token for everyday commerce. Sub-50% merchant processing fees, instant settlement, and Web2-simple wallet.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #fbbf24;">STATUS: LP PLACEMENT</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('toke')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Chiba 100MW Data Center -->
+                <div class="glass-panel deal-card flagship" style="border-color: #fbbf24; background: rgba(251, 191, 36, 0.03);">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #fbbf24; color: #000;">DATA CENTER</span>
+                        <span class="deal-value mono">$1.12B</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Chiba 100MW Data Center</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Institutional hyper-scale development serving low-latency demands of Tokyo financial/tech hub. 100MW load-balanced with TEPCO.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #fbbf24;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('chiba')">VIEW DD MEMORANDUM</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TROPHY REAL ESTATE -->
+        <section class="deals glass-panel" style="margin-bottom: 2rem;">
+            <div class="section-title">
+                <span>02</span> Trophy Real Estate Desk
+            </div>
+            <div class="deal-grid">
+                <!-- Maui Beachfront Portfolio -->
+                <div class="glass-panel deal-card flagship" style="border-color: #06b6d4; background: rgba(6, 182, 212, 0.03);">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #06b6d4; color: #000;">DISTRESSED ACQUISITION</span>
+                        <span class="deal-value mono">$40M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Maui Beachfront Portfolio</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Surgical acquisition of underlying real estate from a bankruptcy estate. 6 prime parcels, $80M embedded equity. As-is, all-cash.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                        <img src="https://img.icons8.com/ios-filled/50/8b5cf6/verified-account.png" style="width: 12px; opacity: 0.6;">
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('maui')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Tiffany Ginza -->
+                <div class="glass-panel deal-card flagship">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #06b6d4; color: #000;">TROPHY ASSET</span>
+                        <span class="deal-value mono">$1B</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Tiffany Ginza Flagship</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Tokyo's premier luxury storefront. 100% occupancy with Tiffany & Co anchor. Generational asset.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                        <img src="https://img.icons8.com/ios-filled/50/8b5cf6/verified-account.png" style="width: 12px; opacity: 0.6;">
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('tiffany')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Parkview Suites HK -->
+                <div class="glass-panel deal-card" style="border-color: var(--accent-cyan);">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #06b6d4; color: #000;">HONG KONG</span>
+                        <span class="deal-value mono">$450M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Parkview Suites Hong Kong</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Towers 1 & 2. Prestigious Tai Tam residential trophy asset. 200 service suites with 83% occupancy.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                        <img src="https://img.icons8.com/ios-filled/50/8b5cf6/verified-account.png" style="width: 12px; opacity: 0.6;">
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('parkview')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Arton Hotel -->
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #06b6d4; color: #000;">SINGAPORE</span>
+                        <span class="deal-value mono">$85M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Arton Hotel Singapore</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Off-market boutique hospitality in a resilient market. Stabilized 5%+ yield profile.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #06b6d4;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('arton')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Bahamas Boutique Hotel -->
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #06b6d4; color: #000;">BAHAMAS</span>
+                        <span class="deal-value mono">$16.5M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Beachfront Boutique Hotel</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Oceanfront property in a sought-after destination. Prime beachfront real estate with established boutique hotel operations.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #06b6d4;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('bahamas_boutique')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Jackson Pollock -->
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #06b6d4; color: #000;">FINE ART</span>
+                        <span class="deal-value mono">$145M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Jackson Pollock: Black on White</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Museum-quality blue-chip masterpiece (Catalog Raisonné No. 300, p.121). Escrow-settled private transaction in New York.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #06b6d4;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('pollock')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Coral Harbour Bahamas -->
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #06b6d4; color: #000;">BAHAMAS</span>
+                        <span class="deal-value mono">$702M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Coral Harbour Resort & Marina</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">422-acre mixed-use oceanfront development on New Providence. Mega-yacht marina, luxury hospitality, and branded residences.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #06b6d4;">STATUS: SOURCING_CAPITAL</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('coral_harbour')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- ALila Seminyak -->
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #06b6d4; color: #000;">BALI</span>
+                        <span class="deal-value mono">$99M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Alila Seminyak Resort</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Luxury beachfront resort in Bali. Premier hospitality asset. Offered at $99M + 3% fees.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #06b6d4;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('alila_seminyak')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Maldives Hotel -->
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #06b6d4; color: #000;">MALDIVES</span>
+                        <span class="deal-value mono">ON REQUEST</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Hideaway Beach & Spa Resort</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Ultra-exclusive private island in Haa Alifu Atoll. All-suite beachfront and overwater villas with private marina and luxury amenities.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #06b6d4;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                        <button class="btn-primary" style="flex: 1; font-size: 0.7rem;" onclick="openDD('maldives_resort')">VIEW DD</button>
+                        <a href="https://youtu.be/B8V_fvnhbVE" target="_blank" class="btn-primary" style="flex: 1; font-size: 0.7rem; text-align: center; text-decoration: none; background: #ef4444; color: #fff; display: flex; justify-content: center; align-items: center;">WATCH VIDEO</a>
+                    </div>
+                </div>
+
+                <!-- Maui Portfolio -->
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #06b6d4; color: #000;">HAWAII</span>
+                        <span class="deal-value mono">$40M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Maui Beachfront Portfolio</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Distressed 6-parcel beachfront acquisition. Appraised at $120M. Asset-only bankruptcy sale (real property only).</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #06b6d4;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('maui_portfolio')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Indigo HK -->
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #06b6d4; color: #000;">HONG KONG</span>
+                        <span class="deal-value mono">ON REQUEST</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Hotel Indigo Hong Kong Island</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">4-star boutique IHG asset in Wan Chai. 138 rooms, rooftop glass-bottom infinity pool, Skybar. Yield-optimized boutique operation.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #06b6d4;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('indigo_hk')">VIEW DD MEMORANDUM</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- IDL STRATEGIC PIPELINE -->
+
+        <!-- EXTRACTION & INFRASTRUCTURE -->
+        <section class="deals glass-panel" style="margin-bottom: 2rem;">
+            <div class="section-title">
+                <span>03</span> Extraction & Mandates
+            </div>
+            <div class="deal-grid">
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #fbbf24; color: #000;">MINING</span>
+                        <span class="deal-value mono">$40M+</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Venture Gold Portfolio</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Verified reserves in Colorado (Venture Gold) and Alaska (Nome Placer). Institutional extraction mandates.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #fbbf24;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('mining_combined')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #fbbf24; color: #000;">METALS</span>
+                        <span class="deal-value mono">$250M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Sovereign Silver Reserves</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">2.3M Tons in-situ recovery mandate for strategic stockpiling. Fire assay verified.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #fbbf24;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('silver')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Tank Farm -->
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #fbbf24; color: #000;">INFRASTRUCTURE</span>
+                        <span class="deal-value mono">ON REQUEST</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Premier Tank Storage Terminal</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Large-scale operational tank storage terminal in Europe. 63 tanks, 8.2M barrels capacity, VLCC deep-water access, 513 acres.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #fbbf24;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('tank_farm')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- Kyushu Hybrid Infrastructure -->
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #fbbf24; color: #000;">DATA CENTER</span>
+                        <span class="deal-value mono">ON REQUEST</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Kyushu Hybrid Infrastructure</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">76,000 m² grid-secured hybrid development integrating 4MW solar generation with high-density containerized data center.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #fbbf24;">STATUS: SOURCING_BUYER</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('kyushu')">VIEW DD MEMORANDUM</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROBOTICS & INDUSTRIAL -->
+        <section class="deals glass-panel" style="margin-bottom: 2rem;">
+            <div class="section-title">
+                <span>04</span> Industrial Robotics, Health Tech & AI
+            </div>
+            <div class="deal-grid">
+                <!-- Tobor Robotics -->
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #8b5cf6; color: #fff;">ROBOTICS</span>
+                        <span class="deal-value mono">$140M</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">Tobor Robot Corp</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Industrial automation and humanoid robotics distribution hub. Preferred US Unitree partner.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.65rem; color: #8b5cf6;">MANDATE: GROWTH EQUITY</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('tobor')">VIEW DD MEMORANDUM</button>
+                </div>
+
+                <!-- GreenVue MAAP -->
+                <div class="glass-panel deal-card">
+                    <div class="deal-header">
+                        <span class="deal-badge" style="background: #8b5cf6; color: #fff;">DEFENSE TECH</span>
+                        <span class="deal-value mono">JV / SEED</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem;">GreenVue MAAP</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Modular Autonomous Aerial Platform. Next-generation AI-enabled dual-use UAV architecture. Seeking JV/Licensing partner.</p>
+                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="mono" style="font-size: 0.6rem; color: #06b6d4;">STATUS: SOURCING_CAPITAL</span>
+                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
+                    </div>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('greenvue')">VIEW DD MEMORANDUM</button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- STRATEGIC INFRASTRUCTURE -->
+
+        <!-- HOW IT WORKS: THE TRUTH MATRIX -->
+        <section class="handshake handshake-grid">
+            <div>
+                <div class="section-title">
+                    <span>05</span> How It Works: The Truth Matrix
+                </div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Autonomous Due Diligence</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">TerraFinA\ is an AI-as-a-Service platform that automates private market due diligence using a 230-daemon swarm called the Truth Matrix. We reduce a 6-month, $250k manual investment banking process into a 48-hour audit. <strong>The Legal Swarm</strong> autonomously extracts liabilities from thousands of pages of deeds, while <strong>The Financial Swarm</strong> runs dynamic Monte Carlo simulations on raw telemetry to price the asset with mathematical certainty.</p>
+                
+                <div class="mono" style="font-size: 0.8rem; color: var(--accent-cyan); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
+                    <div>&gt; LEGAL_SWARM: ACTIVE</div>
+                    <div>&gt; FINANCIAL_SWARM: ACTIVE</div>
+                </div>
+            </div>
+
+            <div class="glass-panel" style="display: flex; flex-direction: column; justify-content: center; gap: 1.5rem;">
+                <div class="mono" style="font-size: 0.65rem; color: var(--accent-cyan);">[ SWARM_ARCHITECTURE ]</div>
+                <div style="border-left: 2px solid var(--accent-violet); padding-left: 1.5rem;">
+                    <h4 class="mono" style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #fff;">1. DEED & TITLE PARSING</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">The Legal Swarm crawls public databases and private VDRs to trace deeds, liens, zoning restrictions, and environmental liabilities.</p>
+                </div>
+                <div style="border-left: 2px solid var(--accent-cyan); padding-left: 1.5rem;">
+                    <h4 class="mono" style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #fff;">2. TELEMETRY & COMPS MATCHING</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">The Financial Swarm ingests regional commercial comps, cap rates, and real-time market data to execute dynamic risk stress-tests.</p>
+                </div>
+                <div style="border-left: 2px solid var(--accent-indigo); padding-left: 1.5rem;">
+                    <h4 class="mono" style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #fff;">3. PROSPECTUS TOKENIZATION</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">A fully audited, high-confidence prospectus is outputted to matching buyers, enabling instantaneous institutional clearing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTAKE -->
+        <section class="handshake handshake-grid" style="margin-top: 0;">
+            <div>
+                <div class="section-title">
+                    <span>06</span> Direct Handshake
+                </div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Institutional Intake Protocol</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Accredited funds and family offices may initiate a formal mandate inquiry via the TerraFinA\ intake layer. All communications are strictly confidential.</p>
+                
+                <div class="mono" style="font-size: 0.8rem; color: var(--accent-violet);">
+                    > INTAKE: INSTITUTIONAL<br>
+                    > NETWORK: TITAN SIGNAL<br>
+                    > STATUS: SECURE
+                </div>
+            </div>
+
+            <div class="glass-panel">
+                <form id="intake-form" onsubmit="submitIntake(event)">
+                    <div class="input-group">
+                        <label>Institutional Identity</label>
+                        <input type="text" name="Entity Name" id="intake-identity" placeholder="Entity Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Contact Email</label>
+                        <input type="email" name="Email" id="intake-email" placeholder="Corporate Email" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Mandate Classification</label>
+                        <select name="Mandate" id="intake-mandate" required>
+                            <option value="">Select Mandate</option>
+                            <option>Buy-Side Acquisition</option>
+                            <option>Institutional Equity</option>
+                            <option>JV Mine Development</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Mandate Depth ($M)</label>
+                        <input type="number" name="Allocation ($M)" id="intake-depth" placeholder="Min. Allocation" required>
+                    </div>
+                    <button type="submit" id="intake-submit-btn" class="btn-primary">Initiate Protocol</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Citability / FAQ Section (For GEO and AI Crawlers) -->
+        <section class="glass-panel" style="margin-bottom: 4rem; padding: 3rem;">
+            <div class="section-title">
+                <span>FAQ</span> Autonomous Clearinghouse Overview
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem;">
+                <div style="border-left: 2px solid var(--accent-cyan); padding-left: 1.5rem;">
+                    <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.1rem;">What is TerraFinAI?</h4>
+                    <p style="color: var(--text-dim); line-height: 1.6; font-size: 0.9rem;">TerraFinAI is an AI-native clearinghouse for private market M&A. It uses a 230-daemon swarm to perform autonomous due diligence on distressed assets, replacing the legacy investment bank back-office.</p>
+                </div>
+                <div style="border-left: 2px solid var(--accent-violet); padding-left: 1.5rem;">
+                    <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.1rem;">How does TerraFinAI verify assets?</h4>
+                    <p style="color: var(--text-dim); line-height: 1.6; font-size: 0.9rem;">TerraFinAI uses the Truth Matrix, an orchestration layer that ingests unstructured data like geological surveys, PDFs, and legal deeds, cross-references claims against public records, and structures the data into a certified institutional profile.</p>
+                </div>
+                <div style="border-left: 2px solid var(--accent-cyan); padding-left: 1.5rem;">
+                    <h4 style="color: #fff; margin-bottom: 0.5rem; font-size: 1.1rem;">What is the cost of TerraFinAI?</h4>
+                    <p style="color: var(--text-dim); line-height: 1.6; font-size: 0.9rem;">Fee structures are custom and tailored to each institutional transaction. Please contact our mandate desk directly for a customized proposal and fee agreement.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>TERRAFINAI</h4>
+                    <p style="font-size: 0.85rem; color: #666; max-width: 320px; margin-top: 1rem;">
+                        The AI-Native Clearinghouse.<br>
+                        Replacing the legacy investment banking back-office with 230+ autonomous daemons.<br>
+                        Powered by Titan Signal infrastructure.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>TerraFinAI Strategic Pipeline</h4>
+                    <ul style="font-size: 0.75rem; color: #555; line-height: 1.6; list-style: none; padding: 0;">
+                        <li>TerraFinAI Global Portfolio</li>
+                        <li>Kyushu Hybrid Infrastructure</li>
+                        <li>Chiba 100MW Data Center</li>
+                        <li>Excellent Bahamas Bank</li>
+                        <li>Wilhelmshaven Refinery</li>
+                        <li>Dominica Offshore Bank</li>
+                        <li>Labuan Investment Bank</li>
+                        <li>Djibouti Commercial Bank</li>
+                        <li>ZymagenX (Phase 3)</li>
+                        <li>Life EV</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Institutional Inbound</h4>
+                    <ul>
+                        <li>Titan Signal Investment Committee</li>
+                        <li>Inbound: gary@terrafinai.com</li>
+                        <li style="font-size: 0.7rem; color: #555; margin-top: 0.5rem;">Direct Master Mandates Only.</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="font-size: 0.6rem; color: #444; line-height: 1.4; margin-top: 4rem; margin-bottom: 2rem; max-width: 960px; margin-left: auto; margin-right: auto; text-align: center; border-top: 1px solid rgba(255,255,255,0.02); padding-top: 2rem;" class="mono">
+                DISCLAIMER: TerraFinAI is an AI-as-a-Service clearinghouse and technology platform. It is not a registered broker-dealer, financial advisor, or licensed real estate appraiser. All valuations, match fit scores, and due diligence prospectuses are generated programmatically via automated analysis models and stress-tests for informational purposes only. Past performance is not indicative of future results. Accredited investors are solely responsible for conducting their own independent legal and financial due diligence prior to entering into any transaction.
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 TerraFinA\. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!-- DD Modal Room (Private Access) -->
+    <div id="dd-modal" class="modal-overlay" style="display: none;">
+        <div class="glass-panel modal-content">
+            <div class="modal-header">
+                <div class="section-title"><span>DD</span> Institutional Summary</div>
+                <button class="close-btn" onclick="closeDD()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="modal-body-content">
+                    <!-- Dynamic DD Content -->
+                </div>
+                
+                <div class="data-room-gate" style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+                    <h4 class="mono" style="color: var(--accent-cyan); font-size: 0.8rem; margin-bottom: 0.25rem;">SECURE INVESTOR DATA ROOM</h4>
+                    <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1.5rem;">Full technical pro-formas and legal audit trails are restricted to cleared institutional buyers.</p>
+
+                    <!-- Step 1: Email -->
+                    <div id="dr-step-1">
+                        <div class="mono" style="font-size: 0.55rem; color: #555; letter-spacing: 2px; margin-bottom: 0.75rem;">STEP 1 OF 2 — INSTITUTIONAL IDENTITY VERIFICATION</div>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <input type="email" id="data-room-email" placeholder="Corporate Email Address" class="mono" style="background: rgba(0,0,0,0.3); border: 1px solid var(--accent-cyan); color: #fff; padding: 0.6rem 1rem; border-radius: 0.5rem; flex: 1; font-size: 0.75rem; min-width: 200px;">
+                            <button class="btn-primary" onclick="requestAccessCode()" style="font-size: 0.7rem; padding: 0.6rem 1.5rem; background: var(--accent-cyan); color: #000; white-space: nowrap;">REQUEST ACCESS CODE</button>
+                        </div>
+                        <p id="step1-error" style="color: #ef4444; font-size: 0.65rem; margin-top: 0.5rem; display: none;" class="mono">> INVALID EMAIL — CORPORATE DOMAIN REQUIRED</p>
+                    </div>
+
+                    <!-- Step 2: Code (hidden until email submitted) -->
+                    <div id="dr-step-2" style="display: none; margin-top: 1.5rem;">
+                        <div class="mono" style="font-size: 0.55rem; color: #555; letter-spacing: 2px; margin-bottom: 0.75rem;">STEP 2 OF 2 — ACCESS CODE VERIFICATION</div>
+                        <div id="dr-dispatch-msg" class="mono" style="font-size: 0.7rem; color: #10b981; margin-bottom: 1rem; padding: 0.75rem; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); border-radius: 0.5rem;"></div>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <input type="text" id="data-room-pass" placeholder="Enter Access Code" class="mono" style="background: rgba(0,0,0,0.3); border: 1px solid var(--accent-violet); color: #fff; padding: 0.6rem 1rem; border-radius: 0.5rem; flex: 1; font-size: 0.75rem; letter-spacing: 3px; min-width: 200px;" maxlength="8">
+                            <button class="btn-primary" onclick="validateAccess()" style="font-size: 0.7rem; padding: 0.6rem 1.5rem; background: var(--accent-violet); white-space: nowrap;">UNLOCK DATA ROOM</button>
+                        </div>
+                        <p id="access-error" style="color: #ef4444; font-size: 0.65rem; margin-top: 0.5rem; display: none;" class="mono">> AUTHENTICATION_FAILED: INVALID ACCESS CODE</p>
+                        <p style="font-size: 0.6rem; color: #555; margin-top: 0.5rem;">Didn't receive it? <a href="#" onclick="resetAccessFlow()" style="color: var(--accent-cyan);">Re-enter email</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buy-Side Mandate Modal -->
+    <div id="buyside-modal" class="modal-overlay" style="display: none;">
+        <div class="glass-panel modal-content" style="max-width: 600px; border-color: var(--accent-violet); box-shadow: 0 0 50px rgba(139, 92, 246, 0.25);">
+            <div class="modal-header">
+                <div class="section-title"><span>MANDATE</span> Buy-Side Onboarding</div>
+                <button class="close-btn" onclick="closeBuySidePortal()">×</button>
+            </div>
+            <div class="modal-body" style="padding-top: 0;">
+                <!-- Step 1: Profile -->
+                <div id="bs-step-1">
+                    <h3 class="mono" style="font-size: 0.95rem; color: #fff; margin-bottom: 1.25rem;">1. Institutional KYC Profile</h3>
+                    <div class="input-group">
+                        <label>Entity Identity</label>
+                        <input type="text" id="bs-name" placeholder="e.g. Starwood Capital, Citizens Wealth FO" required>
+                    </div>
+                    <div class="input-group">
+                        <label>AUM Classification</label>
+                        <select id="bs-aum" required style="background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border); color: #fff;">
+                            <option value="">Select Asset Class depth</option>
+                            <option>$3M - $50M</option>
+                            <option>$50M - $250M</option>
+                            <option>$250M - $1B</option>
+                            <option>$1B+</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Authorized Principal Email</label>
+                        <input type="email" id="bs-email" placeholder="corporate@domain.com" required>
+                    </div>
+                    <button class="btn-primary" onclick="nextBuySideStep(2)" style="width: 100%; font-size: 0.8rem; padding: 0.8rem; margin-top: 1rem;">PROCEED TO TARGET CRITERIA</button>
+                </div>
+
+                <!-- Step 2: Criteria -->
+                <div id="bs-step-2" style="display: none;">
+                    <h3 class="mono" style="font-size: 0.95rem; color: #fff; margin-bottom: 1.25rem;">2. Deployment Criteria</h3>
+                    <div class="input-group">
+                        <label>Target Asset Class</label>
+                        <select id="bs-class" onchange="toggleOtherIndustry(this, 'bs-other-class-container')" required style="background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border); color: #fff; width: 100%;">
+                            <option value="">Select Preferred Class</option>
+                            <option>Trophy Real Estate</option>
+                            <option>Strategic Infrastructure & Data Centers</option>
+                            <option>Energy & Renewables</option>
+                            <option>Extraction & Mining Mandates</option>
+                            <option>Industrial Robotics & Advanced Tech</option>
+                            <option>Maritime & Aviation</option>
+                            <option>Agricultural & Timberland</option>
+                            <option>Intellectual Property & Biotech Patents</option>
+                            <option>Other (Specify...)</option>
+                        </select>
+                    </div>
+                    <div id="bs-other-class-container" style="display: none; margin-top: 0.75rem;" class="input-group">
+                        <label>Specify Other Industry</label>
+                        <input type="text" id="bs-class-other" placeholder="e.g. Bio-Manufacturing, Space Infra">
+                    </div>
+                    <div class="input-group">
+                        <label>Yield Floor (Target IRR %)</label>
+                        <input type="text" id="bs-irr" placeholder="Minimum IRR e.g. 6.5%" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Single-Ticket Allocation Depth ($M)</label>
+                        <input type="text" id="bs-ticket" placeholder="e.g. $40M" required>
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <button class="btn-primary" onclick="nextBuySideStep(1)" style="flex: 1; font-size: 0.75rem; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: #fff;">BACK</button>
+                        <button class="btn-primary" onclick="submitBuySideMandate()" style="flex: 2; font-size: 0.75rem; padding: 0.8rem; background: var(--accent-violet);">REGISTER MANDATE</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Success & Matching -->
+                <div id="bs-step-3" style="display: none; text-align: center; padding: 1rem 0;">
+                    <div style="width: 50px; height: 50px; background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem;">
+                        <span style="color: #10b981; font-size: 1.5rem; font-weight: bold;">&check;</span>
+                    </div>
+                    <h3 class="mono" style="font-size: 1rem; color: #fff; margin-bottom: 0.5rem;">MANDATE SECURELY LOGGED</h3>
+                    <div id="bs-mandate-id" class="mono" style="font-size: 0.7rem; color: var(--accent-cyan); margin-bottom: 1.5rem; font-weight: bold;">MANDATE_ID: TF-WAIT-SYNC</div>
+                    
+                    <div class="glass-panel" style="padding: 1rem; background: rgba(0,0,0,0.6); text-align: left; margin-bottom: 1.5rem; border-color: rgba(139, 92, 246, 0.3);">
+                        <div class="mono" style="font-size: 0.55rem; color: #555; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.25rem; margin-bottom: 0.5rem;">SWARM MATCH ENGINE EXECUTION</div>
+                        <div id="bs-match-terminal" class="mono" style="font-size: 0.65rem; color: var(--accent-violet); height: 110px; overflow-y: auto; line-height: 1.45; white-space: pre-wrap; word-break: break-all;">
+                            > Ready to scan active pipeline...
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" onclick="closeBuySidePortal()" style="width: 100%; font-size: 0.8rem; padding: 0.8rem;">CLOSE PORTAL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sell-Side Asset Modal -->
+    <div id="sellside-modal" class="modal-overlay" style="display: none;">
+        <div class="glass-panel modal-content" style="max-width: 600px; border-color: var(--accent-cyan); box-shadow: 0 0 50px rgba(6, 182, 212, 0.25);">
+            <div class="modal-header">
+                <div class="section-title"><span style="background: var(--accent-cyan); color: #000; padding: 0 0.4rem; border-radius: 2px; font-weight: bold; font-size: 0.7rem;">ASSET</span> Sell-Side Ingestion</div>
+                <button class="close-btn" onclick="closeSellSidePortal()">×</button>
+            </div>
+            <div class="modal-body" style="padding-top: 0;">
+                <!-- Step 1: Profile -->
+                <div id="ss-step-1">
+                    <h3 class="mono" style="font-size: 0.95rem; color: #fff; margin-bottom: 1.25rem;">1. Asset Profile & Details</h3>
+                    <div class="input-group">
+                        <label>Asset Owner / Entity Name</label>
+                        <input type="text" id="ss-name" placeholder="e.g. Radisson Hotels Group, Apex Mining Corp" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Asset Classification</label>
+                        <select id="ss-class" onchange="toggleOtherIndustry(this, 'ss-other-class-container')" required style="background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border); color: #fff; width: 100%;">
+                            <option value="">Select Asset Category</option>
+                            <option>Trophy Real Estate</option>
+                            <option>Strategic Infrastructure & Data Centers</option>
+                            <option>Energy & Renewables</option>
+                            <option>Extraction & Mining Mandates</option>
+                            <option>Industrial Robotics & Advanced Tech</option>
+                            <option>Maritime & Aviation</option>
+                            <option>Agricultural & Timberland</option>
+                            <option>Intellectual Property & Biotech Patents</option>
+                            <option>Other (Specify...)</option>
+                        </select>
+                    </div>
+                    <div id="ss-other-class-container" style="display: none; margin-top: 0.75rem;" class="input-group">
+                        <label>Specify Other Industry</label>
+                        <input type="text" id="ss-class-other" placeholder="e.g. Bio-Manufacturing, Space Infra">
+                    </div>
+                    <div class="input-group">
+                        <label>Estimated Asset Valuation ($M)</label>
+                        <input type="number" id="ss-valuation" placeholder="e.g. 50" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Authorized Principal Email</label>
+                        <input type="email" id="ss-email" placeholder="corporate@domain.com" required>
+                    </div>
+                    <button class="btn-primary" onclick="nextSellSideStep(2)" style="width: 100%; font-size: 0.8rem; padding: 0.8rem; margin-top: 1rem; background: var(--accent-cyan); color: #000; border-color: var(--accent-cyan);">PROCEED TO DOCUMENT UPLOAD</button>
+                </div>
+
+                <!-- Step 2: Document Upload -->
+                <div id="ss-step-2" style="display: none;">
+                    <h3 class="mono" style="font-size: 0.95rem; color: #fff; margin-bottom: 1.25rem;">2. Upload Unstructured Data Room Files</h3>
+                    <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem;">Upload property deeds, financial history, surveys, or regulatory audit files for Truth Matrix ingestion.</p>
+                    <div class="input-group">
+                        <label>Property Deeds / Lease Agreements (.PDF, .ZIP)</label>
+                        <input type="file" id="ss-deeds" style="background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border); color: #fff; padding: 0.5rem; width: 100%;">
+                    </div>
+                    <div class="input-group">
+                        <label>Historical P&L / Underwriting Files (.XLSX, .CSV)</label>
+                        <input type="file" id="ss-financials" style="background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border); color: #fff; padding: 0.5rem; width: 100%;">
+                    </div>
+                    <div class="input-group">
+                        <label>Environmental & Engineering Reports (.PDF, .ZIP)</label>
+                        <input type="file" id="ss-reports" style="background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border); color: #fff; padding: 0.5rem; width: 100%;">
+                    </div>
+                    <div class="input-group">
+                        <label>Other Custom Asset Files & Decks (.PDF, .ZIP, .XLSX)</label>
+                        <input type="file" id="ss-other-docs" style="background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border); color: #fff; padding: 0.5rem; width: 100%;">
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <button class="btn-primary" onclick="nextSellSideStep(1)" style="flex: 1; font-size: 0.75rem; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: #fff;">BACK</button>
+                        <button class="btn-primary" onclick="submitSellSideAsset()" style="flex: 2; font-size: 0.75rem; padding: 0.8rem; background: var(--accent-cyan); color: #000; border-color: var(--accent-cyan);">INITIATE TRUTH MATRIX SWARM</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Swarm Audit Simulation -->
+                <div id="ss-step-3" style="display: none; text-align: center; padding: 1rem 0;">
+                    <div style="width: 50px; height: 50px; background: rgba(6, 182, 212, 0.15); border: 1px solid var(--accent-cyan); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem;">
+                        <span style="color: var(--accent-cyan); font-size: 1.5rem; font-weight: bold; animation: pulse 1s infinite;">&check;</span>
+                    </div>
+                    <h3 class="mono" style="font-size: 1rem; color: #fff; margin-bottom: 0.5rem;">SWARM AUDIT RUNNING</h3>
+                    <div id="ss-asset-id" class="mono" style="font-size: 0.7rem; color: var(--accent-cyan); margin-bottom: 1.5rem; font-weight: bold;">ASSET_ID: TF-PENDING-AUDIT</div>
+                    
+                    <div class="glass-panel" style="padding: 1rem; background: rgba(0,0,0,0.6); text-align: left; margin-bottom: 1.5rem; border-color: rgba(6, 182, 212, 0.3);">
+                        <div class="mono" style="font-size: 0.55rem; color: #555; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.25rem; margin-bottom: 0.5rem;">DAEMON_SWARM_DILIGENCE</div>
+                        <div id="ss-match-terminal" class="mono" style="font-size: 0.65rem; color: var(--accent-cyan); height: 110px; overflow-y: auto; line-height: 1.45; white-space: pre-wrap; word-break: break-all;">
+                            > Ready to Ingest Unstructured Files...
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" onclick="closeSellSidePortal()" style="width: 100%; font-size: 0.8rem; padding: 0.8rem; background: var(--accent-cyan); color: #000; border-color: var(--accent-cyan);">CLOSE PORTAL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js?v=20260616_14"></script>
+</body>
+</html>
