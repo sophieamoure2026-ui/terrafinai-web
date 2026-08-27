@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Deck | Virgin Hotels NYC</title>
+    <style>
+        :root {
+            --virgin-red: #E10A14;
+            --dark: #121212;
+            --light: #F5F5F5;
+            --gold: #D4AF37;
+        }
+        body, html {
+            margin: 0; padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            scroll-behavior: smooth;
+        }
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 10%;
+            position: relative;
+            box-sizing: border-box;
+        }
+        h1, h2, h3 { font-weight: 300; letter-spacing: 2px; text-transform: uppercase; }
+        h1 { font-size: 4rem; margin-bottom: 1rem; }
+        h1 span { color: var(--virgin-red); font-weight: bold; }
+        h2 { font-size: 2.5rem; color: var(--gold); border-bottom: 1px solid var(--gold); padding-bottom: 10px; margin-bottom: 30px; }
+        p { font-size: 1.2rem; line-height: 1.8; color: #ccc; }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/virgin_exterior.jpg') center/cover;
+            text-align: center;
+        }
+        .broker-tag {
+            position: absolute; top: 30px; left: 30px;
+            font-size: 0.9rem; letter-spacing: 3px; color: var(--gold);
+        }
+        .confidential {
+            position: absolute; top: 30px; right: 30px;
+            background-color: var(--virgin-red); padding: 5px 15px; font-weight: bold; font-size: 0.8rem;
+        }
+
+        .grid-2 {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; width: 100%; align-items: center;
+        }
+        .image-placeholder {
+            width: 100%; height: 400px; background-color: #222; border: 1px solid #333;
+            display: flex; align-items: center; justify-content: center; color: #555;
+            background-size: cover; background-position: center;
+        }
+        
+        .financial-box {
+            background-color: rgba(255,255,255,0.05); padding: 30px; border-left: 4px solid var(--gold);
+            margin-bottom: 20px;
+        }
+        .financial-box h4 { margin: 0 0 10px 0; font-size: 1.1rem; color: #fff; }
+        .financial-box p { margin: 0; font-size: 1.5rem; color: var(--gold); font-family: monospace; }
+        
+        .nav-dots {
+            position: fixed; right: 30px; top: 50%; transform: translateY(-50%);
+            display: flex; flex-direction: column; gap: 15px; z-index: 100;
+        }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: #555; cursor: pointer; transition: 0.3s; }
+        .dot:hover { background: var(--virgin-red); }
+    </style>
+</head>
+<body>
+
+    <section class="hero" id="slide1">
+        <div class="broker-tag">PACIFIC BAY ADVISORS</div>
+        <div class="confidential">STRICTLY CONFIDENTIAL</div>
+        <div>
+            <h1>Virgin Hotels <span>NYC</span></h1>
+            <p style="font-size: 1.5rem; max-width: 600px; margin: 0 auto; color: #fff;">An exclusive off-market acquisition opportunity in Manhattan's NoMad District.</p>
+        </div>
+    </section>
+
+    <section id="slide2" style="background-color: #1a1a1a;">
+        <div class="grid-2">
+            <div>
+                <h2>The Asset</h2>
+                <p>A striking 39-story glass tower completed in 2023, Virgin Hotels New York City represents the pinnacle of modern luxury lifestyle hospitality.</p>
+                <ul>
+                    <li style="font-size: 1.2rem; color: #ccc; margin-bottom: 10px;"><strong>Location:</strong> 1227 Broadway, Manhattan</li>
+                    <li style="font-size: 1.2rem; color: #ccc; margin-bottom: 10px;"><strong>Scale:</strong> 460+ Rooms & Penthouses</li>
+                    <li style="font-size: 1.2rem; color: #ccc; margin-bottom: 10px;"><strong>Amenities:</strong> 19,000 sq ft event space, outdoor pool club, premium dining.</li>
+                </ul>
+            </div>
+            <div class="image-placeholder" style="background-image: url('../assets/virgin_lobby.jpg'); background-size: cover;">
+            </div>
+        </div>
+    </section>
+
+    <section id="slide3">
+        <div class="grid-2">
+            <div class="image-placeholder" style="background-image: url('../assets/virgin_suite.jpg'); background-size: cover;">
+            </div>
+            <div>
+                <h2>Financial Estimates</h2>
+                <p>The asset is owned by a 100-year legacy real estate developer, fully operational, and highly profitable. Exact T12 financials will be released upon executed NDA with a qualified buyer.</p>
+                
+                <div class="financial-box">
+                    <h4>Asking Price</h4>
+                    <p>$450,000,000 USD</p>
+                </div>
+                <div class="financial-box">
+                    <h4>Estimated Valuation Per Key</h4>
+                    <p>~$978,000 USD</p>
+                </div>
+                <div class="financial-box">
+                    <h4>Current Status</h4>
+                    <p style="color: #4CAF50;">Cash-flowing & Stabilized</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="slide4" style="background-color: #1a1a1a; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="border: none; justify-content: center;">Acquisition Parameters</h2>
+            <p>Ownership is not distressed and will strictly consider worthy, institutional-grade offers. This transaction requires capital readiness and operational excellence.</p>
+            <br><br>
+            <a href="mailto:david.lempert@idlglobal.net" style="padding: 15px 40px; background: var(--virgin-red); color: #fff; text-decoration: none; font-size: 1.2rem; letter-spacing: 1px; font-weight: bold; text-transform: uppercase;">Submit Proof of Funds</a>
+        </div>
+    </section>
+
+</body>
+</html>
