@@ -587,3 +587,13 @@ footer {
     pointer-events: none;
 }
 
+.regional-tab-btn {
+    transition: all 0.25s ease;
+}
+.regional-tab-btn:hover {
+    border-color: var(--accent-cyan) !important;
+    color: #fff !important;
+    background: rgba(6, 182, 212, 0.15) !important;
+}
+
+
