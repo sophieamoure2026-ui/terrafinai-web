@@ -1,75 +1,98 @@
 const dealData = {
+    virgin_nyc: {
+        region: "americas",
+        desc: "Confidential acquisition of a new 5-star lifestyle hotel in NoMad, Manhattan. 460+ keys, 19,000 sq ft event space.",
+        docs: [{ label: "Executive Summary (HTML)", url: "docs/virgin_hotels_nyc_teaser.html" }]
+    },
     kyushu: {
+        region: "apac",
         desc: "76,000 m² grid-secured hybrid development integrating 4MW solar generation with high-density containerized data center.",
         docs: [{ label: "Project Outline (DOCX)", url: "docs/kyushu_chiba_outline.docx" }]
     },
     chiba: {
+        region: "apac",
         desc: "Institutional hyper-scale development serving low-latency demands of Tokyo financial/tech hub. 100MW load-balanced with TEPCO.",
         docs: [
             { label: "Data Center Teaser (EN)", url: "docs/tokyo_datacenter_teaser.pdf" }
         ]
     },
     bahamas_bank: {
+        region: "americas",
         desc: "Fully operational, profitable private bank in Nassau. Turnkey platform with wealth management and digital asset capabilities. Sourcing qualified principals.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/bahamas_bank_exec_summary.html" }]
     },
     wilhelmshaven: {
+        region: "emea",
         desc: "513-acre energy/logistics hub on Germany's North Sea coast. 8.2MM barrel tank farm with dual VLCC-capable jetties.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/wilhelmshaven_exec_summary.html" }]
     },
     dominica_bank: {
+        region: "americas",
         desc: "Fully operational Class A Offshore Bank. SWIFT/IBAN enabled, multi-currency capabilities. Turnkey infrastructure.",
         docs: [{ label: "Sales Memorandum", url: "docs/dominica_bank_memo.pdf" }]
     },
     labuan_bank: {
+        region: "apac",
         desc: "Active Labuan IBFC Investment Banking license. Corporate finance and wealth management platform.",
         docs: [{ label: "Sales Memorandum", url: "docs/labuan_bank_memo.pdf" }]
     },
     djibouti_bank: {
+        region: "emea",
         desc: "Licensed commercial bank in the Horn of Africa. Strategic geographic positioning for trade finance and retail.",
         docs: [{ label: "Sales Memorandum", url: "docs/djibouti_bank_memo.pdf" }]
     },
     zymagenx: {
+        region: "americas",
         desc: "Phase 3-Ready first-in-class Celiac Disease therapeutic. $2M-$4M Convertible Note at an exceptionally low $27M Valuation Cap.",
         docs: [{ label: "Investor Deck (April 2026)", url: "docs/zymagenx_deck.pdf" }]
     },
     life_ev: {
+        region: "americas",
         desc: "E-mobility consolidation platform. Acquired Rad Power Bikes ($1.2B historical rev) and Serial 1. 1.8M customer base with omnichannel FTZ margin advantage.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/life_ev_exec_summary.html" }]
     },
     tiffany: {
+        region: "apac",
         desc: "Tokyo's premier luxury storefront. 100% occupancy with Tiffany & Co anchor. Generational asset.",
         docs: [{ label: "Asset Teaser", url: "docs/tiffany_ginza_teaser.pdf" }]
     },
     parkview: {
+        region: "apac",
         desc: "Towers 1 & 2. Prestigious Tai Tam residential trophy asset. 200 service suites with 83% occupancy.",
         docs: [{ label: "Asset Summary", url: "docs/parkview_hk.pdf" }]
     },
     arton: {
+        region: "apac",
         desc: "Off-market boutique hospitality in a resilient market. Stabilized 5%+ yield profile.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/arton_exec_summary.html" }]
     },
     bahamas_boutique: {
+        region: "americas",
         desc: "Oceanfront property in a sought-after destination. Prime beachfront real estate with established boutique hotel operations.",
         docs: []
     },
     pollock: {
+        region: "americas",
         desc: "Museum-quality blue-chip masterpiece (Catalog Raisonné No. 300, p.121). Escrow-settled private transaction in New York.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/pollock_exec_summary.html" }]
     },
     coral_harbour: {
+        region: "americas",
         desc: "422-acre mixed-use oceanfront development on New Providence. Mega-yacht marina, luxury hospitality, and branded residences.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/coral_harbour_exec_summary.html" }]
     },
     alila_seminyak: {
+        region: "apac",
         desc: "Luxury beachfront resort in Bali. Premier hospitality asset. Offered at $99M + 3% fees.",
         docs: [{ label: "Investment Teaser (2026)", url: "docs/alila_seminyak_teaser.pdf" }]
     },
     maldives_resort: {
+        region: "emea",
         desc: "Ultra-exclusive private island in Haa Alifu Atoll. All-suite beachfront and overwater villas with private marina and luxury amenities.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/maldives_resort_exec_summary.html" }]
     },
     maui_portfolio: {
+        region: "americas",
         desc: "Distressed 6-parcel beachfront acquisition. Appraised at $120M. Asset-only bankruptcy sale (real property only).",
         docs: [
             { label: "Executive Summary (HTML)", url: "docs/maui_exec_summary.html" },
@@ -77,54 +100,66 @@ const dealData = {
         ]
     },
     indigo_hk: {
+        region: "apac",
         desc: "4-star boutique IHG asset in Wan Chai. 138 rooms, rooftop glass-bottom infinity pool, Skybar. Yield-optimized boutique operation.",
         docs: [{ label: "Asset Summary", url: "docs/hotel_indigo_hk.pdf" }]
     },
     mining_combined: {
+        region: "americas",
         desc: "Verified reserves in Colorado (Venture Gold) and Alaska (Nome Placer). Institutional extraction mandates.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/mining_exec_summary.html" }]
     },
     silver: {
+        region: "americas",
         desc: "2.3M Tons in-situ recovery mandate for strategic stockpiling. Fire assay verified.",
         docs: []
     },
     tank_farm: {
+        region: "emea",
         desc: "Large-scale operational tank storage terminal in Europe. 63 tanks, 8.2M barrels capacity, VLCC deep-water access, 513 acres.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/wilhelmshaven_exec_summary.html" }]
     },
     tobor: {
+        region: "americas",
         desc: "Industrial automation and humanoid robotics distribution hub. Preferred US Unitree partner.",
         docs: [{ label: "Investor Deck", url: "docs/tobor_robot_deck.pdf" }]
     },
     greenvue: {
+        region: "americas",
         desc: "Modular Autonomous Aerial Platform. Next-generation AI-enabled dual-use UAV architecture. Seeking JV/Licensing partner.",
         docs: [{ label: "Executive Summary", url: "docs/greenvue_exec_summary.pdf" }]
     },
     greenvue_health: {
+        region: "americas",
         desc: "AI-driven diabetes technology company developing advanced solutions to support clinics worldwide through improved patient management and operational efficiency. Raising US$500,000.",
         docs: [{ label: "Investor Presentation", url: "docs/greenvue-ai-investor-deck-jun2026.pdf" }]
     },
     brazil_crypto_bank: {
+        region: "latam",
         title: "Brazil Crypto Bank",
         desc: "A well-established crypto banking and digital asset services company in Brazil. Operating successfully for 10+ years with an experienced team.",
         docs: [{ label: "Executive Summary", url: "docs/brazil_crypto_bank.html" }, { label: "Interactive Pitch Deck", url: "docs/brazil_crypto_deck.html" }]
     },
     brazil_payment_eme: {
+        region: "latam",
         title: "Brazil Payment Institution (EME)",
         desc: "Authorized Payment Institution (EME) & Direct Participant in PIX in Brazil. Proprietary CORE banking/payment system and established compliance infrastructure.",
         docs: [{ label: "Executive Summary", url: "docs/brazil_payment_eme.html" }, { label: "Interactive Pitch Deck", url: "docs/brazil_payment_deck.html" }]
     },
     westin_tokyo: {
+        region: "apac",
         title: "The Westin Tokyo",
         desc: "Landmark 438-room luxury hospitality asset in Ebisu, Tokyo. Offered off-market at ¥125,000,000,000 (approx. USD $860,000,000). Seller requires LOI/POF and registered Japan entity.",
         docs: [{ label: "Executive Summary", url: "docs/westin_tokyo_exec_summary.html" }]
     },
     amara_energy: {
+        region: "emea",
         title: "Amara Energy AB",
         desc: "Nordic geothermal platform built around a proven acquisition-led consolidation strategy in Sweden and Norway. Three completed acquisitions with SEK 400M assets on balance sheet. Raising SEK 30M in new equity at a SEK 600M pre-money valuation.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/amara_energy_exec_summary.html" }, { label: "Investor Presentation", url: "docs/amara_energy_deck.pdf" }]
     },
     cityclinic: {
+        region: "emea",
         title: "CityClinic Group",
         desc: "Vertically integrated European MedTech & premium healthcare corporation consolidator. Proven Marbella clinical baseline with 6-pillar digital scaling engine and Agentic AI SaaS. €12.5M Series A Raise.",
         docs: [
@@ -134,11 +169,30 @@ const dealData = {
         ]
     },
     toke: {
+        region: "americas",
         title: "TOKE Utility Token",
         desc: "Utility token built on Ethereum L2 Base network designed for digital commerce. Combines sub-50% merchant processing fees and instant settlements with Venmo-like wallet simplicity.",
         docs: [
             { label: "Executive Summary (HTML)", url: "docs/toke_exec_summary.html" }
         ]
+    },
+    rogers_wash: {
+        region: "americas",
+        title: "Wickenburg Gold & Palladium Mine",
+        desc: "3,262 acres of claims + 120 acres patented in Arizona. Estimated 10.8M oz Au, 15.3M oz Ag, 60.8M oz Pd reserves ($143.4B resource value). Offered at $250M.",
+        docs: []
+    },
+    oligogen: {
+        region: "apac",
+        title: "Oligogen Inc.",
+        desc: "Kyoto University spin-out iPS neural cell platform. Proprietary OligoGenie NSCs with >90% OLG differentiation. $30M raise for 28-29% equity for Phase II/III Japan clinical trials.",
+        docs: []
+    },
+    zero_g: {
+        region: "americas",
+        title: "Zero Gravity Corporation",
+        desc: "Exclusive FAA-certified U.S. microgravity flight provider. 2,400+ research payloads flown (NASA, Space Force). $10.2M Series B+ raise at $17M pre-money valuation (70-75% discount).",
+        docs: []
     }
 };
 
@@ -1324,6 +1378,91 @@ function toggleOtherIndustry(selectEl, containerId) {
         }
     }
 }
+
+// --- REGIONAL FILTERING & TERRAFIN PAY FUNCTIONS --- //
+function filterRegion(regionKey) {
+    const tabs = ['all', 'americas', 'apac', 'emea', 'latam'];
+    tabs.forEach(r => {
+        const btn = document.getElementById(`tab-${r}`);
+        if (btn) {
+            if (r === regionKey) {
+                btn.classList.add('active');
+                btn.style.background = 'var(--accent-cyan)';
+                btn.style.color = '#000';
+                btn.style.borderColor = 'var(--accent-cyan)';
+            } else {
+                btn.classList.remove('active');
+                btn.style.background = 'rgba(255,255,255,0.05)';
+                btn.style.color = 'var(--text-dim)';
+                btn.style.borderColor = 'rgba(255,255,255,0.1)';
+            }
+        }
+    });
+
+    const dealCards = document.querySelectorAll('.deal-card');
+    dealCards.forEach(card => {
+        const reg = card.getAttribute('data-region');
+        if (regionKey === 'all' || !reg || reg === regionKey) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+function openTerraFinPayInvoiceModal() {
+    const modal = document.getElementById('terrafin-pay-invoice-modal');
+    if (modal) modal.style.display = 'flex';
+}
+
+function closeTerraFinPayInvoiceModal() {
+    const modal = document.getElementById('terrafin-pay-invoice-modal');
+    if (modal) modal.style.display = 'none';
+}
+
+function openTerraFinPayCheckoutModal(type, amount, title) {
+    const modal = document.getElementById('terrafin-pay-checkout-modal');
+    if (!modal) return;
+    
+    document.getElementById('tp-checkout-title').innerText = title || "TerraFin Pay™ Settlement";
+    document.getElementById('tp-checkout-amount').innerText = `$${Number(amount).toLocaleString()}`;
+    document.getElementById('tp-checkout-type').innerText = type || "Escrow Hold";
+    
+    modal.style.display = 'flex';
+}
+
+function closeTerraFinPayCheckoutModal() {
+    const modal = document.getElementById('terrafin-pay-checkout-modal');
+    if (modal) modal.style.display = 'none';
+}
+
+function generateInvoiceLink() {
+    const clientName = document.getElementById('tp-inv-client').value.trim();
+    const dealRef = document.getElementById('tp-inv-deal').value.trim();
+    const amount = document.getElementById('tp-inv-amount').value;
+    
+    if (!clientName || !dealRef || !amount) {
+        alert("Please complete client name, deal reference, and invoice amount.");
+        return;
+    }
+    
+    const invId = `INV-2026-${Math.floor(1000 + Math.random() * 9000)}`;
+    const payUrl = `https://terrafinai.com/pay/?inv=${invId}&amount=${amount}&ref=${encodeURIComponent(dealRef)}`;
+    
+    document.getElementById('tp-inv-result').style.display = 'block';
+    document.getElementById('tp-inv-url').value = payUrl;
+    document.getElementById('tp-inv-id-text').innerText = `INVOICE ID: ${invId}`;
+}
+
+function copyInvoiceUrl() {
+    const input = document.getElementById('tp-inv-url');
+    if (input) {
+        input.select();
+        document.execCommand('copy');
+        alert("TerraFin Pay Invoice URL copied to clipboard!");
+    }
+}
+
 
 
 
