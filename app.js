@@ -1,8 +1,9 @@
 const dealData = {
-    virgin_nyc: {
+    project_nyc: {
         region: "americas",
-        desc: "Confidential acquisition of a new 5-star lifestyle hotel in NoMad, Manhattan. 460+ keys, 19,000 sq ft event space.",
-        docs: [{ label: "Executive Summary (HTML)", url: "docs/virgin_hotels_nyc_teaser.html" }]
+        title: "Project NYC 2026",
+        desc: "Landmark 460-room luxury hospitality asset in NoMad, Manhattan. Delivered unencumbered by management/brand. $400M valuation.",
+        docs: [{ label: "Executive Summary (HTML)", url: "docs/project_nyc_teaser.html" }]
     },
     kyushu: {
         region: "apac",
@@ -418,10 +419,10 @@ if (canvas) {
     const CONNECTION_DIST = 120;
     
     const COLORS = [
-        'rgba(6, 182, 212, 1)',   // Cyan
-        'rgba(139, 92, 246, 1)',  // Violet
-        'rgba(251, 191, 36, 1)',  // Amber
-        'rgba(255, 255, 255, 0.8)'// Pings
+        'rgba(6, 182, 212, 0.6)',   // Soft Cyan
+        'rgba(139, 92, 246, 0.6)',  // Soft Violet
+        'rgba(251, 191, 36, 0.6)',  // Soft Amber
+        'rgba(255, 255, 255, 0.7)'  // Pings
     ];
 
     // Mouse Tracking relative to canvas
@@ -445,20 +446,18 @@ if (canvas) {
         constructor() {
             this.x = Math.random() * 800;
             this.y = Math.random() * 400;
-            this.vx = (Math.random() - 0.5) * 1.5;
-            this.vy = (Math.random() - 0.5) * 1.5;
-            this.size = Math.random() * 2 + 1; // back to smaller size
+            this.vx = (Math.random() - 0.5) * 0.2;
+            this.vy = (Math.random() - 0.5) * 0.2;
+            this.size = Math.random() * 2 + 1.5; // Slightly larger for softer look
             this.color = COLORS[Math.floor(Math.random() * 3)];
             
             const tasks = [
-                "EXTRACTING DEED...",
-                "VERIFYING LIABILITIES",
-                "MONTE CARLO SIM: ACTIVE",
-                "PRICING MODEL: LOCKED",
-                "TRUTH MATRIX: SYNCED",
-                "ASSET SECURED",
-                "0x7F8A9B",
-                "YIELD 8.2%"
+                "analyzing...",
+                "verified",
+                "secure connection",
+                "stable",
+                "syncing...",
+                "asset authenticated"
             ];
             this.task = tasks[Math.floor(Math.random() * tasks.length)];
             this.isPinging = false;
@@ -469,12 +468,14 @@ if (canvas) {
             this.x += this.vx;
             this.y += this.vy;
 
+            // Gentle bounce
             if (this.x < 0 || this.x > width) this.vx *= -1;
             if (this.y < 0 || this.y > height) this.vy *= -1;
 
-            if (Math.random() < 0.005) {
+            // Less frequent pings for a calmer atmosphere
+            if (Math.random() < 0.001) {
                 this.isPinging = true;
-                this.pingTimer = 60;
+                this.pingTimer = 90; // Longer, slower fade
             }
             if (this.pingTimer > 0) {
                 this.pingTimer--;
@@ -534,10 +535,10 @@ if (canvas) {
                     
                     const opacity = 1 - (dist / CONNECTION_DIST);
                     if (daemons[i].isPinging || daemons[j].isPinging) {
-                        ctx.strokeStyle = `rgba(139, 92, 246, ${opacity * 0.75})`;
-                        ctx.lineWidth = 1.2;
+                        ctx.strokeStyle = `rgba(139, 92, 246, ${opacity * 0.5})`;
+                        ctx.lineWidth = 1.0;
                     } else {
-                        ctx.strokeStyle = `rgba(6, 182, 212, ${opacity * 0.25})`;
+                        ctx.strokeStyle = `rgba(6, 182, 212, ${opacity * 0.15})`;
                         ctx.lineWidth = 0.5;
                     }
                     ctx.stroke();
@@ -554,7 +555,7 @@ if (canvas) {
                     ctx.moveTo(daemons[i].x, daemons[i].y);
                     ctx.lineTo(mouse.x, mouse.y);
                     const opacity = 1 - (dist / 150);
-                    ctx.strokeStyle = `rgba(6, 182, 212, ${opacity * 0.6})`;
+                    ctx.strokeStyle = `rgba(6, 182, 212, ${opacity * 0.4})`;
                     ctx.lineWidth = 1.0;
                     ctx.stroke();
                 }

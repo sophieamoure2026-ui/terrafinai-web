@@ -97,152 +97,35 @@
     </nav>
 
     <div class="container" style="padding-top: 3.2rem;">
-        <header class="hero-section">
-            <div class="hero-grid">
-                <!-- Left Side: Brand, Pitch, Stats & Interaction -->
-                <div class="hero-left">
-                    <div style="display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1rem;">
-                        <img src="assets/logo.png" alt="TerraFinA\ Logo" style="height: 55px; border-radius: 12px; box-shadow: 0 4px 30px rgba(255, 0, 0, 0.1);">
-                        <div class="deal-badge" style="background: var(--accent-violet); color: white; margin: 0; display: inline-block;">THE AI-NATIVE ORCHESTRATION LAYER</div>
-                    </div>
-                    <h1>Global Capital, Powered by Autonomous AI</h1>
-                    <p>TerraFinA\ is the world's first AI-native clearinghouse. Powered by Titan Signal—our proprietary intelligence engine of over 200 autonomous agents—we programmatically source M&A deals, verify asset integrity in real-time, and match them with global institutional capital at an unprecedented scale.</p>
-                    
-                    <div class="hero-stats mono" style="margin-top: 0.5rem; margin-bottom: 1.2rem; justify-content: flex-start; gap: 2rem; display: flex;">
-                        <div class="stat-item">
-                            <span class="stat-value">200+</span>
-                            <span class="stat-label">AI Agents</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">$3.5B+</span>
-                            <span class="stat-label">Active Mandates</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">99.4%</span>
-                            <span class="stat-label">Match Fit</span>
-                        </div>
-                    </div>
-
-                    <!-- RUN AUDIT FORM -->
-                    <div class="glass-panel" style="padding: 1.2rem; border-color: rgba(255, 255, 255, 0.15); margin-bottom: 1rem; position: relative;">
-                        <h4 class="mono" style="font-size: 0.75rem; color: var(--accent-cyan); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em;">Run Autonomous Due Diligence</h4>
-                        <form action="javascript:void(0);" onsubmit="openDemo();" style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
-                            <input type="text" id="demo-address" placeholder="Enter Asset Address or Name..." class="mono" style="flex: 1; background: rgba(0,0,0,0.4); border: 1px solid var(--accent-cyan); color: #fff; padding: 0.6rem; border-radius: 6px; font-size: 0.8rem;" required>
-                            <button type="submit" class="btn-primary" style="font-size: 0.8rem; padding: 0.6rem 1.1rem; display: flex; align-items: center; gap: 0.5rem; justify-content: center; white-space: nowrap;">
-                                <span style="display: inline-block; width: 6px; height: 6px; background: #fff; border-radius: 50%; box-shadow: 0 0 10px #fff; animation: pulse 1s infinite;"></span>
-                                RUN AUDIT
-                            </button>
-                        </form>
-                        <p style="font-size: 0.62rem; color: var(--text-dim); margin-bottom: 0.75rem;">Enter any US property address for a live AVM audit — or click one of our active pipeline deals below.</p>
-                        
-                        <!-- Featured Pipeline Assets Quick Trigger -->
-                        <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
-                            <div class="mono" style="font-size: 0.62rem; color: var(--accent-cyan); letter-spacing: 1.5px; display: flex; align-items: center; gap: 0.4rem; font-weight: bold; text-shadow: 0 0 8px rgba(6, 182, 212, 0.3);">
-                                <span style="display: inline-block; width: 6px; height: 6px; background: var(--accent-cyan); border-radius: 50%; box-shadow: 0 0 8px var(--accent-cyan); animation: pulse 1s infinite;"></span>
-                                SELECT ACTIVE LISTING TO RUN SWARM AUDIT:
-                            </div>
-                            <div class="quick-deals-container" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem;">
-                                <!-- Chiba DC Card -->
-                                <div class="quick-deal-card mono" onclick="openDealDemo('chiba')" style="cursor: pointer; background: rgba(5,7,10,0.6); border: 1px solid rgba(6, 182, 212, 0.2); padding: 0.6rem; border-radius: 8px; transition: all 0.3s ease; position: relative;">
-                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.3rem;">
-                                        <span style="font-size: 0.62rem; font-weight: bold; color: #fff; line-height: 1.2;">CHIBA 100MW DC</span>
-                                        <span style="font-size: 0.58rem; color: var(--accent-cyan); font-weight: bold;">$1.12B</span>
-                                    </div>
-                                    <div style="font-size: 0.5rem; color: #555; margin-top: 0.35rem; display: flex; justify-content: space-between; align-items: center;">
-                                        <span>TOKYO, JP</span>
-                                        <span style="color: var(--accent-violet); font-size: 0.48rem; text-transform: uppercase;">[RUN AUDIT]</span>
-                                    </div>
-                                </div>
-                                <!-- Maui Card -->
-                                <div class="quick-deal-card mono" onclick="openDealDemo('maui')" style="cursor: pointer; background: rgba(5,7,10,0.6); border: 1px solid rgba(6, 182, 212, 0.2); padding: 0.6rem; border-radius: 8px; transition: all 0.3s ease; position: relative;">
-                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.3rem;">
-                                        <span style="font-size: 0.62rem; font-weight: bold; color: #fff; line-height: 1.2;">MAUI PORTFOLIO</span>
-                                        <span style="font-size: 0.58rem; color: var(--accent-cyan); font-weight: bold;">$40M</span>
-                                    </div>
-                                    <div style="font-size: 0.5rem; color: #555; margin-top: 0.35rem; display: flex; justify-content: space-between; align-items: center;">
-                                        <span>HAWAII, USA</span>
-                                        <span style="color: var(--accent-violet); font-size: 0.48rem; text-transform: uppercase;">[RUN AUDIT]</span>
-                                    </div>
-                                </div>
-                                <!-- Brazil EME Card -->
-                                <div class="quick-deal-card mono" onclick="openDealDemo('brazil_payment_eme')" style="cursor: pointer; background: rgba(5,7,10,0.6); border: 1px solid rgba(6, 182, 212, 0.2); padding: 0.6rem; border-radius: 8px; transition: all 0.3s ease; position: relative;">
-                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.3rem;">
-                                        <span style="font-size: 0.62rem; font-weight: bold; color: #fff; line-height: 1.2;">BRAZIL PAYMENTS</span>
-                                        <span style="font-size: 0.58rem; color: var(--accent-cyan); font-weight: bold;">$25M</span>
-                                    </div>
-                                    <div style="font-size: 0.5rem; color: #555; margin-top: 0.35rem; display: flex; justify-content: space-between; align-items: center;">
-                                        <span>BRAZIL, LATAM</span>
-                                        <span style="color: var(--accent-violet); font-size: 0.48rem; text-transform: uppercase;">[RUN AUDIT]</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <header class="hero-section" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 6rem 1rem 4rem 1rem;">
+            <div style="display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.5rem;">
+                <img src="assets/logo.png" alt="TerraFinA\ Logo" style="height: 65px; border-radius: 12px; box-shadow: 0 4px 40px rgba(255, 0, 0, 0.15);">
+            </div>
+            <div class="deal-badge" style="background: var(--accent-violet); color: white; margin-bottom: 1.5rem; display: inline-block;">THE AI-NATIVE ORCHESTRATION LAYER</div>
+            
+            <h1 style="max-width: 800px; margin: 0 auto 1.5rem auto; font-size: 3.5rem; line-height: 1.1;">Global Capital, Powered by Autonomous AI</h1>
+            <p style="max-width: 700px; margin: 0 auto 2.5rem auto; font-size: 1.1rem; color: var(--text-muted); line-height: 1.6;">
+                TerraFinA\ is the world's first AI-native clearinghouse. Powered by Titan Signal—our proprietary intelligence engine of over 200 autonomous agents—we programmatically source M&A deals, verify asset integrity in real-time, and match them with global institutional capital at an unprecedented scale.
+            </p>
+            
+            <div class="hero-stats mono" style="margin-bottom: 3rem; justify-content: center; gap: 4rem; display: flex;">
+                <div class="stat-item">
+                    <span class="stat-value">200+</span>
+                    <span class="stat-label">AI Agents</span>
                 </div>
-
-                <!-- Right Side: The Interactive Truth Matrix Wow Widget -->
-                <div class="hero-right" style="position: relative;">
-                    <div class="glass-panel truth-matrix-widget" style="padding: 0; overflow: hidden; border-color: var(--accent-cyan); height: 100%; min-height: 400px; display: flex; flex-direction: column; box-shadow: 0 0 40px rgba(6, 182, 212, 0.15); position: relative; z-index: 1;">
-                        <!-- Canvas Swarm Background (Floating) -->
-                        <div id="canvas-container" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 0; pointer-events: none; opacity: 0.65; transition: opacity 0.5s ease;">
-                            <canvas id="truth-matrix-canvas" style="width: 100%; height: 100%; background: transparent; display: block;"></canvas>
-                        </div>
-                        
-                        <!-- Widget Interface (Z-Index 1) -->
-                        <div class="widget-header" style="position: relative; z-index: 1; padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(5, 7, 10, 0.85); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center;">
-                            <div class="section-title" style="margin: 0; font-size: 0.75rem; letter-spacing: 1px; display: flex; align-items: center; gap: 0.5rem;">
-                                <span style="display: inline-block; width: 8px; height: 8px; background: #06b6d4; border-radius: 50%; box-shadow: 0 0 8px #06b6d4; animation: pulse 1.5s infinite;"></span>
-                                TRUTH MATRIX ENGINE
-                            </div>
-                            <div class="mono" style="font-size: 0.65rem; color: var(--accent-violet); font-weight: bold;" id="swarm-status">MONITORING</div>
-                        </div>
-                        
-                        <!-- Main Content Split Screen -->
-                        <div class="widget-body" style="position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1.2fr; flex: 1; min-height: 0; background: rgba(0, 0, 0, 0.15);">
-                            <!-- Doc Scanner Panel -->
-                            <div style="border-right: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; overflow: hidden; position: relative;">
-                                <div id="demo-target-title" class="mono" style="font-size: 0.55rem; color: #555; padding: 0.4rem 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.5);">
-                                    > AWAITING DEAL MANDATE
-                                </div>
-                                <div id="doc-viewer" class="mono" style="flex: 1; padding: 1rem; font-size: 0.65rem; color: rgba(255, 255, 255, 0.85); overflow-y: auto; display: flex; flex-direction: column; gap: 0.5rem; line-height: 1.4; word-break: break-word; overflow-wrap: break-word;">
-                                    <div style="color: #444;">[No active matching process]</div>
-                                </div>
-                            </div>
-                            
-                            <!-- Swarm CLI Terminal Panel -->
-                            <div class="terminal-crt" style="display: flex; flex-direction: column; background: rgba(0, 0, 0, 0.6); overflow: hidden; position: relative;">
-                                <div class="mono" style="font-size: 0.55rem; color: var(--accent-cyan); padding: 0.4rem 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; position: relative; z-index: 3;">
-                                    <span>> DAEMON_SWARM_CLI</span>
-                                </div>
-                                <div id="terminal-output" class="mono" style="flex: 1; padding: 1rem; font-size: 0.7rem; color: #06b6d4; overflow-y: auto; display: flex; flex-direction: column; gap: 0.4rem; line-height: 1.4; word-break: break-all; overflow-wrap: break-word; position: relative; z-index: 3;">
-                                    <div style="color: #444;">System operational. Awaiting due diligence command...</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- High-Tech HUD Telemetry Footer -->
-                        <div class="widget-hud mono" style="position: relative; z-index: 1; padding: 0.5rem 1rem; border-top: 1px solid rgba(255,255,255,0.08); background: rgba(5, 7, 10, 0.9); display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; font-size: 0.52rem; color: #555; gap: 0.5rem;">
-                            <div>SYS_PING: <span id="hud-ping" style="color: var(--accent-cyan);">14ms</span></div>
-                            <div>DAEMONS: <span id="hud-daemons" style="color: var(--accent-violet);">230/250</span></div>
-                            <div>BANDWIDTH: <span id="hud-band" style="color: #fbbf24;">1.48 TB/S</span></div>
-                            <div>LOCK_STATUS: <span style="color: #10b981;">SECURE</span></div>
-                        </div>
-
-                        <!-- Certified Result Wow Output stamp -->
-                        <div id="verification-stamp" style="position: relative; z-index: 2; display: none; padding: 1rem 0.5rem; background: linear-gradient(135deg, var(--accent-violet), var(--accent-indigo)); color: #fff; text-align: center; border-top: 1px solid rgba(255,255,255,0.2);">
-                            <div style="font-size: 0.85rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;">Certified Prospectus Secured</div>
-                            <div id="demo-wow-text" class="mono" style="font-size: 0.75rem; margin-top: 0.4rem; color: #10b981; font-weight: bold; white-space: nowrap; line-height: 1.4;">AVM VALUATION CONFIRMED</div>
-                            <div style="margin-top: 0.7rem;">
-                                <button class="btn-primary" onclick="openDD('chiba')" style="font-size: 0.65rem; padding: 0.5rem 1.2rem; background: #fff; color: var(--accent-violet); border-radius: 4px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                                    VIEW PRIVATE DATA ROOM
-                                </button>
-                            </div>
-                            <div style="font-size: 0.52rem; color: rgba(255,255,255,0.45); margin-top: 0.6rem; letter-spacing: 0.5px;" class="mono">
-                                *MODEL ESTIMATES FOR INFORMATIONAL PURPOSES ONLY. NO INVESTMENT OR APPRAISAL RELIANCE.
-                            </div>
-                        </div>
-                    </div>
+                <div class="stat-item">
+                    <span class="stat-value">$3.5B+</span>
+                    <span class="stat-label">Active Mandates</span>
                 </div>
+                <div class="stat-item">
+                    <span class="stat-value">99.4%</span>
+                    <span class="stat-label">Match Fit</span>
+                </div>
+            </div>
+            
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#marketplace" class="btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem;">View Active Deals</a>
+                <a href="truth-matrix.html" class="btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem; background: rgba(0,0,0,0.5); border: 1px solid var(--accent-cyan); color: var(--accent-cyan);">Launch Truth Matrix™</a>
             </div>
         </header>
 
@@ -385,19 +268,19 @@
                 <span>02</span> Trophy Real Estate Desk
             </div>
             <div class="deal-grid">
-                <!-- Virgin Hotels NYC -->
+                <!-- Project NYC 2026 -->
                 <div class="glass-panel deal-card flagship" data-region="americas">
                     <div class="deal-header">
                         <span class="deal-badge" style="background: #06b6d4; color: #000;">OFF-MARKET HOTEL</span>
-                        <span class="deal-value mono">$450M</span>
+                        <span class="deal-value mono">$400M</span>
                     </div>
-                    <h3 style="margin-bottom: 0.5rem;">Virgin Hotels New York City</h3>
-                    <p style="font-size: 0.85rem; color: var(--text-dim);">Confidential acquisition of a new 5-star lifestyle hotel in NoMad, Manhattan. 460+ keys, 19,000 sq ft event space.</p>
+                    <h3 style="margin-bottom: 0.5rem;">Project NYC 2026</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-dim);">Confidential acquisition of a new 5-star lifestyle hotel in NoMad, Manhattan. Delivered unencumbered by management/brand.</p>
                     <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
                         <span class="mono" style="font-size: 0.6rem; color: #06b6d4;">STATUS: SOURCING_BUYER</span>
                         <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
                     </div>
-                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('virgin_nyc')">VIEW DD MEMORANDUM</button>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('project_nyc')">VIEW DD MEMORANDUM</button>
                 </div>
 
                 <!-- Maui Beachfront Portfolio -->
