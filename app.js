@@ -1,4 +1,10 @@
 const dealData = {
+    project_reston: {
+        region: "americas",
+        title: "Project Reston",
+        desc: "Operating 21,100 SF Tier III data center in Northern Virginia (Data Center Alley). 900 kW current IT load with 5 MW expansion capability via Dominion Energy.",
+        docs: [{ label: "Executive Summary (HTML)", url: "docs/project_reston_teaser.html" }]
+    },
     project_nyc: {
         region: "americas",
         title: "Project NYC 2026",
