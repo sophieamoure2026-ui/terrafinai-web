@@ -545,6 +545,15 @@ footer {
     .hero-left img {
         margin: 0 auto;
     }
+    .glass-panel {
+        padding: 1.5rem;
+    }
+    .modal-overlay {
+        padding: 1rem;
+    }
+    .modal-content {
+        padding: 1rem;
+    }
 }
 
 @keyframes borderPulse {
