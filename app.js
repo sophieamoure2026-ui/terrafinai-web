@@ -1410,7 +1410,7 @@ function filterRegion(regionKey) {
     dealCards.forEach(card => {
         const reg = card.getAttribute('data-region');
         if (regionKey === 'all' || !reg || reg === regionKey) {
-            card.style.display = 'flex';
+            card.style.display = 'block';
         } else {
             card.style.display = 'none';
         }

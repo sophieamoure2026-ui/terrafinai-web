@@ -115,36 +115,90 @@
 <span class="stat-label">Match Fit</span>
 </div>
 </header>
+<!-- HIGH PROBABILITY SHOWCASE -->
+<section class="deals" style="margin-bottom: 2rem;">
+    <div class="section-title" style="color: var(--accent-cyan); text-shadow: 0 0 20px rgba(6, 182, 212, 0.4);">
+        <span style="color: var(--accent-cyan);">🔥</span> HIGH-PROBABILITY MANDATES <span style="font-size: 0.8rem; margin-left: 1rem; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; font-weight: normal;">[ AI-TARGETED ]</span>
+    </div>
+    
+    <div class="showcase-grid">
+        <!-- 1. Project Reston IDC -->
+        <div class="panoramic-card" data-region="americas">
+            <div class="panoramic-main">
+                <div class="deal-header">
+                    <span class="deal-badge" style="background: #fbbf24; color: #000;">DATA CENTER</span>
+                    <span class="deal-value mono">ON REQUEST</span>
+                </div>
+                <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Project Reston (Tier III IDC)</h3>
+                <p style="font-size: 0.95rem; color: var(--text-dim); line-height: 1.5;">Operating 21,100 SF Tier III data center in Northern Virginia (Data Center Alley). 97% leased. Anchor: Cloudflare. 900 kW current IT load with 5 MW expansion capability.</p>
+                <button class="btn-primary" style="margin-top: 1.5rem; font-size: 0.75rem; padding: 0.6rem 1.5rem;" onclick="openDD('project_reston')">VIEW DD MEMORANDUM</button>
+            </div>
+            <div class="panoramic-metrics">
+                <div class="metric-row"><span style="color: var(--text-dim);">MATCH PROBABILITY:</span> <span style="color: #10b981;">94.2%</span></div>
+                <div class="metric-row"><span style="color: var(--text-dim);">ESTIMATED CLOSE:</span> <span style="color: #fbbf24;">&lt; 30 DAYS</span></div>
+                <div class="metric-row"><span style="color: var(--text-dim);">BUYER POOL:</span> <span>14 INSTITUTIONS</span></div>
+                <div class="metric-row"><span style="color: var(--text-dim);">TRUTH_MATRIX:</span> <span style="color: var(--accent-violet);">VETTED</span></div>
+            </div>
+        </div>
+
+        <!-- 2. Project NYC -->
+        <div class="panoramic-card" data-region="americas">
+            <div class="panoramic-main">
+                <div class="deal-header">
+                    <span class="deal-badge" style="background: #06b6d4; color: #000;">OFF-MARKET HOTEL</span>
+                    <span class="deal-value mono">$450M</span>
+                </div>
+                <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Project NYC 2026</h3>
+                <p style="font-size: 0.95rem; color: var(--text-dim); line-height: 1.5;">Confidential acquisition of a new 5-star lifestyle hotel in NoMad, Manhattan. Delivered unencumbered by management/brand.</p>
+                <button class="btn-primary" style="margin-top: 1.5rem; font-size: 0.75rem; padding: 0.6rem 1.5rem;" onclick="openDD('project_nyc')">VIEW DD MEMORANDUM</button>
+            </div>
+            <div class="panoramic-metrics">
+                <div class="metric-row"><span style="color: var(--text-dim);">MATCH PROBABILITY:</span> <span style="color: #10b981;">89.7%</span></div>
+                <div class="metric-row"><span style="color: var(--text-dim);">ESTIMATED CLOSE:</span> <span style="color: #fbbf24;">&lt; 45 DAYS</span></div>
+                <div class="metric-row"><span style="color: var(--text-dim);">BUYER POOL:</span> <span>8 INSTITUTIONS</span></div>
+                <div class="metric-row"><span style="color: var(--text-dim);">TRUTH_MATRIX:</span> <span style="color: var(--accent-violet);">VETTED</span></div>
+            </div>
+        </div>
+
+        <!-- 3. Project Messery -->
+        <div class="panoramic-card" data-region="emea">
+            <div class="panoramic-main">
+                <div class="deal-header">
+                    <span class="deal-badge" style="background: #fbbf24; color: #000;">ROYAL ESTATE</span>
+                    <span class="deal-value mono">ON REQUEST</span>
+                </div>
+                <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Project Messery</h3>
+                <p style="font-size: 0.95rem; color: var(--text-dim); line-height: 1.5;">Off-market disposition of a generational Royal Family palace estate overlooking Lake Geneva.</p>
+                <button class="btn-primary" style="margin-top: 1.5rem; font-size: 0.75rem; padding: 0.6rem 1.5rem;" onclick="window.open('docs/project_messery_teaser.html', '_blank')">VIEW DD MEMORANDUM</button>
+            </div>
+            <div class="panoramic-metrics">
+                <div class="metric-row"><span style="color: var(--text-dim);">MATCH PROBABILITY:</span> <span style="color: #10b981;">86.4%</span></div>
+                <div class="metric-row"><span style="color: var(--text-dim);">ESTIMATED CLOSE:</span> <span style="color: #fbbf24;">&lt; 60 DAYS</span></div>
+                <div class="metric-row"><span style="color: var(--text-dim);">BUYER POOL:</span> <span>4 UHNW FAMILY OFFICES</span></div>
+                <div class="metric-row"><span style="color: var(--text-dim);">TRUTH_MATRIX:</span> <span style="color: var(--accent-violet);">ACTIVE</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="regional-filter-bar glass-panel" style="margin-bottom: 2rem; padding: 0.8rem 1.2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+<div class="mono" style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: bold; letter-spacing: 1px;">
+                DESK REGION:
+            </div>
+<div class="regional-tabs" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<button class="regional-tab-btn active" id="tab-all" onclick="filterRegion('all')" style="font-size: 0.72rem; padding: 0.4rem 0.8rem; border-radius: 4px; background: var(--accent-cyan); color: #000; border: 1px solid var(--accent-cyan); font-weight: bold; cursor: pointer;">🌐 All Deals ($3.5B+)</button>
+<button class="regional-tab-btn" id="tab-americas" onclick="filterRegion('americas')" style="font-size: 0.72rem; padding: 0.4rem 0.8rem; border-radius: 4px; background: rgba(255,255,255,0.05); color: var(--text-dim); border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">🇺🇸 Americas</button>
+<button class="regional-tab-btn" id="tab-apac" onclick="filterRegion('apac')" style="font-size: 0.72rem; padding: 0.4rem 0.8rem; border-radius: 4px; background: rgba(255,255,255,0.05); color: var(--text-dim); border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">🇯🇵 🌏 Asia-Pacific</button>
+<button class="regional-tab-btn" id="tab-emea" onclick="filterRegion('emea')" style="font-size: 0.72rem; padding: 0.4rem 0.8rem; border-radius: 4px; background: rgba(255,255,255,0.05); color: var(--text-dim); border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">🇪🇺 EMEA</button>
+<button class="regional-tab-btn" id="tab-latam" onclick="filterRegion('latam')" style="font-size: 0.72rem; padding: 0.4rem 0.8rem; border-radius: 4px; background: rgba(255,255,255,0.05); color: var(--text-dim); border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">🇧🇷 LATAM</button>
+</div></div>
+
 <!-- JUST LISTED -->
 <section class="deals glass-panel" style="margin-bottom: 2rem;">
 <div class="section-title"><span>01</span> Trophy Real Estate</div>
 <div class="deal-grid">
-<div class="glass-panel deal-card flagship" data-region="emea" style="border-color: #fbbf24; background: rgba(251, 191, 36, 0.03);">
-<div class="deal-header">
-<span class="deal-badge" style="background: #fbbf24; color: #000;">ROYAL ESTATE</span>
-<span class="deal-value mono">ON REQUEST</span>
-</div>
-<h3 style="margin-bottom: 0.5rem;">Project Messery</h3>
-<p style="font-size: 0.85rem; color: var(--text-dim);">Off-market disposition of a generational Royal Family palace estate overlooking Lake Geneva.</p>
-<div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
-<span class="mono" style="font-size: 0.6rem; color: #fbbf24;">STATUS: OFF-MARKET</span>
-<span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: ACTIVE ]</span>
-</div>
-<button class="btn-primary" onclick="window.open('docs/project_messery_teaser.html', '_blank')" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;">VIEW DD MEMORANDUM</button>
-</div>
-<div class="glass-panel deal-card flagship" data-region="americas">
-<div class="deal-header">
-<span class="deal-badge" style="background: #06b6d4; color: #000;">OFF-MARKET HOTEL</span>
-<span class="deal-value mono">$450M</span>
-</div>
-<h3 style="margin-bottom: 0.5rem;">Project NYC 2026</h3>
-<p style="font-size: 0.85rem; color: var(--text-dim);">Confidential acquisition of a new 5-star lifestyle hotel in NoMad, Manhattan. Delivered unencumbered by management/brand.</p>
-<div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
-<span class="mono" style="font-size: 0.6rem; color: #06b6d4;">STATUS: SOURCING_BUYER</span>
-<span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
-</div>
-<button class="btn-primary" onclick="openDD('project_nyc')" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;">VIEW DD MEMORANDUM</button>
-</div><div class="glass-panel deal-card flagship" data-region="apac" style="border-color: #fbbf24; background: rgba(251, 191, 36, 0.03);">
+
+<div class="glass-panel deal-card flagship" data-region="apac" style="border-color: #fbbf24; background: rgba(251, 191, 36, 0.03);">
 <div class="deal-header">
 <span class="deal-badge" style="background: #fbbf24; color: #000;">HOTEL / TROPHY</span>
 <span class="deal-value mono">~$860M</span>
@@ -219,17 +273,7 @@
 </div></div>
 </section>
 
-<div class="regional-filter-bar glass-panel" style="margin-bottom: 2rem; padding: 0.8rem 1.2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-<div class="mono" style="font-size: 0.75rem; color: var(--accent-cyan); font-weight: bold; letter-spacing: 1px;">
-                DESK REGION:
-            </div>
-<div class="regional-tabs" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-<button class="regional-tab-btn active" id="tab-all" onclick="filterRegion('all')" style="font-size: 0.72rem; padding: 0.4rem 0.8rem; border-radius: 4px; background: var(--accent-cyan); color: #000; border: 1px solid var(--accent-cyan); font-weight: bold; cursor: pointer;">🌐 All Deals ($3.5B+)</button>
-<button class="regional-tab-btn" id="tab-americas" onclick="filterRegion('americas')" style="font-size: 0.72rem; padding: 0.4rem 0.8rem; border-radius: 4px; background: rgba(255,255,255,0.05); color: var(--text-dim); border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">🇺🇸 Americas</button>
-<button class="regional-tab-btn" id="tab-apac" onclick="filterRegion('apac')" style="font-size: 0.72rem; padding: 0.4rem 0.8rem; border-radius: 4px; background: rgba(255,255,255,0.05); color: var(--text-dim); border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">🇯🇵 🌏 Asia-Pacific</button>
-<button class="regional-tab-btn" id="tab-emea" onclick="filterRegion('emea')" style="font-size: 0.72rem; padding: 0.4rem 0.8rem; border-radius: 4px; background: rgba(255,255,255,0.05); color: var(--text-dim); border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">🇪🇺 EMEA</button>
-<button class="regional-tab-btn" id="tab-latam" onclick="filterRegion('latam')" style="font-size: 0.72rem; padding: 0.4rem 0.8rem; border-radius: 4px; background: rgba(255,255,255,0.05); color: var(--text-dim); border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">🇧🇷 LATAM</button>
-</div></div>
+
 <!-- TROPHY REAL ESTATE -->
 
         <!-- IDL STRATEGIC PIPELINE -->
@@ -240,7 +284,7 @@
                 <span>03</span> Extraction & Mandates
             </div>
             <div class="deal-grid">
-                <div class="glass-panel deal-card">
+                <div class="glass-panel deal-card" data-region="americas">
                     <div class="deal-header">
                         <span class="deal-badge" style="background: #fbbf24; color: #000;">MINING</span>
                         <span class="deal-value mono">$40M+</span>
@@ -254,7 +298,7 @@
                     <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('mining_combined')">VIEW DD MEMORANDUM</button>
                 </div>
 
-                <div class="glass-panel deal-card">
+                <div class="glass-panel deal-card" data-region="americas">
                     <div class="deal-header">
                         <span class="deal-badge" style="background: #fbbf24; color: #000;">METALS</span>
                         <span class="deal-value mono">$250M</span>
@@ -269,7 +313,7 @@
                 </div>
 
                 <!-- Tank Farm -->
-                <div class="glass-panel deal-card">
+                <div class="glass-panel deal-card" data-region="emea">
                     <div class="deal-header">
                         <span class="deal-badge" style="background: #fbbf24; color: #000;">INFRASTRUCTURE</span>
                         <span class="deal-value mono">ON REQUEST</span>
@@ -283,23 +327,10 @@
                     <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('tank_farm')">VIEW DD MEMORANDUM</button>
                 </div>
 
-                <!-- Project Reston Data Center -->
-                <div class="glass-panel deal-card">
-                    <div class="deal-header">
-                        <span class="deal-badge" style="background: #fbbf24; color: #000;">DATA CENTER</span>
-                        <span class="deal-value mono">ON REQUEST</span>
-                    </div>
-                    <h3 style="margin-bottom: 0.5rem;">Project Reston</h3>
-                    <p style="font-size: 0.85rem; color: var(--text-dim);">Operating 21,100 SF Tier III data center in Northern Virginia (Data Center Alley). 97% leased. Anchor: Cloudflare. 900 kW current IT load with 5 MW expansion capability.</p>
-                    <div style="margin-top: 1rem; border-top: 1px solid var(--glass-border); padding-top: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
-                        <span class="mono" style="font-size: 0.6rem; color: #fbbf24;">STATUS: SOURCING_BUYER</span>
-                        <span class="mono" style="font-size: 0.5rem; color: var(--accent-violet);">[ TRUTH_MATRIX: VETTED ]</span>
-                    </div>
-                    <button class="btn-primary" style="margin-top: 1rem; width: 100%; font-size: 0.7rem;" onclick="openDD('project_reston')">VIEW DD MEMORANDUM</button>
-                </div>
+
 
                 <!-- Kyushu Hybrid Infrastructure -->
-                <div class="glass-panel deal-card">
+                <div class="glass-panel deal-card" data-region="apac">
                     <div class="deal-header">
                         <span class="deal-badge" style="background: #fbbf24; color: #000;">DATA CENTER</span>
                         <span class="deal-value mono">ON REQUEST</span>
