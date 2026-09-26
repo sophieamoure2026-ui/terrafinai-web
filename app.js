@@ -48,20 +48,10 @@ const dealData = {
         desc: "Licensed commercial bank in the Horn of Africa. Strategic geographic positioning for trade finance and retail.",
         docs: [{ label: "Sales Memorandum", url: "docs/djibouti_bank_memo.pdf" }]
     },
-    zymagenx: {
-        region: "americas",
-        desc: "Phase 3-Ready first-in-class Celiac Disease therapeutic. $2M-$4M Convertible Note at an exceptionally low $27M Valuation Cap.",
-        docs: [{ label: "Investor Deck (April 2026)", url: "docs/zymagenx_deck.pdf" }]
-    },
     life_ev: {
         region: "americas",
         desc: "E-mobility consolidation platform. Acquired Rad Power Bikes ($1.2B historical rev) and Serial 1. 1.8M customer base with omnichannel FTZ margin advantage.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/life_ev_exec_summary.html" }]
-    },
-    tiffany: {
-        region: "apac",
-        desc: "Tokyo's premier luxury storefront. 100% occupancy with Tiffany & Co anchor. Generational asset.",
-        docs: [{ label: "Asset Teaser", url: "docs/tiffany_ginza_teaser.pdf" }]
     },
     parkview: {
         region: "apac",
@@ -82,11 +72,6 @@ const dealData = {
         region: "americas",
         desc: "Museum-quality blue-chip masterpiece (Catalog Raisonné No. 300, p.121). Escrow-settled private transaction in New York.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/pollock_exec_summary.html" }]
-    },
-    coral_harbour: {
-        region: "americas",
-        desc: "422-acre mixed-use oceanfront development on New Providence. Mega-yacht marina, luxury hospitality, and branded residences.",
-        docs: [{ label: "Executive Summary (HTML)", url: "docs/coral_harbour_exec_summary.html" }]
     },
     alila_seminyak: {
         region: "apac",
@@ -125,16 +110,6 @@ const dealData = {
         region: "emea",
         desc: "Large-scale operational tank storage terminal in Europe. 63 tanks, 8.2M barrels capacity, VLCC deep-water access, 513 acres.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/wilhelmshaven_exec_summary.html" }]
-    },
-    tobor: {
-        region: "americas",
-        desc: "Industrial automation and humanoid robotics distribution hub. Preferred US Unitree partner.",
-        docs: [{ label: "Investor Deck", url: "docs/tobor_robot_deck.pdf" }]
-    },
-    greenvue: {
-        region: "americas",
-        desc: "Modular Autonomous Aerial Platform. Next-generation AI-enabled dual-use UAV architecture. Seeking JV/Licensing partner.",
-        docs: [{ label: "Executive Summary", url: "docs/greenvue_exec_summary.pdf" }]
     },
     greenvue_health: {
         region: "americas",
@@ -187,12 +162,6 @@ const dealData = {
         region: "americas",
         title: "Wickenburg Gold & Palladium Mine",
         desc: "3,262 acres of claims + 120 acres patented in Arizona. Estimated 10.8M oz Au, 15.3M oz Ag, 60.8M oz Pd reserves ($143.4B resource value). Offered at $250M.",
-        docs: []
-    },
-    oligogen: {
-        region: "apac",
-        title: "Oligogen Inc.",
-        desc: "Kyoto University spin-out iPS neural cell platform. Proprietary OligoGenie NSCs with >90% OLG differentiation. $30M raise for 28-29% equity for Phase II/III Japan clinical trials.",
         docs: []
     },
 };
@@ -716,25 +685,6 @@ const dealSimulations = {
         valuation: '98.4', suffix: 'M', yield: '5.2',
         prospectus: 'maui_portfolio'
     },
-    coral: {
-        title: 'CORAL HARBOUR DEVELOPMENT | 422 ACRES | NEW PROVIDENCE',
-        steps: [
-            { msg: '>> INITIATING SECURE DOCUMENT UPLOAD...', color: '#666', delay: 500 },
-            { msg: '>> DEPLOYING LEGAL SWARM (84 DAEMONS)', color: '#8b5cf6', delay: 800 },
-            { msg: '   [OK] Government Crown Grant: VERIFIED', color: '#10b981', delay: 1000 },
-            { msg: '   [OK] Marina Dredging Permit: APPROVED (422 Acres Offshore)', color: '#10b981', delay: 700 },
-            { msg: '   [OK] Mixed-Use Development Zoning: CONFIRMED', color: '#10b981', delay: 600 },
-            { msg: '   [OK] Environmental Impact Study: PASSED (2023)', color: '#10b981', delay: 500 },
-            { msg: '<br>>> DEPLOYING FINANCIAL SWARM (146 DAEMONS)', color: '#fbbf24', delay: 800 },
-            { msg: '>> INGESTING CBRE CARIBBEAN LUXURY DEVELOPMENT COMPS', color: '#06b6d4', delay: 600 },
-            { msg: '   [OK] Comparable: Baha Mar Phase III — $2.1B cleared', color: '#06b6d4', delay: 700 },
-            { msg: '   [OK] Comparable: Albany Albany Marina — $850M cleared', color: '#06b6d4', delay: 600 },
-            { msg: '   [OK] Comparable: Ocean Club Residences — $420M cleared', color: '#06b6d4', delay: 500 },
-            { msg: '>> RUNNING MONTE CARLO PRICING SIMULATION (10,000 ITERATIONS)', color: '#06b6d4', delay: 1000 },
-        ],
-        valuation: '480', suffix: 'M', yield: '7.4',
-        prospectus: 'coral_harbour'
-    },
     brazil_payment_eme: {
         title: 'BRAZIL PAYMENTS PLATFORM (EME) & PIX | SAO PAULO',
         steps: [
@@ -766,11 +716,6 @@ const dealMatches = {
         { name: "Starwood Capital Group", fit: "98%", type: "OPPORTUNISTIC_RE" },
         { name: "KSL Capital Partners", fit: "91%", type: "HOSPITALITY_PE" },
         { name: "Highgate Hotels PE", fit: "88%", type: "REAL_ASSET_FO" }
-    ],
-    coral: [
-        { name: "Brookfield Properties", fit: "97%", type: "INFRASTRUCTURE_PE" },
-        { name: "Qatari Investment Authority", fit: "94%", type: "SOVEREIGN_WEALTH" },
-        { name: "Starwood Capital Group", fit: "90%", type: "OPPORTUNISTIC_RE" }
     ],
     brazil_payment_eme: [
         { name: "Visa Strategic Ventures", fit: "97%", type: "STRATEGIC_ACQUIRER" },
@@ -897,7 +842,7 @@ async function runDealSimulation(deal, dealKey) {
     setTimeout(() => {
         document.getElementById('demo-wow-text').innerHTML = `STRESS-TESTED VALUATION RANGE:<br>${rangeDisplay}<br><span style="font-size: 0.65rem; color: #fbbf24; font-weight: bold; display: block; margin-top: 0.25rem;">SWARM AUDIT VERIFIED</span><span style="font-size: 0.52rem; color: #64748b; font-weight: normal; font-family: monospace; display: block; margin-top: 0.2rem;">HASH: ${mockHash}</span>`;
         // Setup direct data room target
-        stamp.querySelector('button').setAttribute('onclick', `openDD('${deal.prospectus || 'zymagenx'}')`);
+        stamp.querySelector('button').setAttribute('onclick', `openDD('${deal.prospectus || 'westin_tokyo'}')`);
         stamp.style.display = 'block';
     }, 500);
 }
@@ -1244,7 +1189,7 @@ async function submitBuySideMandate() {
     let matchedAsset = 'General Placement';
     let matchFit = '94%';
     if (assetClass.includes('Real Estate')) {
-        matchedAsset = 'Tiffany Ginza Flagship ($1B)';
+        matchedAsset = 'Westin Tokyo ($860M)';
         matchFit = '98%';
     } else if (assetClass.includes('Infrastructure') || assetClass.includes('DC')) {
         matchedAsset = 'Chiba 100MW DC ($1.12B)';
@@ -1252,8 +1197,8 @@ async function submitBuySideMandate() {
     } else if (assetClass.includes('Mining')) {
         matchedAsset = 'Sovereign Silver Reserves ($250M)';
         matchFit = '92%';
-    } else if (assetClass.includes('Robotics')) {
-        matchedAsset = 'Tobor Robot Corp ($140M)';
+    } else if (assetClass.includes('Energy')) {
+        matchedAsset = 'Amara Energy AB (SEK 600M pre)';
         matchFit = '95%';
     }
 
