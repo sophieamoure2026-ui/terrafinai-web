@@ -142,8 +142,22 @@ const dealData = {
     singulari: {
         region: "apac",
         title: "The Singulari Hotel & SkySpa",
-        desc: "Official Universal Studios Japan hotel, Osaka. 390 rooms directly connected to JR Universal City Station; 14th-floor rooftop SkySpa. Opened 2017. Price on application; NDA and proof of funds required.",
-        docs: []
+        desc: "Official Universal Studios Japan hotel, Osaka. 390 rooms directly connected to JR Universal City Station; rooftop SkySpa onsen. Opened August 2017. Seller's Japanese dossier: asking JPY 65.0B. NDA and proof of funds required.",
+        docs: [],
+        photos: [
+            { src: "images/singulari/exterior-day-1.jpg", alt: "Hotel tower exterior, day" },
+            { src: "images/singulari/exterior-day-2.jpg", alt: "Hotel tower from street level" },
+            { src: "images/singulari/exterior-night.jpg", alt: "Hotel exterior at night (render)" },
+            { src: "images/singulari/entrance.jpg", alt: "Hotel entrance" },
+            { src: "images/singulari/lobby-1.jpg", alt: "Lobby" },
+            { src: "images/singulari/lobby-2.jpg", alt: "Lobby lounge seating" },
+            { src: "images/singulari/lobby-lounge.jpg", alt: "Lobby lounge area" },
+            { src: "images/singulari/skyspa-onsen-1.jpg", alt: "SkySpa rooftop onsen" },
+            { src: "images/singulari/skyspa-onsen-2.jpg", alt: "SkySpa onsen with bay view" },
+            { src: "images/singulari/onsen-view.jpg", alt: "Onsen with panoramic view" },
+            { src: "images/singulari/suite.jpg", alt: "Suite with lounge area" },
+            { src: "images/singulari/breakfast.jpg", alt: "Breakfast buffet" }
+        ]
     },
     fukuracia: {
         region: "apac",
