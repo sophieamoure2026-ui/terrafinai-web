@@ -7,7 +7,7 @@ const dealData = {
     },
     project_nyc: {
         region: "americas",
-        title: "Project NYC 2026",
+        title: "Project Hudson",
         desc: "Landmark 460-room luxury hospitality asset in NoMad, Manhattan. Delivered unencumbered by management/brand. $400M valuation.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/project_nyc_teaser.html" }]
     },
