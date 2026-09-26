@@ -169,6 +169,12 @@ const dealData = {
         desc: "Private-island resort on an approximately 3-hectare island in Vaavu Atoll: ~61-62 villas across overwater, beach and garden categories (subject to verification). 20 minutes by seaplane or 90 minutes by speedboat from Mal\u00e9. Acquisition of the resort operating vehicle and/or island leasehold interests, subject to Maldivian governmental approvals and lease consents. Price guidance via NDA; confirmation of financial capacity required.",
         docs: []
     },
+    cambodia_bank: {
+        region: "apac",
+        title: "Cambodia Banking Platform",
+        desc: "Well-established bank in Cambodia, represented as being in good standing, available for acquisition by a qualified strategic or institutional investor. Existing regulated banking infrastructure, regulatory framework, personnel, systems and operating platform \u2014 a gateway to Southeast Asian / ASEAN financial services. Indicative valuation approximately US$120 million. Transaction subject to National Bank of Cambodia requirements and regulatory approval. Qualified buyers only: KYC/CIS, proof of funds and LOI required.",
+        docs: []
+    },
     amara_energy: {
         region: "emea",
         title: "Amara Energy AB",
