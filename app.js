@@ -139,6 +139,12 @@ const dealData = {
         desc: "Landmark 438-room luxury hospitality asset in Ebisu, Tokyo. Offered off-market at ¥125,000,000,000 (approx. USD $860,000,000). Seller requires LOI/POF and registered Japan entity.",
         docs: [{ label: "Executive Summary", url: "docs/westin_tokyo_exec_summary.html" }]
     },
+    singulari: {
+        region: "apac",
+        title: "The Singulari Hotel & SkySpa",
+        desc: "Official Universal Studios Japan hotel, Osaka. 390 rooms directly connected to JR Universal City Station; 14th-floor rooftop SkySpa. Opened 2017. Price on application; NDA and proof of funds required.",
+        docs: []
+    },
     amara_energy: {
         region: "emea",
         title: "Amara Energy AB",
