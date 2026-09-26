@@ -197,7 +197,15 @@ const dealData = {
         region: "apac",
         title: "NAKAI Dhiggiri Resort \u2014 Vaavu Atoll, Maldives",
         desc: "Private-island resort on an approximately 3-hectare island in Vaavu Atoll: ~61-62 villas across overwater, beach and garden categories (subject to verification). 20 minutes by seaplane or 90 minutes by speedboat from Mal\u00e9. Acquisition of the resort operating vehicle and/or island leasehold interests, subject to Maldivian governmental approvals and lease consents. Price guidance via NDA; confirmation of financial capacity required.",
-        docs: []
+        docs: [],
+        photos: [
+            { src: "images/nakai/overwater-villas-jetty.jpg", alt: "Overwater villas from the jetty" },
+            { src: "images/nakai/overwater-villas-lagoon.jpg", alt: "Overwater villas over turquoise lagoon" },
+            { src: "images/nakai/overwater-villas-water.jpg", alt: "Overwater villa row from the water" },
+            { src: "images/nakai/overwater-villa-deck.jpg", alt: "Overwater villa private deck" },
+            { src: "images/nakai/beach-palms.jpg", alt: "Beach with palms and loungers" },
+            { src: "images/nakai/sunset-island.jpg", alt: "Sunset over the island" }
+        ]
     },
     cambodia_bank: {
         region: "apac",
