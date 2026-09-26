@@ -163,6 +163,12 @@ const dealData = {
         desc: "Operating Tier III-design data center at 1807 Michael Faraday Court, Reston VA: 21,100 SF, 900 kW critical IT load, ~97% leased. Broker-advised anchor tenant Cloudflare (NYSE: NET), ~62% of stabilized base rent through Oct 2030. Up to 5 MW expansion via adjacent Dominion Energy substation; ~10,000 SF building expansion potential. Broker-projected NOI: $750K (2027), $799K (2028), $851K (2029), $748K (2030). Confidential offering \u2014 qualified buyers only.",
         docs: []
     },
+    nakai_dhiggiri: {
+        region: "apac",
+        title: "NAKAI Dhiggiri Resort \u2014 Vaavu Atoll, Maldives",
+        desc: "Private-island resort on an approximately 3-hectare island in Vaavu Atoll: ~61-62 villas across overwater, beach and garden categories (subject to verification). 20 minutes by seaplane or 90 minutes by speedboat from Mal\u00e9. Acquisition of the resort operating vehicle and/or island leasehold interests, subject to Maldivian governmental approvals and lease consents. Price guidance via NDA; confirmation of financial capacity required.",
+        docs: []
+    },
     amara_energy: {
         region: "emea",
         title: "Amara Energy AB",
