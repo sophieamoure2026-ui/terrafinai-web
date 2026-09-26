@@ -151,6 +151,12 @@ const dealData = {
         desc: "320-key Osaka Bay hotel & MICE asset beside Intex Osaka. ~35 meeting rooms incl. 918 sq.m. COSMO HALL. Opened 2002, reported 2022 renovation. Price on application; NDA and proof of funds required.",
         docs: []
     },
+    singapore_platform: {
+        region: "apac",
+        title: "Singapore Growth Platform",
+        desc: "Established, compliant Singapore-based company offered as a turnkey regional growth platform: existing corporate structure, banking relationships, vendor/customer infrastructure and operating history. Sale of 100% equity; flexible structure. Valuation available following NDA and buyer qualification.",
+        docs: []
+    },
     amara_energy: {
         region: "emea",
         title: "Amara Energy AB",
