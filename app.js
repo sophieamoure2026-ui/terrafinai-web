@@ -157,6 +157,12 @@ const dealData = {
         desc: "Established, compliant Singapore-based company offered as a turnkey regional growth platform: existing corporate structure, banking relationships, vendor/customer infrastructure and operating history. Sale of 100% equity; flexible structure. Valuation available following NDA and buyer qualification.",
         docs: []
     },
+    reston_dc: {
+        region: "americas",
+        title: "Reston Data Center \u2014 Northern Virginia",
+        desc: "Operating Tier III-design data center at 1807 Michael Faraday Court, Reston VA: 21,100 SF, 900 kW critical IT load, ~97% leased. Broker-advised anchor tenant Cloudflare (NYSE: NET), ~62% of stabilized base rent through Oct 2030. Up to 5 MW expansion via adjacent Dominion Energy substation; ~10,000 SF building expansion potential. Broker-projected NOI: $750K (2027), $799K (2028), $851K (2029), $748K (2030). Confidential offering \u2014 qualified buyers only.",
+        docs: []
+    },
     amara_energy: {
         region: "emea",
         title: "Amara Energy AB",
