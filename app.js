@@ -195,12 +195,6 @@ const dealData = {
         desc: "Kyoto University spin-out iPS neural cell platform. Proprietary OligoGenie NSCs with >90% OLG differentiation. $30M raise for 28-29% equity for Phase II/III Japan clinical trials.",
         docs: []
     },
-    zero_g: {
-        region: "americas",
-        title: "Zero Gravity Corporation",
-        desc: "Exclusive FAA-certified U.S. microgravity flight provider. 2,400+ research payloads flown (NASA, Space Force). $10.2M Series B+ raise at $17M pre-money valuation (70-75% discount).",
-        docs: []
-    }
 };
 
 
@@ -1386,7 +1380,7 @@ function toggleOtherIndustry(selectEl, containerId) {
     }
 }
 
-// --- REGIONAL FILTERING & TERRAFIN PAY FUNCTIONS --- //
+// --- REGIONAL FILTERING --- //
 function filterRegion(regionKey) {
     const tabs = ['all', 'americas', 'apac', 'emea', 'latam'];
     tabs.forEach(r => {
@@ -1416,60 +1410,3 @@ function filterRegion(regionKey) {
         }
     });
 }
-
-function openTerraFinPayInvoiceModal() {
-    const modal = document.getElementById('terrafin-pay-invoice-modal');
-    if (modal) modal.style.display = 'flex';
-}
-
-function closeTerraFinPayInvoiceModal() {
-    const modal = document.getElementById('terrafin-pay-invoice-modal');
-    if (modal) modal.style.display = 'none';
-}
-
-function openTerraFinPayCheckoutModal(type, amount, title) {
-    const modal = document.getElementById('terrafin-pay-checkout-modal');
-    if (!modal) return;
-    
-    document.getElementById('tp-checkout-title').innerText = title || "TerraFin Pay™ Settlement";
-    document.getElementById('tp-checkout-amount').innerText = `$${Number(amount).toLocaleString()}`;
-    document.getElementById('tp-checkout-type').innerText = type || "Escrow Hold";
-    
-    modal.style.display = 'flex';
-}
-
-function closeTerraFinPayCheckoutModal() {
-    const modal = document.getElementById('terrafin-pay-checkout-modal');
-    if (modal) modal.style.display = 'none';
-}
-
-function generateInvoiceLink() {
-    const clientName = document.getElementById('tp-inv-client').value.trim();
-    const dealRef = document.getElementById('tp-inv-deal').value.trim();
-    const amount = document.getElementById('tp-inv-amount').value;
-    
-    if (!clientName || !dealRef || !amount) {
-        alert("Please complete client name, deal reference, and invoice amount.");
-        return;
-    }
-    
-    const invId = `INV-2026-${Math.floor(1000 + Math.random() * 9000)}`;
-    const payUrl = `https://terrafinai.com/pay/?inv=${invId}&amount=${amount}&ref=${encodeURIComponent(dealRef)}`;
-    
-    document.getElementById('tp-inv-result').style.display = 'block';
-    document.getElementById('tp-inv-url').value = payUrl;
-    document.getElementById('tp-inv-id-text').innerText = `INVOICE ID: ${invId}`;
-}
-
-function copyInvoiceUrl() {
-    const input = document.getElementById('tp-inv-url');
-    if (input) {
-        input.select();
-        document.execCommand('copy');
-        alert("TerraFin Pay Invoice URL copied to clipboard!");
-    }
-}
-
-
-
-
