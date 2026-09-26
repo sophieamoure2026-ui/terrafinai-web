@@ -148,8 +148,24 @@ const dealData = {
     fukuracia: {
         region: "apac",
         title: "Hotel Fukuracia Osaka-Bay",
-        desc: "320-key Osaka Bay hotel & MICE asset beside Intex Osaka. ~35 meeting rooms incl. 918 sq.m. COSMO HALL. Opened 2002, reported 2022 renovation. Price on application; NDA and proof of funds required.",
-        docs: []
+        desc: "320-key Osaka Bay hotel & MICE asset beside Intex Osaka. ~35 meeting rooms incl. 918 sq.m. COSMO HALL. Opened 2002; reported 2022 renovation. Seller's Japanese dossier: 331 rooms, ~JPY 2.5B annual sales, currently owner-operated (management change possible), as-is handover. Asking JPY 17.0B (tax incl.) per seller dossier. NDA and proof of funds required.",
+        docs: [],
+        photos: [
+            { src: "images/fukuracia/exterior-tower.jpg", alt: "Hotel tower exterior" },
+            { src: "images/fukuracia/aerial.jpg", alt: "Aerial view of hotel and bay area" },
+            { src: "images/fukuracia/lobby.jpg", alt: "Lobby lounge" },
+            { src: "images/fukuracia/bath-sauna.jpg", alt: "Public bath and sauna" },
+            { src: "images/fukuracia/gym.jpg", alt: "Fitness gym" },
+            { src: "images/fukuracia/theater-room.jpg", alt: "Theater room" },
+            { src: "images/fukuracia/auditorium.jpg", alt: "Auditorium hall" },
+            { src: "images/fukuracia/superior-twin.jpg", alt: "Superior twin room" },
+            { src: "images/fukuracia/twin-room.jpg", alt: "Twin room" },
+            { src: "images/fukuracia/single-room.jpg", alt: "Single room" },
+            { src: "images/fukuracia/triple-room.jpg", alt: "Triple room" },
+            { src: "images/fukuracia/relax-single.jpg", alt: "Relax single room" },
+            { src: "images/fukuracia/lounge.jpg", alt: "Lounge seating area" },
+            { src: "images/fukuracia/deluxe-fourth.jpg", alt: "Deluxe fourth room" }
+        ]
     },
     singapore_platform: {
         region: "apac",
@@ -215,6 +231,17 @@ function openDD(dealId) {
     const deal = dealData[dealId];
     const description = deal ? deal.desc : 'Detailed due diligence information is restricted to cleared institutional buyers.';
     const docs = deal ? deal.docs : [];
+    const photos = deal ? (deal.photos || []) : [];
+
+    const photoGallery = photos.length > 0
+        ? `<div class="mono" style="font-size: 0.55rem; color: #555; letter-spacing: 2px; margin-bottom: 0.5rem;">PROPERTY PHOTOS</div>
+           <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem; margin-bottom: 1rem;">
+            ${photos.map(p => `
+                <a href="${p.src}" target="_blank" rel="noopener" title="${p.alt}">
+                    <img src="${p.src}" alt="${p.alt}" loading="lazy" style="width: 100%; height: 110px; object-fit: cover; border-radius: 6px; border: 1px solid var(--glass-border);">
+                </a>`).join('')}
+           </div>`
+        : '';
 
     const docButtons = docs.length > 0
         ? `<div style="margin-top: 1.5rem;">
@@ -231,6 +258,7 @@ function openDD(dealId) {
     content.innerHTML = `
         <h3 style="margin-bottom: 0.5rem; color: #fff; font-size: 1.1rem;">${dealId.replace(/_/g,' ').toUpperCase()}</h3>
         <p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 1rem;">${description}</p>
+        ${photoGallery}
         <div class="mono" style="font-size: 0.7rem; color: #06b6d4; padding: 1rem; background: rgba(0,0,0,0.5); border-radius: 4px; margin-bottom: 0.5rem;">
             > LEGAL_AUDIT: VERIFIED<br>
             > FINANCIAL_MODEL: VETTED<br>
