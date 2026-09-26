@@ -3,7 +3,7 @@
 > An AI-native clearinghouse and orchestration layer for $100M+ off-market private-market deals.
 
 ## Summary
-TerraFinAI replaces the traditional investment banking back-office with AI-as-a-Service (AIaaS). We automate diligence on alternative physical assets (commercial real estate, industrial infrastructure, and environmental assets) using a 200+ AI agent workforce called the Truth Matrix. We reduce a 6-month, $250k manual banking process into a 48-hour AI diligence turnaround.
+TerraFinAI replaces the traditional investment banking back-office with AI-as-a-Service (AIaaS). We automate diligence on alternative physical assets (commercial real estate, industrial infrastructure, and environmental assets) using a 200+ AI agent workforce called the Truth Matrix. It is built to reduce a 6-month, $250k manual banking process into a 48-hour AI diligence turnaround.
 
 ## Core Agent Architecture (The Engine)
 - **Legal agents**: Ingest thousands of pages of raw legal deeds, environmental reports, and contracts to extract liabilities and verify chain of title.
