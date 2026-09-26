@@ -53,6 +53,11 @@ const dealData = {
         desc: "E-mobility consolidation platform. Acquired Rad Power Bikes ($1.2B historical rev) and Serial 1. 1.8M customer base with omnichannel FTZ margin advantage.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/life_ev_exec_summary.html" }]
     },
+    tiffany: {
+        region: "apac",
+        desc: "Tokyo's premier luxury storefront. 100% occupancy with Tiffany & Co anchor. Generational asset.",
+        docs: [{ label: "Asset Teaser", url: "docs/tiffany_ginza_teaser.pdf" }]
+    },
     parkview: {
         region: "apac",
         desc: "Towers 1 & 2. Prestigious Tai Tam residential trophy asset. 200 service suites with 83% occupancy.",
@@ -1189,7 +1194,7 @@ async function submitBuySideMandate() {
     let matchedAsset = 'General Placement';
     let matchFit = '94%';
     if (assetClass.includes('Real Estate')) {
-        matchedAsset = 'Westin Tokyo ($860M)';
+        matchedAsset = 'Tiffany Ginza Flagship ($1B)';
         matchFit = '98%';
     } else if (assetClass.includes('Infrastructure') || assetClass.includes('DC')) {
         matchedAsset = 'Chiba 100MW DC ($1.12B)';
