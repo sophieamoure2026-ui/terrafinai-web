@@ -145,6 +145,12 @@ const dealData = {
         desc: "Official Universal Studios Japan hotel, Osaka. 390 rooms directly connected to JR Universal City Station; 14th-floor rooftop SkySpa. Opened 2017. Price on application; NDA and proof of funds required.",
         docs: []
     },
+    fukuracia: {
+        region: "apac",
+        title: "Hotel Fukuracia Osaka-Bay",
+        desc: "320-key Osaka Bay hotel & MICE asset beside Intex Osaka. ~35 meeting rooms incl. 918 sq.m. COSMO HALL. Opened 2002, reported 2022 renovation. Price on application; NDA and proof of funds required.",
+        docs: []
+    },
     amara_energy: {
         region: "emea",
         title: "Amara Energy AB",
