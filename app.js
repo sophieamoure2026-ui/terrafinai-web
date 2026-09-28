@@ -48,11 +48,6 @@ const dealData = {
         desc: "Licensed commercial bank in the Horn of Africa. Strategic geographic positioning for trade finance and retail.",
         docs: [{ label: "Sales Memorandum", url: "docs/djibouti_bank_memo.pdf" }]
     },
-    zymagenx: {
-        region: "americas",
-        desc: "Phase 3-Ready first-in-class Celiac Disease therapeutic. $2M-$4M Convertible Note at an exceptionally low $27M Valuation Cap.",
-        docs: [{ label: "Investor Deck (April 2026)", url: "docs/zymagenx_deck.pdf" }]
-    },
     life_ev: {
         region: "americas",
         desc: "E-mobility consolidation platform. Acquired Rad Power Bikes ($1.2B historical rev) and Serial 1. 1.8M customer base with omnichannel FTZ margin advantage.",
@@ -82,11 +77,6 @@ const dealData = {
         region: "americas",
         desc: "Museum-quality blue-chip masterpiece (Catalog Raisonné No. 300, p.121). Escrow-settled private transaction in New York.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/pollock_exec_summary.html" }]
-    },
-    coral_harbour: {
-        region: "americas",
-        desc: "422-acre mixed-use oceanfront development on New Providence. Mega-yacht marina, luxury hospitality, and branded residences.",
-        docs: [{ label: "Executive Summary (HTML)", url: "docs/coral_harbour_exec_summary.html" }]
     },
     alila_seminyak: {
         region: "apac",
@@ -126,16 +116,6 @@ const dealData = {
         desc: "Large-scale operational tank storage terminal in Europe. 63 tanks, 8.2M barrels capacity, VLCC deep-water access, 513 acres.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/wilhelmshaven_exec_summary.html" }]
     },
-    tobor: {
-        region: "americas",
-        desc: "Industrial automation and humanoid robotics distribution hub. Preferred US Unitree partner.",
-        docs: [{ label: "Investor Deck", url: "docs/tobor_robot_deck.pdf" }]
-    },
-    greenvue: {
-        region: "americas",
-        desc: "Modular Autonomous Aerial Platform. Next-generation AI-enabled dual-use UAV architecture. Seeking JV/Licensing partner.",
-        docs: [{ label: "Executive Summary", url: "docs/greenvue_exec_summary.pdf" }]
-    },
     greenvue_health: {
         region: "americas",
         desc: "AI-driven diabetes technology company developing advanced solutions to support clinics worldwide through improved patient management and operational efficiency. Raising US$500,000.",
@@ -158,6 +138,80 @@ const dealData = {
         title: "The Westin Tokyo",
         desc: "Landmark 438-room luxury hospitality asset in Ebisu, Tokyo. Offered off-market at ¥125,000,000,000 (approx. USD $860,000,000). Seller requires LOI/POF and registered Japan entity.",
         docs: [{ label: "Executive Summary", url: "docs/westin_tokyo_exec_summary.html" }]
+    },
+    singulari: {
+        region: "apac",
+        title: "The Singulari Hotel & SkySpa",
+        desc: "Official Universal Studios Japan hotel, Osaka. 390 rooms directly connected to JR Universal City Station; rooftop SkySpa onsen. Opened August 2017. Seller's Japanese dossier: asking JPY 65.0B. NDA and proof of funds required.",
+        docs: [],
+        photos: [
+            { src: "images/singulari/exterior-day-1.jpg", alt: "Hotel tower exterior, day" },
+            { src: "images/singulari/exterior-day-2.jpg", alt: "Hotel tower from street level" },
+            { src: "images/singulari/exterior-night.jpg", alt: "Hotel exterior at night (render)" },
+            { src: "images/singulari/entrance.jpg", alt: "Hotel entrance" },
+            { src: "images/singulari/lobby-1.jpg", alt: "Lobby" },
+            { src: "images/singulari/lobby-2.jpg", alt: "Lobby lounge seating" },
+            { src: "images/singulari/lobby-lounge.jpg", alt: "Lobby lounge area" },
+            { src: "images/singulari/skyspa-onsen-1.jpg", alt: "SkySpa rooftop onsen" },
+            { src: "images/singulari/skyspa-onsen-2.jpg", alt: "SkySpa onsen with bay view" },
+            { src: "images/singulari/onsen-view.jpg", alt: "Onsen with panoramic view" },
+            { src: "images/singulari/suite.jpg", alt: "Suite with lounge area" },
+            { src: "images/singulari/breakfast.jpg", alt: "Breakfast buffet" }
+        ]
+    },
+    fukuracia: {
+        region: "apac",
+        title: "Hotel Fukuracia Osaka-Bay",
+        desc: "320-key Osaka Bay hotel & MICE asset beside Intex Osaka. ~35 meeting rooms incl. 918 sq.m. COSMO HALL. Opened 2002; reported 2022 renovation. Seller's Japanese dossier: 331 rooms, ~JPY 2.5B annual sales, currently owner-operated (management change possible), as-is handover. Asking JPY 17.0B (tax incl.) per seller dossier. NDA and proof of funds required.",
+        docs: [],
+        photos: [
+            { src: "images/fukuracia/exterior-tower.jpg", alt: "Hotel tower exterior" },
+            { src: "images/fukuracia/aerial.jpg", alt: "Aerial view of hotel and bay area" },
+            { src: "images/fukuracia/lobby.jpg", alt: "Lobby lounge" },
+            { src: "images/fukuracia/bath-sauna.jpg", alt: "Public bath and sauna" },
+            { src: "images/fukuracia/gym.jpg", alt: "Fitness gym" },
+            { src: "images/fukuracia/theater-room.jpg", alt: "Theater room" },
+            { src: "images/fukuracia/auditorium.jpg", alt: "Auditorium hall" },
+            { src: "images/fukuracia/superior-twin.jpg", alt: "Superior twin room" },
+            { src: "images/fukuracia/twin-room.jpg", alt: "Twin room" },
+            { src: "images/fukuracia/single-room.jpg", alt: "Single room" },
+            { src: "images/fukuracia/triple-room.jpg", alt: "Triple room" },
+            { src: "images/fukuracia/relax-single.jpg", alt: "Relax single room" },
+            { src: "images/fukuracia/lounge.jpg", alt: "Lounge seating area" },
+            { src: "images/fukuracia/deluxe-fourth.jpg", alt: "Deluxe fourth room" }
+        ]
+    },
+    singapore_platform: {
+        region: "apac",
+        title: "Singapore Growth Platform",
+        desc: "Established, compliant Singapore-based company offered as a turnkey regional growth platform: existing corporate structure, banking relationships, vendor/customer infrastructure and operating history. Sale of 100% equity; flexible structure. Valuation available following NDA and buyer qualification.",
+        docs: []
+    },
+    reston_dc: {
+        region: "americas",
+        title: "Reston Data Center \u2014 Northern Virginia",
+        desc: "Operating Tier III-design data center at 1807 Michael Faraday Court, Reston VA: 21,100 SF, 900 kW critical IT load, ~97% leased. Broker-advised anchor tenant Cloudflare (NYSE: NET), ~62% of stabilized base rent through Oct 2030. Up to 5 MW expansion via adjacent Dominion Energy substation; ~10,000 SF building expansion potential. Broker-projected NOI: $750K (2027), $799K (2028), $851K (2029), $748K (2030). Confidential offering \u2014 qualified buyers only.",
+        docs: []
+    },
+    nakai_dhiggiri: {
+        region: "apac",
+        title: "NAKAI Dhiggiri Resort \u2014 Vaavu Atoll, Maldives",
+        desc: "Private-island resort on an approximately 3-hectare island in Vaavu Atoll: ~61-62 villas across overwater, beach and garden categories (subject to verification). 20 minutes by seaplane or 90 minutes by speedboat from Mal\u00e9. Acquisition of the resort operating vehicle and/or island leasehold interests, subject to Maldivian governmental approvals and lease consents. Price guidance via NDA; confirmation of financial capacity required.",
+        docs: [],
+        photos: [
+            { src: "images/nakai/overwater-villas-jetty.jpg", alt: "Overwater villas from the jetty" },
+            { src: "images/nakai/overwater-villas-lagoon.jpg", alt: "Overwater villas over turquoise lagoon" },
+            { src: "images/nakai/overwater-villas-water.jpg", alt: "Overwater villa row from the water" },
+            { src: "images/nakai/overwater-villa-deck.jpg", alt: "Overwater villa private deck" },
+            { src: "images/nakai/beach-palms.jpg", alt: "Beach with palms and loungers" },
+            { src: "images/nakai/sunset-island.jpg", alt: "Sunset over the island" }
+        ]
+    },
+    cambodia_bank: {
+        region: "apac",
+        title: "Cambodia Banking Platform",
+        desc: "Well-established bank in Cambodia, represented as being in good standing, available for acquisition by a qualified strategic or institutional investor. Existing regulated banking infrastructure, regulatory framework, personnel, systems and operating platform \u2014 a gateway to Southeast Asian / ASEAN financial services. Indicative valuation approximately US$120 million. Transaction subject to National Bank of Cambodia requirements and regulatory approval. Qualified buyers only: KYC/CIS, proof of funds and LOI required.",
+        docs: []
     },
     amara_energy: {
         region: "emea",
@@ -189,18 +243,6 @@ const dealData = {
         desc: "3,262 acres of claims + 120 acres patented in Arizona. Estimated 10.8M oz Au, 15.3M oz Ag, 60.8M oz Pd reserves ($143.4B resource value). Offered at $250M.",
         docs: []
     },
-    oligogen: {
-        region: "apac",
-        title: "Oligogen Inc.",
-        desc: "Kyoto University spin-out iPS neural cell platform. Proprietary OligoGenie NSCs with >90% OLG differentiation. $30M raise for 28-29% equity for Phase II/III Japan clinical trials.",
-        docs: []
-    },
-    zero_g: {
-        region: "americas",
-        title: "Zero Gravity Corporation",
-        desc: "Exclusive FAA-certified U.S. microgravity flight provider. 2,400+ research payloads flown (NASA, Space Force). $10.2M Series B+ raise at $17M pre-money valuation (70-75% discount).",
-        docs: []
-    }
 };
 
 
@@ -211,6 +253,17 @@ function openDD(dealId) {
     const deal = dealData[dealId];
     const description = deal ? deal.desc : 'Detailed due diligence information is restricted to cleared institutional buyers.';
     const docs = deal ? deal.docs : [];
+    const photos = deal ? (deal.photos || []) : [];
+
+    const photoGallery = photos.length > 0
+        ? `<div class="mono" style="font-size: 0.55rem; color: #555; letter-spacing: 2px; margin-bottom: 0.5rem;">PROPERTY PHOTOS</div>
+           <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem; margin-bottom: 1rem;">
+            ${photos.map(p => `
+                <a href="${p.src}" target="_blank" rel="noopener" title="${p.alt}">
+                    <img src="${p.src}" alt="${p.alt}" loading="lazy" style="width: 100%; height: 110px; object-fit: cover; border-radius: 6px; border: 1px solid var(--glass-border);">
+                </a>`).join('')}
+           </div>`
+        : '';
 
     const docButtons = docs.length > 0
         ? `<div style="margin-top: 1.5rem;">
@@ -227,9 +280,9 @@ function openDD(dealId) {
     content.innerHTML = `
         <h3 style="margin-bottom: 0.5rem; color: #fff; font-size: 1.1rem;">${dealId.replace(/_/g,' ').toUpperCase()}</h3>
         <p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 1rem;">${description}</p>
+        ${photoGallery}
         <div class="mono" style="font-size: 0.7rem; color: #06b6d4; padding: 1rem; background: rgba(0,0,0,0.5); border-radius: 4px; margin-bottom: 0.5rem;">
-            > LEGAL_AUDIT: VERIFIED<br>
-            > FINANCIAL_MODEL: VETTED<br>
+            > DOCUMENTS: AVAILABLE UNDER NDA<br>
             > STATUS: LOCKED PENDING CLEARANCE
         </div>
         ${docButtons}
@@ -722,25 +775,6 @@ const dealSimulations = {
         valuation: '98.4', suffix: 'M', yield: '5.2',
         prospectus: 'maui_portfolio'
     },
-    coral: {
-        title: 'CORAL HARBOUR DEVELOPMENT | 422 ACRES | NEW PROVIDENCE',
-        steps: [
-            { msg: '>> INITIATING SECURE DOCUMENT UPLOAD...', color: '#666', delay: 500 },
-            { msg: '>> DEPLOYING LEGAL SWARM (84 DAEMONS)', color: '#8b5cf6', delay: 800 },
-            { msg: '   [OK] Government Crown Grant: VERIFIED', color: '#10b981', delay: 1000 },
-            { msg: '   [OK] Marina Dredging Permit: APPROVED (422 Acres Offshore)', color: '#10b981', delay: 700 },
-            { msg: '   [OK] Mixed-Use Development Zoning: CONFIRMED', color: '#10b981', delay: 600 },
-            { msg: '   [OK] Environmental Impact Study: PASSED (2023)', color: '#10b981', delay: 500 },
-            { msg: '<br>>> DEPLOYING FINANCIAL SWARM (146 DAEMONS)', color: '#fbbf24', delay: 800 },
-            { msg: '>> INGESTING CBRE CARIBBEAN LUXURY DEVELOPMENT COMPS', color: '#06b6d4', delay: 600 },
-            { msg: '   [OK] Comparable: Baha Mar Phase III — $2.1B cleared', color: '#06b6d4', delay: 700 },
-            { msg: '   [OK] Comparable: Albany Albany Marina — $850M cleared', color: '#06b6d4', delay: 600 },
-            { msg: '   [OK] Comparable: Ocean Club Residences — $420M cleared', color: '#06b6d4', delay: 500 },
-            { msg: '>> RUNNING MONTE CARLO PRICING SIMULATION (10,000 ITERATIONS)', color: '#06b6d4', delay: 1000 },
-        ],
-        valuation: '480', suffix: 'M', yield: '7.4',
-        prospectus: 'coral_harbour'
-    },
     brazil_payment_eme: {
         title: 'BRAZIL PAYMENTS PLATFORM (EME) & PIX | SAO PAULO',
         steps: [
@@ -772,11 +806,6 @@ const dealMatches = {
         { name: "Starwood Capital Group", fit: "98%", type: "OPPORTUNISTIC_RE" },
         { name: "KSL Capital Partners", fit: "91%", type: "HOSPITALITY_PE" },
         { name: "Highgate Hotels PE", fit: "88%", type: "REAL_ASSET_FO" }
-    ],
-    coral: [
-        { name: "Brookfield Properties", fit: "97%", type: "INFRASTRUCTURE_PE" },
-        { name: "Qatari Investment Authority", fit: "94%", type: "SOVEREIGN_WEALTH" },
-        { name: "Starwood Capital Group", fit: "90%", type: "OPPORTUNISTIC_RE" }
     ],
     brazil_payment_eme: [
         { name: "Visa Strategic Ventures", fit: "97%", type: "STRATEGIC_ACQUIRER" },
@@ -903,7 +932,7 @@ async function runDealSimulation(deal, dealKey) {
     setTimeout(() => {
         document.getElementById('demo-wow-text').innerHTML = `STRESS-TESTED VALUATION RANGE:<br>${rangeDisplay}<br><span style="font-size: 0.65rem; color: #fbbf24; font-weight: bold; display: block; margin-top: 0.25rem;">SWARM AUDIT VERIFIED</span><span style="font-size: 0.52rem; color: #64748b; font-weight: normal; font-family: monospace; display: block; margin-top: 0.2rem;">HASH: ${mockHash}</span>`;
         // Setup direct data room target
-        stamp.querySelector('button').setAttribute('onclick', `openDD('${deal.prospectus || 'zymagenx'}')`);
+        stamp.querySelector('button').setAttribute('onclick', `openDD('${deal.prospectus || 'westin_tokyo'}')`);
         stamp.style.display = 'block';
     }, 500);
 }
@@ -1258,8 +1287,8 @@ async function submitBuySideMandate() {
     } else if (assetClass.includes('Mining')) {
         matchedAsset = 'Sovereign Silver Reserves ($250M)';
         matchFit = '92%';
-    } else if (assetClass.includes('Robotics')) {
-        matchedAsset = 'Tobor Robot Corp ($140M)';
+    } else if (assetClass.includes('Energy')) {
+        matchedAsset = 'Amara Energy AB (SEK 600M pre)';
         matchFit = '95%';
     }
 
@@ -1386,7 +1415,7 @@ function toggleOtherIndustry(selectEl, containerId) {
     }
 }
 
-// --- REGIONAL FILTERING & TERRAFIN PAY FUNCTIONS --- //
+// --- REGIONAL FILTERING --- //
 function filterRegion(regionKey) {
     const tabs = ['all', 'americas', 'apac', 'emea', 'latam'];
     tabs.forEach(r => {
@@ -1416,60 +1445,3 @@ function filterRegion(regionKey) {
         }
     });
 }
-
-function openTerraFinPayInvoiceModal() {
-    const modal = document.getElementById('terrafin-pay-invoice-modal');
-    if (modal) modal.style.display = 'flex';
-}
-
-function closeTerraFinPayInvoiceModal() {
-    const modal = document.getElementById('terrafin-pay-invoice-modal');
-    if (modal) modal.style.display = 'none';
-}
-
-function openTerraFinPayCheckoutModal(type, amount, title) {
-    const modal = document.getElementById('terrafin-pay-checkout-modal');
-    if (!modal) return;
-    
-    document.getElementById('tp-checkout-title').innerText = title || "TerraFin Pay™ Settlement";
-    document.getElementById('tp-checkout-amount').innerText = `$${Number(amount).toLocaleString()}`;
-    document.getElementById('tp-checkout-type').innerText = type || "Escrow Hold";
-    
-    modal.style.display = 'flex';
-}
-
-function closeTerraFinPayCheckoutModal() {
-    const modal = document.getElementById('terrafin-pay-checkout-modal');
-    if (modal) modal.style.display = 'none';
-}
-
-function generateInvoiceLink() {
-    const clientName = document.getElementById('tp-inv-client').value.trim();
-    const dealRef = document.getElementById('tp-inv-deal').value.trim();
-    const amount = document.getElementById('tp-inv-amount').value;
-    
-    if (!clientName || !dealRef || !amount) {
-        alert("Please complete client name, deal reference, and invoice amount.");
-        return;
-    }
-    
-    const invId = `INV-2026-${Math.floor(1000 + Math.random() * 9000)}`;
-    const payUrl = `https://terrafinai.com/pay/?inv=${invId}&amount=${amount}&ref=${encodeURIComponent(dealRef)}`;
-    
-    document.getElementById('tp-inv-result').style.display = 'block';
-    document.getElementById('tp-inv-url').value = payUrl;
-    document.getElementById('tp-inv-id-text').innerText = `INVOICE ID: ${invId}`;
-}
-
-function copyInvoiceUrl() {
-    const input = document.getElementById('tp-inv-url');
-    if (input) {
-        input.select();
-        document.execCommand('copy');
-        alert("TerraFin Pay Invoice URL copied to clipboard!");
-    }
-}
-
-
-
-
