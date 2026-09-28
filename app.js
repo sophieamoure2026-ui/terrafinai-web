@@ -282,8 +282,7 @@ function openDD(dealId) {
         <p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 1rem;">${description}</p>
         ${photoGallery}
         <div class="mono" style="font-size: 0.7rem; color: #06b6d4; padding: 1rem; background: rgba(0,0,0,0.5); border-radius: 4px; margin-bottom: 0.5rem;">
-            > LEGAL_AUDIT: VERIFIED<br>
-            > FINANCIAL_MODEL: VETTED<br>
+            > DOCUMENTS: AVAILABLE UNDER NDA<br>
             > STATUS: LOCKED PENDING CLEARANCE
         </div>
         ${docButtons}
