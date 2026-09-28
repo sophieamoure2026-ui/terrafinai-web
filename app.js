@@ -364,17 +364,17 @@ function validateAccess() {
                 <div style="display: flex; flex-direction: column; gap: 0.75rem;">
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.5rem;">
                         <div>
-                            <span style="color: #fff; display: block; font-size: 0.75rem;">📄 Vetted_AVM_Due_Diligence_Report.pdf</span>
-                            <span style="color: #555; font-size: 0.62rem;">2.4 MB &bull; Vetted by Legal Swarm</span>
+                            <span style="color: #fff; display: block; font-size: 0.75rem;">📄 Deal_Profile_Summary.pdf</span>
+                            <span style="color: #555; font-size: 0.62rem;">2.4 MB &bull; Prepared by our deal team</span>
                         </div>
-                        <button onclick="simulateDownload(this, 'Vetted_AVM_Due_Diligence_Report.pdf')" class="btn-primary" style="font-size: 0.65rem; padding: 0.4rem 0.8rem; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3); color: #10b981; cursor: pointer;">DOWNLOAD</button>
+                        <button onclick="simulateDownload(this, 'Deal_Profile_Summary.pdf')" class="btn-primary" style="font-size: 0.65rem; padding: 0.4rem 0.8rem; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3); color: #10b981; cursor: pointer;">DOWNLOAD</button>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.5rem;">
                         <div>
-                            <span style="color: #fff; display: block; font-size: 0.75rem;">📊 Monte_Carlo_Cashflow_Forecast.xlsx</span>
-                            <span style="color: #555; font-size: 0.62rem;">1.8 MB &bull; Swarm Underwritten Financials</span>
+                            <span style="color: #fff; display: block; font-size: 0.75rem;">📊 Financial_Summary.xlsx</span>
+                            <span style="color: #555; font-size: 0.62rem;">1.8 MB &bull; Deal team financial summary</span>
                         </div>
-                        <button onclick="simulateDownload(this, 'Monte_Carlo_Cashflow_Forecast.xlsx')" class="btn-primary" style="font-size: 0.65rem; padding: 0.4rem 0.8rem; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3); color: #10b981; cursor: pointer;">DOWNLOAD</button>
+                        <button onclick="simulateDownload(this, 'Financial_Summary.xlsx')" class="btn-primary" style="font-size: 0.65rem; padding: 0.4rem 0.8rem; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3); color: #10b981; cursor: pointer;">DOWNLOAD</button>
                     </div>
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <div>
@@ -406,7 +406,7 @@ async function simulateDownload(btn, filename) {
     
     // Simulate simple download file trigger
     const element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(`Mock data room file download for: ${filename}\nClearance secured. Verified by TerraFinAI Truth Matrix.`));
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(`Mock data room file download for: ${filename}\nClearance secured. Prepared by TerraFinAI.`));
     element.setAttribute('download', filename);
     element.style.display = 'none';
     document.body.appendChild(element);
@@ -453,7 +453,7 @@ function submitIntake(event) {
 }
 
 // ==========================================
-// TRUTH MATRIX VISUALIZER (230 DAEMON SWARM)
+// TRUTH MATRIX VISUALIZER
 // ==========================================
 const canvas = document.getElementById('truth-matrix-canvas');
 if (canvas) {
@@ -512,11 +512,11 @@ if (canvas) {
             
             const tasks = [
                 "analyzing...",
-                "verified",
+                "received",
                 "secure connection",
                 "stable",
                 "syncing...",
-                "asset authenticated"
+                "asset profiled"
             ];
             this.task = tasks[Math.floor(Math.random() * tasks.length)];
             this.isPinging = false;
@@ -713,10 +713,10 @@ setInterval(() => {
     const category = categories[Math.floor(Math.random() * categories.length)];
     
     const actions = [
-        `[INBOUND] Telemetry ingested: Category: ${category} | Valuation: $${(Math.random() * 200 + 10).toFixed(1)}M`,
-        `[AUDIT] Swarm analyzing title deed integrity for ${category} mandate...`,
-        `[MATCH] Scanning buy-side private pool matching matrices for ${category}...`,
-        `[SECURE] Data room payload locked and hashed for vetted ${category} asset.`
+        `[INBOUND] Deal documents received: Category: ${category} | Valuation: $${(Math.random() * 200 + 10).toFixed(1)}M`,
+        `[PROFILE] Structuring title documents for ${category} mandate...`,
+        `[MATCH] Matching against qualified buyer network for ${category}...`,
+        `[SECURE] Data room prepared for cleared ${category} asset.`
     ];
     
     const randomMsg = actions[Math.floor(Math.random() * actions.length)];
@@ -741,16 +741,16 @@ const dealSimulations = {
         title: 'CHIBA 100MW DATA CENTER | TOKYO METRO',
         steps: [
             { msg: '>> INITIATING SECURE DOCUMENT UPLOAD...', color: '#666', delay: 500 },
-            { msg: '>> DEPLOYING LEGAL SWARM (84 DAEMONS)', color: '#8b5cf6', delay: 800 },
-            { msg: '   [OK] TEPCO Grid Interconnect Agreement: VERIFIED', color: '#10b981', delay: 1000 },
-            { msg: '   [OK] Land Registry Tokyo-Metro: CLEAR TITLE', color: '#10b981', delay: 600 },
-            { msg: '   [OK] Zoning: Industrial Class A — Data Infrastructure', color: '#10b981', delay: 600 },
-            { msg: '   [OK] Environmental Clearance: PASSED', color: '#10b981', delay: 500 },
-            { msg: '<br>>> DEPLOYING FINANCIAL SWARM (146 DAEMONS)', color: '#fbbf24', delay: 800 },
-            { msg: '>> INGESTING JLL ASIA-PAC DATA CENTER COMPS (2022-2025)', color: '#06b6d4', delay: 600 },
-            { msg: '   [OK] Comparable: Singapore 120MW — $1.4B cleared 2024', color: '#06b6d4', delay: 700 },
-            { msg: '   [OK] Comparable: Osaka 80MW — $890M cleared 2023', color: '#06b6d4', delay: 600 },
-            { msg: '>> RUNNING MONTE CARLO PRICING SIMULATION (10,000 ITERATIONS)', color: '#06b6d4', delay: 1000 },
+            { msg: '>> STRUCTURING DEAL DOCUMENTS...', color: '#8b5cf6', delay: 800 },
+            { msg: '   [OK] TEPCO grid interconnect agreement on file', color: '#10b981', delay: 1000 },
+            { msg: '   [OK] Land registry documents organized', color: '#10b981', delay: 600 },
+            { msg: '   [OK] Zoning file: industrial class A — data infrastructure', color: '#10b981', delay: 600 },
+            { msg: '   [OK] Environmental reports on file', color: '#10b981', delay: 500 },
+            { msg: '<br>>> MATCHING AGAINST BUYER DEMAND...', color: '#fbbf24', delay: 800 },
+            { msg: '>> REVIEWING ASIA-PAC DATA CENTER COMPS (2022-2025)', color: '#06b6d4', delay: 600 },
+            { msg: '   [OK] Comparable: Singapore 120MW — $1.4B (2024)', color: '#06b6d4', delay: 700 },
+            { msg: '   [OK] Comparable: Osaka 80MW — $890M (2023)', color: '#06b6d4', delay: 600 },
+            { msg: '>> COMPILING BUYER MATERIALS...', color: '#06b6d4', delay: 1000 },
         ],
         valuation: '1.12', suffix: 'B', yield: '6.8',
         prospectus: 'chiba'
@@ -759,18 +759,18 @@ const dealSimulations = {
         title: 'MAUI BEACHFRONT PORTFOLIO | HAWAII, USA',
         steps: [
             { msg: '>> INITIATING SECURE DOCUMENT UPLOAD...', color: '#666', delay: 500 },
-            { msg: '>> DEPLOYING LEGAL SWARM (84 DAEMONS)', color: '#8b5cf6', delay: 800 },
-            { msg: '   [OK] Hawaii Land Court Title: VERIFIED (6 Parcels)', color: '#10b981', delay: 1000 },
+            { msg: '>> STRUCTURING DEAL DOCUMENTS...', color: '#8b5cf6', delay: 800 },
+            { msg: '   [OK] Hawaii land court title documents: 6 parcels on file', color: '#10b981', delay: 1000 },
             { msg: '   [WARN] Bankruptcy Stay: Active — Asset-Only Sale', color: '#fbbf24', delay: 700 },
-            { msg: '   [OK] Stay Confirmed: Real Property Only — Unencumbered', color: '#10b981', delay: 800 },
-            { msg: '   [OK] Coastal Zone Compliance: CLEAR', color: '#10b981', delay: 600 },
-            { msg: '   [OK] Environmental: No CERCLA liability detected', color: '#10b981', delay: 500 },
-            { msg: '<br>>> DEPLOYING FINANCIAL SWARM (146 DAEMONS)', color: '#fbbf24', delay: 800 },
+            { msg: '   [OK] Sale structure: real property only', color: '#10b981', delay: 800 },
+            { msg: '   [OK] Coastal zone documents on file', color: '#10b981', delay: 600 },
+            { msg: '   [OK] Environmental reports on file', color: '#10b981', delay: 500 },
+            { msg: '<br>>> MATCHING AGAINST BUYER DEMAND...', color: '#fbbf24', delay: 800 },
             { msg: '>> QUERYING LIVE PROPERTY DATABASE (RENTCAST AVM)...', color: '#06b6d4', delay: 600 },
             { msg: '   [OK] Maui Beachfront Comp Set: 6 transactions 2022-2025', color: '#06b6d4', delay: 700 },
             { msg: '   [OK] Appraised Value On Record: $120M', color: '#06b6d4', delay: 500 },
-            { msg: '   [OK] Distressed Discount Applied: -18% (Bankruptcy Basis)', color: '#fbbf24', delay: 600 },
-            { msg: '>> RUNNING MONTE CARLO PRICING SIMULATION (10,000 ITERATIONS)', color: '#06b6d4', delay: 1000 },
+            { msg: '   [OK] Distressed seller basis reflected in asking price', color: '#fbbf24', delay: 600 },
+            { msg: '>> COMPILING BUYER MATERIALS...', color: '#06b6d4', delay: 1000 },
         ],
         valuation: '98.4', suffix: 'M', yield: '5.2',
         prospectus: 'maui_portfolio'
@@ -779,17 +779,17 @@ const dealSimulations = {
         title: 'BRAZIL PAYMENTS PLATFORM (EME) & PIX | SAO PAULO',
         steps: [
             { msg: '>> INITIATING SECURE DOCUMENT UPLOAD...', color: '#666', delay: 500 },
-            { msg: '>> DEPLOYING LEGAL SWARM (84 DAEMONS)', color: '#8b5cf6', delay: 800 },
-            { msg: '   [OK] Central Bank EME License: VERIFIED (2023)', color: '#10b981', delay: 1000 },
-            { msg: '   [OK] PIX Direct Participant (Pix Direto): CONFIRMED', color: '#10b981', delay: 700 },
-            { msg: '   [OK] ITP (Open Finance) Authorization: ACTIVE', color: '#10b981', delay: 600 },
-            { msg: '   [OK] Legal Liabilities: CLEAN PROFILE DETECTED', color: '#10b981', delay: 500 },
-            { msg: '<br>>> DEPLOYING FINANCIAL SWARM (146 DAEMONS)', color: '#fbbf24', delay: 800 },
-            { msg: '>> INGESTING LATAM FINTECH M&A COMPS (2023-2026)', color: '#06b6d4', delay: 600 },
-            { msg: '   [OK] Comparable: Pismo Acquisition — $1.0B cleared', color: '#06b6d4', delay: 700 },
-            { msg: '   [OK] Comparable: EME Platform Series B — $45M cleared', color: '#06b6d4', delay: 600 },
-            { msg: '   [OK] Proprietary CORE System IP: VALUATION PREMIUM', color: '#fbbf24', delay: 500 },
-            { msg: '>> RUNNING MONTE CARLO PRICING SIMULATION (10,000 ITERATIONS)', color: '#06b6d4', delay: 1000 },
+            { msg: '>> STRUCTURING DEAL DOCUMENTS...', color: '#8b5cf6', delay: 800 },
+            { msg: '   [OK] Central bank EME license documentation on file (2023)', color: '#10b981', delay: 1000 },
+            { msg: '   [OK] PIX direct participation noted in materials', color: '#10b981', delay: 700 },
+            { msg: '   [OK] ITP (open finance) authorization documented', color: '#10b981', delay: 600 },
+            { msg: '   [OK] Liability summary included in profile', color: '#10b981', delay: 500 },
+            { msg: '<br>>> MATCHING AGAINST BUYER DEMAND...', color: '#fbbf24', delay: 800 },
+            { msg: '>> REVIEWING LATAM FINTECH M&A COMPS (2023-2026)', color: '#06b6d4', delay: 600 },
+            { msg: '   [OK] Comparable: Pismo acquisition — $1.0B', color: '#06b6d4', delay: 700 },
+            { msg: '   [OK] Comparable: EME platform Series B — $45M', color: '#06b6d4', delay: 600 },
+            { msg: '   [OK] Proprietary CORE system IP noted as value driver', color: '#fbbf24', delay: 500 },
+            { msg: '>> COMPILING BUYER MATERIALS...', color: '#06b6d4', delay: 1000 },
         ],
         valuation: '25.0', suffix: 'M', yield: '12.4',
         prospectus: 'brazil_payment_eme'
@@ -857,7 +857,7 @@ async function runDealSimulation(deal, dealKey) {
 
     const docViewer = document.getElementById('doc-viewer');
     const terminal = document.getElementById('terminal-output');
-    const status = document.getElementById('swarm-status');
+    const status = document.getElementById('review-status');
     const stamp = document.getElementById('verification-stamp');
 
     document.getElementById('demo-target-title').innerText = `> TARGETING: ${deal.title}`;
@@ -881,15 +881,15 @@ async function runDealSimulation(deal, dealKey) {
 
     // Simulate logs & match popups
     await log('>> INITIATING SECURE UPLOAD...', '#666', 500);
-    await log('>> DEPLOYING LEGAL SWARM (84 DAEMONS)', '#8b5cf6', 800);
+    await log('>> STRUCTURING DEAL DOCUMENTS...', '#8b5cf6', 800);
     
     // Add match 1
-    docViewer.innerHTML = `<div class="mono" style="color: #64748b; font-size: 0.65rem; margin-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.25rem;">MATCHING SWARM: IN PROGRESS</div>` + renderMatchCard(buyers[0]);
+    docViewer.innerHTML = `<div class="mono" style="color: #64748b; font-size: 0.65rem; margin-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.25rem;">BUYER MATCHING: IN PROGRESS</div>` + renderMatchCard(buyers[0]);
     
     for (const step of deal.steps) {
-        if (step.msg.includes('LEGAL SWARM')) { status.innerText = 'LEGAL_SWARM: ACTIVE'; status.style.color = '#8b5cf6'; }
-        if (step.msg.includes('FINANCIAL SWARM')) { 
-            status.innerText = 'FINANCIAL_SWARM: ACTIVE'; 
+        if (step.msg.includes('STRUCTURING DEAL')) { status.innerText = 'PROFILING: ACTIVE'; status.style.color = '#8b5cf6'; }
+        if (step.msg.includes('MATCHING AGAINST BUYER')) { 
+            status.innerText = 'MATCHING: ACTIVE'; 
             status.style.color = '#fbbf24'; 
             // Add match 2
             docViewer.innerHTML += renderMatchCard(buyers[1]);
@@ -917,20 +917,18 @@ async function runDealSimulation(deal, dealKey) {
 
     const mockHash = '0x' + Array.from({length: 32}, () => Math.floor(Math.random()*16).toString(16)).join('').toUpperCase();
 
-    await log('   [OK] Simulation Complete. Confidence Interval: 99.4%', '#10b981', 400);
+    await log('   [OK] Profile complete.', '#10b981', 400);
     await log(`   [+] Base Yield: ${deal.yield}%`, '#10b981', 200);
-    await log(`   [+] Stress-Tested Valuation Range: ${rangeDisplay}`, '#10b981', 200);
-    await log(`   [+] Audit Verification: Swarm Audit Verified`, '#10b981', 200);
-    await log(`   [+] Cryptographic Integrity Hash: ${mockHash}`, '#06b6d4', 200);
+    await log(`   [+] Indicative valuation range: ${rangeDisplay}`, '#10b981', 200);
 
-    status.innerText = 'PROSPECTUS GENERATED';
+    status.innerText = 'PROFILE COMPLETE';
     status.style.color = '#10b981';
 
-    await log('<br>>> FINALIZING CERTIFIED PROSPECTUS...', '#06b6d4', 1000);
-    await log(`>> ${deal.title} — SECURED. READY FOR CLEARING.`, '#10b981', 800);
+    await log('<br>>> FINALIZING DEAL PROFILE...', '#06b6d4', 1000);
+    await log(`>> ${deal.title} — PROFILED. READY FOR BUYER MATCHING.`, '#10b981', 800);
 
     setTimeout(() => {
-        document.getElementById('demo-wow-text').innerHTML = `STRESS-TESTED VALUATION RANGE:<br>${rangeDisplay}<br><span style="font-size: 0.65rem; color: #fbbf24; font-weight: bold; display: block; margin-top: 0.25rem;">SWARM AUDIT VERIFIED</span><span style="font-size: 0.52rem; color: #64748b; font-weight: normal; font-family: monospace; display: block; margin-top: 0.2rem;">HASH: ${mockHash}</span>`;
+        document.getElementById('demo-wow-text').innerHTML = `INDICATIVE VALUATION RANGE:<br>${rangeDisplay}<br><span style="font-size: 0.65rem; color: #fbbf24; font-weight: bold; display: block; margin-top: 0.25rem;">PROFILED FOR CLEARING</span>`;
         // Setup direct data room target
         stamp.querySelector('button').setAttribute('onclick', `openDD('${deal.prospectus || 'westin_tokyo'}')`);
         stamp.style.display = 'block';
@@ -959,8 +957,8 @@ function resetSimulation() {
     if (canvasCont) canvasCont.style.opacity = '0.65';
     document.getElementById('doc-viewer').innerHTML = '<div style="color: #444;">[No active matching process]</div>';
     document.getElementById('terminal-output').innerHTML = '';
-    document.getElementById('swarm-status').innerText = 'MONITORING';
-    document.getElementById('swarm-status').style.color = 'var(--accent-violet)';
+    document.getElementById('review-status').innerText = 'READY';
+    document.getElementById('review-status').style.color = 'var(--accent-violet)';
     document.getElementById('verification-stamp').style.display = 'none';
     
     if (window.beamInterval) clearInterval(window.beamInterval);
@@ -978,7 +976,7 @@ async function runSimulation(target, customValuation = null) {
     
     const docViewer = document.getElementById('doc-viewer');
     const terminal = document.getElementById('terminal-output');
-    const status = document.getElementById('swarm-status');
+    const status = document.getElementById('review-status');
     const stamp = document.getElementById('verification-stamp');
 
     const log = (msg, color = '#06b6d4', delay = 0) => {
@@ -1011,41 +1009,40 @@ async function runSimulation(target, customValuation = null) {
 
     // Simulate logs & match popups
     await log('>> INITIATING SECURE UPLOAD...', '#666', 500);
-    await log('>> DEPLOYING LEGAL SWARM (84 DAEMONS)', '#8b5cf6', 800);
+    await log('>> STRUCTURING DEAL DOCUMENTS...', '#8b5cf6', 800);
     
     // Add match 1
-    docViewer.innerHTML = `<div class="mono" style="color: #64748b; font-size: 0.65rem; margin-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.25rem;">MATCHING SWARM: IN PROGRESS</div>` + renderMatchCard(buyers[0]);
+    docViewer.innerHTML = `<div class="mono" style="color: #64748b; font-size: 0.65rem; margin-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.25rem;">BUYER MATCHING: IN PROGRESS</div>` + renderMatchCard(buyers[0]);
     
     let hashVal = 0;
     for (let i = 0; i < safeTarget.length; i++) {
         hashVal = safeTarget.charCodeAt(i) + ((hashVal << 5) - hashVal);
     }
-    const pageNum = Math.abs(hashVal) % 140 + 15;
-    const warnings = [
-        { warn: `   [WARN] Minor easement discrepancy detected on Page ${pageNum}`, resolve: '   [OK] Easement verified: Utility access only (Resolved)' },
-        { warn: `   [WARN] Outdated boundary survey mismatch on Page ${pageNum}`, resolve: '   [OK] Metes & bounds cross-referenced with GIS database (Resolved)' },
-        { warn: `   [WARN] Ambiguous structural classification on Page ${pageNum}`, resolve: '   [OK] Construction permits verified: Zoning compliant (Resolved)' },
-        { warn: `   [WARN] Unrecorded municipal setback variance on Page ${pageNum}`, resolve: '   [OK] Municipal setback clearance confirmed (Resolved)' }
+    const notes = [
+        `   [i] Document set received: deed + survey + financials (${pageNum} pages indexed)`,
+        `   [i] Boundary survey and site plans filed for review`,
+        `   [i] Structural reports and permits included in profile`,
+        `   [i] Municipal filings noted in deal profile`
     ];
-    const selectedWarn = warnings[Math.abs(hashVal) % warnings.length];
+    const selectedNote = notes[Math.abs(hashVal) % notes.length];
 
-    await log('>> PARSING MASTER DEED & TITLE HISTORY', '#06b6d4', 400);
-    await log('   [OK] Title Chain Verified (1984-Present)', '#10b981', 1200);
-    await log(selectedWarn.warn, '#fbbf24', 600);
+    await log('>> ORGANIZING MASTER DEED & TITLE HISTORY', '#06b6d4', 400);
+    await log('   [OK] Title documents organized (1984–present)', '#10b981', 1200);
+    await log(selectedNote, '#06b6d4', 600);
     
     // Add match 2
     docViewer.innerHTML += renderMatchCard(buyers[1]);
     
-    status.innerText = 'FINANCIAL_SWARM: ACTIVE';
+    status.innerText = 'MATCHING: ACTIVE';
     status.style.color = '#fbbf24';
     
-    await log('>> CROSS-REFERENCING MUNICIPAL DATABASES...', '#06b6d4', 800);
-    await log(selectedWarn.resolve, '#10b981', 1500);
-    await log('   [OK] Environmental Liability: CLEAR', '#10b981', 400);
+    await log('>> CHECKING PUBLIC RECORDS...', '#06b6d4', 800);
+    await log('   [OK] Public records check noted in profile', '#10b981', 1500);
+    await log('   [OK] Environmental reports filed', '#10b981', 400);
     
-    await log('<br>>> DEPLOYING FINANCIAL SWARM (146 DAEMONS)', '#fbbf24', 800);
-    await log('>> INGESTING 10-YEAR P&L TELEMETRY', '#06b6d4', 500);
-    await log('>> RUNNING MONTE CARLO PRICING SIMULATION (10,000 ITERATIONS)', '#06b6d4', 1000);
+    await log('<br>>> MATCHING AGAINST BUYER DEMAND...', '#fbbf24', 800);
+    await log('>> REVIEWING 10-YEAR P&L HISTORY', '#06b6d4', 500);
+    await log('>> COMPILING BUYER MATERIALS...', '#06b6d4', 1000);
     
     const barId = 'progress-' + Date.now();
     await log(`   <span id="${barId}">[          ] 0%</span>`, '#06b6d4', 200);
@@ -1172,18 +1169,16 @@ async function runSimulation(target, customValuation = null) {
     const mockHash = '0x' + Array.from({length: 32}, () => Math.floor(Math.random()*16).toString(16)).join('').toUpperCase();
 
     await log(`   [+] Base Yield: ${finalYield}%`, '#10b981', 200);
-    await log(`   [+] Stress-Tested Valuation Range: ${finalValRange}`, '#10b981', 200);
-    await log(`   [+] Audit Verification: Swarm Audit Verified`, '#10b981', 200);
-    await log(`   [+] Cryptographic Integrity Hash: ${mockHash}`, '#06b6d4', 200);
+    await log(`   [+] Indicative valuation range: ${finalValRange}`, '#10b981', 200);
 
-    status.innerText = 'PROSPECTUS GENERATED';
+    status.innerText = 'PROFILE COMPLETE';
     status.style.color = '#10b981';
     
-    await log('<br>>> FINALIZING CERTIFIED PROSPECTUS...', '#06b6d4', 1000);
-    await log(`>> ${safeTarget} SECURED. READY FOR CLEARING.`, '#10b981', 800);
+    await log('<br>>> FINALIZING DEAL PROFILE...', '#06b6d4', 1000);
+    await log(`>> ${safeTarget} PROFILED. READY FOR BUYER MATCHING.`, '#10b981', 800);
 
     setTimeout(() => {
-        document.getElementById('demo-wow-text').innerHTML = `STRESS-TESTED VALUATION RANGE:<br>${finalValRange}<br><span style="font-size: 0.65rem; color: #fbbf24; font-weight: bold; display: block; margin-top: 0.25rem;">SWARM AUDIT VERIFIED</span><span style="font-size: 0.52rem; color: #64748b; font-weight: normal; font-family: monospace; display: block; margin-top: 0.2rem;">HASH: ${mockHash}</span>`;
+        document.getElementById('demo-wow-text').innerHTML = `INDICATIVE VALUATION RANGE:<br>${finalValRange}<br><span style="font-size: 0.65rem; color: #fbbf24; font-weight: bold; display: block; margin-top: 0.25rem;">PROFILED FOR CLEARING</span>`;
         // Setup direct data room target
         stamp.querySelector('button').setAttribute('onclick', "openDD('general')");
         stamp.style.display = 'block';
@@ -1378,7 +1373,7 @@ async function submitSellSideAsset() {
     }).catch(e => console.error(e));
 
     const terminal = document.getElementById('ss-match-terminal');
-    terminal.innerHTML = '>> INGESTING UNSTRUCTURED DATA ROOM FILES...';
+    terminal.innerHTML = '>> RECEIVING DATA ROOM FILES...';
 
     const logMsg = (msg, delay) => new Promise(r => setTimeout(() => {
         terminal.innerHTML += `\n${msg}`;
@@ -1387,16 +1382,16 @@ async function submitSellSideAsset() {
     }, delay));
 
     await logMsg('>> EXTRACTING TITLE DEEDS AND LEASES...', 300);
-    await logMsg('>> DEPLOYING LEGAL SWARM (42 DAEMONS)...', 400);
-    await logMsg('>> DETECTING LIABILITIES & REGULATORY RISK...', 350);
-    await logMsg('>> STATUS: NO REGULATORY EXPOSURE FOUND.', 300);
-    await logMsg('>> INGESTING HISTORICAL P&L TELEMETRY...', 400);
-    await logMsg('>> DEPLOYING FINANCIAL SWARM (68 DAEMONS)...', 400);
-    await logMsg('>> RUNNING MONTE CARLO PRICING SIMULATIONS...', 500);
-    await logMsg(`>> IMPLIED VALUATION: $${valuation}M (AVM VETTED)`, 400);
-    await logMsg('>> STRUCTURING CERTIFIED ASSET PROSPECTUS...', 600);
-    await logMsg('>> DEPLOYING PROSPECTUS TO PRIVATE DARK POOL...', 500);
-    await logMsg('>> STATUS: CLEARED. TRANSACTION ROOM INITIATED.', 400);
+    await logMsg('>> STRUCTURING LEGAL DOCUMENTS...', 400);
+    await logMsg('>> SUMMARIZING LIABILITIES & REGULATORY NOTES...', 350);
+    await logMsg('>> STATUS: DOCUMENTS STRUCTURED FOR REVIEW.', 300);
+    await logMsg('>> REVIEWING HISTORICAL P&L...', 400);
+    await logMsg('>> MATCHING AGAINST BUYER DEMAND...', 400);
+    await logMsg('>> COMPILING BUYER MATERIALS...', 500);
+    await logMsg(`>> INDICATIVE VALUATION: $${valuation}M (TEAM REVIEWED)`, 400);
+    await logMsg('>> STRUCTURING DEAL PROFILE...', 600);
+    await logMsg('>> ROUTING PROFILE TO MATCHED BUYERS...', 500);
+    await logMsg('>> STATUS: SUBMITTED. OUR TEAM WILL REVIEW.', 400);
 }
 
 function toggleOtherIndustry(selectEl, containerId) {
