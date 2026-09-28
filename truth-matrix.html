@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Truth Matrix — TerraFinAI</title>
-    <meta name="description" content="The Truth Matrix turns raw deal material into structured, investment-committee-ready diligence. AI agents profile $100M+ off-market mandates for family offices, institutions, and funds.">
+    <meta name="description" content="TerraFinAI is an AI-native clearinghouse for $100M+ off-market trophy real estate — surfacing quiet American deals to qualified investors, family offices, and funds.">
     <link rel="canonical" href="https://terrafinai.com/truth-matrix.html" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="TerraFinAI">
     <meta property="og:title" content="Truth Matrix — TerraFinAI">
-    <meta property="og:description" content="AI agents turn raw deal material into investment-committee-ready diligence on $100M+ off-market mandates.">
+    <meta property="og:description" content="Off-market American real estate and private M&A, surfaced to qualified investors, family offices, and funds.">
     <meta property="og:url" content="https://terrafinai.com/truth-matrix.html">
     <meta property="og:image" content="https://terrafinai.com/og-image.png">
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Truth Matrix — TerraFinAI">
-    <meta name="twitter:description" content="AI agents turn raw deal material into investment-committee-ready diligence on $100M+ off-market mandates.">
+    <meta name="twitter:description" content="Off-market American real estate and private M&A, surfaced to qualified investors, family offices, and funds.">
     <meta name="twitter:image" content="https://terrafinai.com/og-image.png">
     
     <!-- Favicons -->
@@ -115,7 +115,7 @@
                                 <span style="display: inline-block; width: 8px; height: 8px; background: #06b6d4; border-radius: 50%; box-shadow: 0 0 8px #06b6d4;"></span>
                                 TRUTH MATRIX ENGINE
                             </div>
-                            <div class="mono" style="font-size: 0.65rem; color: var(--accent-violet); font-weight: bold;" id="swarm-status">MONITORING</div>
+                            <div class="mono" style="font-size: 0.65rem; color: var(--accent-violet); font-weight: bold;" id="review-status">REVIEWING</div>
                         </div>
                         
                         <!-- Main Content: Active Mandates Grid -->
@@ -346,7 +346,7 @@
                     <div id="bs-mandate-id" class="mono" style="font-size: 0.7rem; color: var(--accent-cyan); margin-bottom: 1.5rem; font-weight: bold;">MANDATE_ID: TF-WAIT-SYNC</div>
                     
                     <div class="glass-panel" style="padding: 1rem; background: rgba(0,0,0,0.6); text-align: left; margin-bottom: 1.5rem; border-color: rgba(139, 92, 246, 0.3);">
-                        <div class="mono" style="font-size: 0.55rem; color: #555; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.25rem; margin-bottom: 0.5rem;">SWARM MATCH ENGINE EXECUTION</div>
+                        <div class="mono" style="font-size: 0.55rem; color: #555; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.25rem; margin-bottom: 0.5rem;">BUYER MATCH ENGINE</div>
                         <div id="bs-match-terminal" class="mono" style="font-size: 0.65rem; color: var(--accent-violet); height: 110px; overflow-y: auto; line-height: 1.45; white-space: pre-wrap; word-break: break-all;">
                             > Ready to scan active pipeline...
                         </div>
@@ -406,7 +406,7 @@
                 <!-- Step 2: Document Upload -->
                 <div id="ss-step-2" style="display: none;">
                     <h3 class="mono" style="font-size: 0.95rem; color: #fff; margin-bottom: 1.25rem;">2. Upload Unstructured Data Room Files</h3>
-                    <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem;">Upload property deeds, financial history, surveys, or regulatory audit files for Truth Matrix ingestion.</p>
+                    <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 1rem;">Upload property deeds, financial history, surveys, or regulatory files for review.</p>
                     <div class="input-group">
                         <label>Property Deeds / Lease Agreements (.PDF, .ZIP)</label>
                         <input type="file" id="ss-deeds" style="background: rgba(0,0,0,0.4); border: 1px solid var(--glass-border); color: #fff; padding: 0.5rem; width: 100%;">
@@ -425,22 +425,22 @@
                     </div>
                     <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
                         <button class="btn-primary" onclick="nextSellSideStep(1)" style="flex: 1; font-size: 0.75rem; padding: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); color: #fff;">BACK</button>
-                        <button class="btn-primary" onclick="submitSellSideAsset()" style="flex: 2; font-size: 0.75rem; padding: 0.8rem; background: var(--accent-cyan); color: #000; border-color: var(--accent-cyan);">INITIATE TRUTH MATRIX SWARM</button>
+                        <button class="btn-primary" onclick="submitSellSideAsset()" style="flex: 2; font-size: 0.75rem; padding: 0.8rem; background: var(--accent-cyan); color: #000; border-color: var(--accent-cyan);">SUBMIT ASSET FOR REVIEW</button>
                     </div>
                 </div>
 
-                <!-- Step 3: Swarm Audit Simulation -->
+                <!-- Step 3: Review Simulation -->
                 <div id="ss-step-3" style="display: none; text-align: center; padding: 1rem 0;">
                     <div style="width: 50px; height: 50px; background: rgba(6, 182, 212, 0.15); border: 1px solid var(--accent-cyan); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem;">
                         <span style="color: var(--accent-cyan); font-size: 1.5rem; font-weight: bold;">&check;</span>
                     </div>
-                    <h3 class="mono" style="font-size: 1rem; color: #fff; margin-bottom: 0.5rem;">SWARM AUDIT RUNNING</h3>
-                    <div id="ss-asset-id" class="mono" style="font-size: 0.7rem; color: var(--accent-cyan); margin-bottom: 1.5rem; font-weight: bold;">ASSET_ID: TF-PENDING-AUDIT</div>
+                    <h3 class="mono" style="font-size: 1rem; color: #fff; margin-bottom: 0.5rem;">REVIEW IN PROGRESS</h3>
+                    <div id="ss-asset-id" class="mono" style="font-size: 0.7rem; color: var(--accent-cyan); margin-bottom: 1.5rem; font-weight: bold;">ASSET_ID: TF-PENDING</div>
                     
                     <div class="glass-panel" style="padding: 1rem; background: rgba(0,0,0,0.6); text-align: left; margin-bottom: 1.5rem; border-color: rgba(6, 182, 212, 0.3);">
-                        <div class="mono" style="font-size: 0.55rem; color: #555; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.25rem; margin-bottom: 0.5rem;">DAEMON_SWARM_DILIGENCE</div>
+                        <div class="mono" style="font-size: 0.55rem; color: #555; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.25rem; margin-bottom: 0.5rem;">CLEARINGHOUSE_INTAKE</div>
                         <div id="ss-match-terminal" class="mono" style="font-size: 0.65rem; color: var(--accent-cyan); height: 110px; overflow-y: auto; line-height: 1.45; white-space: pre-wrap; word-break: break-all;">
-                            > Ready to Ingest Unstructured Files...
+                            > Ready to receive documents...
                         </div>
                     </div>
 
