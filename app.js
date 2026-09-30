@@ -406,7 +406,7 @@ async function simulateDownload(btn, filename) {
     
     // Simulate simple download file trigger
     const element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(`Mock data room file download for: ${filename}\nClearance secured. Prepared by TerraFinAI.`));
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(`Mock data room file download for: ${filename}\nClearance secured. Prepared by TerraFin SI.`));
     element.setAttribute('download', filename);
     element.style.display = 'none';
     document.body.appendChild(element);
