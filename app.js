@@ -219,6 +219,12 @@ const dealData = {
         desc: "Nordic geothermal platform built around a proven acquisition-led consolidation strategy in Sweden and Norway. Three completed acquisitions with SEK 400M assets on balance sheet. Raising SEK 30M in new equity at a SEK 600M pre-money valuation.",
         docs: [{ label: "Executive Summary (HTML)", url: "docs/amara_energy_exec_summary.html" }, { label: "Investor Presentation", url: "docs/amara_energy_deck.pdf" }]
     },
+    paris_palace: {
+        region: "emea",
+        title: "Trophy Paris Palace Hotel",
+        desc: "Confidential: 100-key Palace-distinction hotel, Paris 16th arrondissement. 1896 landmark residence with Monument Historique status; 37 suites; Eiffel Tower and Seine outlooks; ~790 sq m event space. One-off irreplaceable trophy asset. Price guidance and full memorandum available under NDA — contact gary@terrafinai.com.",
+        docs: []
+    },
     cityclinic: {
         region: "emea",
         title: "CityClinic Group",
