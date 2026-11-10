@@ -27,16 +27,23 @@
         return '<span class="tf-badge tf-badge-locked">LOCKED — APPROVAL REQUIRED</span>';
     }
 
-    function docRow(m, doc, accessTier) {
-        var unlocked = accessTier >= doc.tier;
-        var status = unlocked
-            ? '<span class="tf-badge tf-badge-verified">UNLOCKED</span>'
-            : lockNote(doc.tier);
+    function docRow(m, doc, accessTier, shortlisted) {
+        var unlocked = accessTier >= doc.tier && (!doc.shortlistOnly || shortlisted);
+        var status;
+        if (unlocked) {
+            status = '<span class="tf-badge tf-badge-verified">UNLOCKED</span>';
+        } else if (doc.shortlistOnly && accessTier >= doc.tier) {
+            status = '<span class="tf-badge tf-badge-locked">LOCKED — SHORTLIST ONLY</span>';
+        } else {
+            status = lockNote(doc.tier);
+        }
         var action = '';
         if (unlocked && doc.detailKey) {
             action = '<button class="tf-btn ghost small" data-doc-view="' + TF.esc(doc.detailKey) + '" data-mandate="' + TF.esc(m.id) + '" data-label="' + TF.esc(doc.label) + '">VIEW</button>';
         } else if (unlocked) {
             action = '<span class="tf-dim" style="font-size:0.7rem;">Provided after NDA — see instructions</span>';
+        } else if (doc.shortlistOnly && accessTier >= doc.tier) {
+            action = '<span class="tf-dim" style="font-size:0.7rem;">Shortlisted buyers only — the deal team shortlists after approval</span>';
         } else {
             action = '<a class="tf-btn small" href="data-room.html?mandate=' + m.id + '">REQUEST ACCESS →</a>';
         }
@@ -92,13 +99,20 @@
         var tier = access.tier || 0;
         TF.logActivity(m.id, 'room-view', 'tier ' + tier);
 
+        // Real figures on file (data/mandates.json) — shown in the Tier 2
+        // financials document. Statuses travel with the figures.
+        var figuresText = (m.figures || []).map(function (f) {
+            var s = f.status === 'verified' ? 'VERIFIED' : (f.status === 'per-mandate-doc' ? 'PER MANDATE DOCUMENTATION' : 'UNVERIFIED');
+            return f.label + ': ' + f.value + ' [' + s + ']' + (f.note ? ' — ' + f.note : '');
+        }).join('\n');
+
         var docs = [
             { label: 'Executive Teaser (public)', note: 'The public summary — visible to everyone.', tier: 0, detailKey: 'teaser', detailText: m.teaser },
             { label: 'Mandate Summary — registered buyers', note: 'Full public summary + process, for registered buyers.', tier: 1, detailKey: 'summary', detailText: m.teaser + ' Process: ' + m.process.join(' → ') + '.' },
             { label: 'Offering Memorandum', note: 'Provided after e-NDA. No file is published on the public site.', tier: 2 },
-            { label: 'Financials — P&L, revenue, EBITDA', note: 'Provided after e-NDA; full set after approval.', tier: 2 },
+            { label: 'Financials — P&L, revenue, EBITDA', note: 'Verified figures on file; full set after approval.', tier: 2, detailKey: 'financials', detailText: figuresText || 'No figures on file yet.' },
             { label: 'Full diligence set — legal, title, permits', note: 'Available after deal-team approval (Tier 3).', tier: 3 },
-            { label: 'Shortlist — deep diligence pack', note: 'Shortlisted buyers only. Deeper material, direct deal-team access.', tier: 3, shortlist: true }
+            { label: 'Shortlist — deep diligence pack', note: 'Shortlisted buyers only. Deeper material, direct deal-team access.', tier: 3, shortlistOnly: true }
         ];
 
         var steps = m.process.map(function (s, i) {
@@ -125,7 +139,7 @@
             '<div class="glass-panel" style="padding: 1.5rem; border-radius: 12px;">' +
             '<div class="section-title" style="margin-bottom: 1rem;"><span>01</span> Teaser, offering materials &amp; documents</div>' +
             '<p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.25rem;">' + TF.esc(m.teaser) + '</p>' +
-            docs.map(function (d) { return docRow(m, d, tier); }).join('') +
+            docs.map(function (d) { return docRow(m, d, tier, !!access.shortlist); }).join('') +
             '<div style="margin-top: 1.25rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">' +
             '<a class="tf-btn" href="data-room.html?mandate=' + m.id + '">CONTINUE TO DATA ROOM →</a>' + dossierLink +
             '</div></div>' +

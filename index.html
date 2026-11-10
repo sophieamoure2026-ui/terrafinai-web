@@ -89,6 +89,7 @@
 <span style="color: var(--glass-border);">/</span>
 <a class="active" href="index.html">TerraFin AI</a>
 <a href="deal-room.html">Deal Rooms</a>
+<a href="demo.html">Demo</a>
 </div>
 <div style="display: flex; align-items: center; gap: 0.8rem;">
 <button class="btn-primary" onclick="openBuySidePortal()" style="font-size: 0.62rem; padding: 0.4rem 0.9rem; border-radius: 4px; background: transparent; border: 1px solid var(--accent-cyan); color: var(--accent-cyan); cursor: pointer; letter-spacing: 1px; font-weight: bold; box-shadow: none; white-space: nowrap;">BUY-SIDE REGISTRATION</button>
@@ -1034,27 +1035,8 @@ Direct Handshake
 </div>
 <div class="data-room-gate" style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
 <h4 class="mono" style="color: var(--accent-cyan); font-size: 0.8rem; margin-bottom: 0.25rem;">SECURE INVESTOR DATA ROOM</h4>
-<p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1.5rem;">Full pro-formas and deal materials are available to cleared buyers under NDA.</p>
-<!-- Step 1: Email -->
-<div id="dr-step-1">
-<div class="mono" style="font-size: 0.55rem; color: #555; letter-spacing: 2px; margin-bottom: 0.75rem;">STEP 1 OF 2 — INSTITUTIONAL IDENTITY VERIFICATION</div>
-<div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-<input class="mono" id="data-room-email" placeholder="Corporate Email Address" style="background: rgba(0,0,0,0.3); border: 1px solid var(--accent-cyan); color: #fff; padding: 0.6rem 1rem; border-radius: 0.5rem; flex: 1; font-size: 0.75rem; min-width: 200px;" type="email"/>
-<button class="btn-primary" onclick="requestAccessCode()" style="font-size: 0.7rem; padding: 0.6rem 1.5rem; background: var(--accent-cyan); color: #000; white-space: nowrap;">REQUEST ACCESS CODE</button>
-</div>
-<p class="mono" id="step1-error" style="color: #ef4444; font-size: 0.65rem; margin-top: 0.5rem; display: none;">&gt; INVALID EMAIL — CORPORATE DOMAIN REQUIRED</p>
-</div>
-<!-- Step 2: Code (hidden until email submitted) -->
-<div id="dr-step-2" style="display: none; margin-top: 1.5rem;">
-<div class="mono" style="font-size: 0.55rem; color: #555; letter-spacing: 2px; margin-bottom: 0.75rem;">STEP 2 OF 2 — ACCESS CODE VERIFICATION</div>
-<div class="mono" id="dr-dispatch-msg" style="font-size: 0.7rem; color: #10b981; margin-bottom: 1rem; padding: 0.75rem; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); border-radius: 0.5rem;"></div>
-<div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-<input class="mono" id="data-room-pass" maxlength="8" placeholder="Enter Access Code" style="background: rgba(0,0,0,0.3); border: 1px solid var(--accent-violet); color: #fff; padding: 0.6rem 1rem; border-radius: 0.5rem; flex: 1; font-size: 0.75rem; letter-spacing: 3px; min-width: 200px;" type="text"/>
-<button class="btn-primary" onclick="validateAccess()" style="font-size: 0.7rem; padding: 0.6rem 1.5rem; background: var(--accent-violet); white-space: nowrap;">UNLOCK DATA ROOM</button>
-</div>
-<p class="mono" id="access-error" style="color: #ef4444; font-size: 0.65rem; margin-top: 0.5rem; display: none;">&gt; AUTHENTICATION_FAILED: INVALID ACCESS CODE</p>
-<p style="font-size: 0.6rem; color: #555; margin-top: 0.5rem;">Didn't receive it? <a href="#" onclick="resetAccessFlow()" style="color: var(--accent-cyan);">Re-enter email</a></p>
-</div>
+<p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1.5rem;">Full pro-formas and deal materials are available to cleared buyers under NDA. Access runs through the tiered data room — register, sign the e-NDA, and request approval. The old email + access-code gate (TF2026) is retired.</p>
+<a href="data-room.html" class="btn-primary" style="font-size: 0.7rem; padding: 0.6rem 1.5rem; background: var(--accent-cyan); color: #000; white-space: nowrap; text-decoration: none; display: inline-block;">CONTINUE TO THE TIERED DATA ROOM →</a>
 </div>
 </div>
 </div>

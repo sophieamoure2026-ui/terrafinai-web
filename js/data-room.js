@@ -46,6 +46,36 @@
             ' <span class="tf-dim">Registered buyers are alerted when new diligence posts for a mandate they follow.</span></div>';
     }
 
+    function figureBadge(status) {
+        var cls = status === 'verified' ? 'tf-badge-verified' : (status === 'per-mandate-doc' ? 'tf-badge-doc' : 'tf-badge-unverified');
+        var label = status === 'verified' ? 'VERIFIED' : (status === 'per-mandate-doc' ? 'PER MANDATE DOCUMENTATION' : 'UNVERIFIED');
+        return '<span class="tf-badge ' + cls + '">' + label + '</span>';
+    }
+
+    // Verified-figures table for a mandate (data/mandates.json figures).
+    // Same status vocabulary as the dossiers: verified | per-mandate-doc |
+    // unverified. Nothing invented — a missing figure reads UNVERIFIED.
+    function figuresTable(m, limit) {
+        var figs = (m.figures || []).slice(0, limit || 99);
+        if (!figs.length) return '<p class="tf-muted" style="font-size:0.85rem;">No figures on file for this mandate yet.</p>';
+        return '<div style="overflow-x:auto;"><table class="tf-table"><thead><tr><th>Figure</th><th>Value</th><th>Status &amp; source</th></tr></thead><tbody>' +
+            figs.map(function (f) {
+                return '<tr><td><strong style="color:#fff;">' + TF.esc(f.label) + '</strong></td><td>' + TF.esc(f.value) + '</td><td>' + figureBadge(f.status) + '<div class="tf-dim" style="font-size:0.72rem; margin-top:0.35rem; line-height:1.5;">' + TF.esc(f.note || '') + '</div></td></tr>';
+            }).join('') + '</tbody></table></div>';
+    }
+
+    // Tier 3 full-diligence checklist (data/mandates.json diligence).
+    function diligenceList(m) {
+        var items = m.diligence || [];
+        if (!items.length) return '<p class="tf-muted" style="font-size:0.85rem;">No diligence checklist on file for this mandate yet.</p>';
+        return items.map(function (d) {
+            var badge = d.status === 'received'
+                ? '<span class="tf-badge tf-badge-verified">RECEIVED</span>'
+                : '<span class="tf-badge tf-badge-locked">PENDING</span>';
+            return '<div class="tf-doc-row"><div><div style="color:#fff; font-size:0.85rem; font-weight:600;">' + TF.esc(d.item) + '</div><div class="tf-dim" style="font-size:0.72rem; margin-top:0.2rem;">' + TF.esc(d.note || '') + '</div></div>' + badge + '</div>';
+        }).join('');
+    }
+
     function renderPicker(mandates) {
         var cards = mandates.map(function (m) {
             var a = TF.getAccess(m.id);
@@ -101,6 +131,16 @@
                 (access.alerts ? 'New-diligence alerts are ON for this mandate.' : 'New-diligence alerts are off.') + '</div>';
         }
 
+        /* ---- Tier 1: registered buyer pack (summary figures) ---- */
+        if (tier >= 1) {
+            body += '<div class="glass-panel" style="padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">' +
+                '<div style="font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">Registered buyer pack — key figures</div>' +
+                figuresTable(m, 3) +
+                '<p class="tf-dim" style="font-size: 0.75rem; margin-top: 1rem; line-height: 1.6;">Summary figures for registered buyers. The full verified-figures table unlocks at Tier 2, after the e-NDA.</p>' +
+                (m.dossier ? '<a class="tf-btn ghost small" href="dossier.html?mandate=' + m.id + '">OPEN VERIFICATION DOSSIER →</a> ' : '') +
+                '<a class="tf-btn ghost small" href="deal-room.html?mandate=' + m.id + '">OPEN DEAL ROOM →</a></div>';
+        }
+
         /* ---- Tier 2: e-NDA + identity verification ---- */
         if (tier >= 1 && tier < 2) {
             body += '<div class="glass-panel" style="padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">' +
@@ -124,9 +164,10 @@
             body += '<div class="glass-panel" style="padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">' +
                 '<div class="section-title" style="margin-bottom: 1rem;"><span>03</span> Offering materials (Tier 2 unlocked)</div>' +
                 '<div class="tf-doc-row"><div><div style="color:#fff; font-size:0.85rem; font-weight:600;">Offering Memorandum — ' + TF.esc(m.name) + '</div><div class="tf-dim" style="font-size:0.72rem;">Provided by the deal team after NDA. No file is published on the public site.</div></div><span class="tf-badge tf-badge-verified">UNLOCKED</span></div>' +
-                '<div class="tf-doc-row"><div><div style="color:#fff; font-size:0.85rem; font-weight:600;">Financial summary</div><div class="tf-dim" style="font-size:0.72rem;">Revenue, EBITDA and key figures as verified in the dossier.</div></div><span class="tf-badge tf-badge-verified">UNLOCKED</span></div>' +
                 (m.dossier ? '<div class="tf-doc-row"><div><div style="color:#fff; font-size:0.85rem; font-weight:600;">Verification dossier</div><div class="tf-dim" style="font-size:0.72rem;">Ownership chain, public-record cross-checks, comps discipline, verification score.</div></div><a class="tf-btn ghost small" href="dossier.html?mandate=' + m.id + '">OPEN DOSSIER →</a></div>' : '') +
-                '<p class="tf-dim" style="font-size: 0.75rem; margin-top: 1rem;">Documents are delivered by the deal team — this static build records your clearance and notifies the team. In production, documents are served from the room itself.</p></div>';
+                '<div style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 1.25rem 0 0.75rem;">Financial summary — verified figures</div>' +
+                figuresTable(m) +
+                '<p class="tf-dim" style="font-size: 0.75rem; margin-top: 1rem;">Documents are delivered by the deal team — this static build records your clearance and notifies the team. In production, documents are served from the room itself. Figures above are the verified figures on file; anything not verified reads UNVERIFIED.</p></div>';
         }
 
         /* ---- Tier 3: approval + capability screening ---- */
@@ -146,9 +187,14 @@
         if (tier === 3) {
             body += '<div class="glass-panel" style="padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">' +
                 '<div class="section-title" style="margin-bottom: 1rem;"><span>04</span> Tier 3 — Full diligence (approved)</div>' +
-                '<div class="tf-callout green"><strong>Approved.</strong> Full diligence is open. ' + (access.shortlist ? 'You are on the <strong>shortlist</strong> — deeper material is open below.' : 'Shortlist status: not shortlisted.') + '</div>' +
-                '<div class="tf-doc-row"><div><div style="color:#fff; font-size:0.85rem; font-weight:600;">Full diligence set — legal, title, permits</div><div class="tf-dim" style="font-size:0.72rem;">Delivered by the deal team on approval.</div></div><span class="tf-badge tf-badge-verified">UNLOCKED</span></div>' +
-                (access.shortlist ? '<div class="tf-doc-row"><div><div style="color:#fff; font-size:0.85rem; font-weight:600;">Shortlist — deep diligence pack</div><div class="tf-dim" style="font-size:0.72rem;">Deeper material + direct deal-team access for shortlisted buyers.</div></div><span class="tf-badge tf-badge-verified">UNLOCKED — SHORTLIST</span></div>' : '') +
+                '<div class="tf-callout green"><strong>Approved.</strong> Full diligence is open. ' + (access.shortlist ? 'You are on the <strong>shortlist</strong> — the deep pack is open below.' : 'Shortlist status: not shortlisted.') + '</div>' +
+                '<div style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 1.25rem 0 0.75rem;">Full diligence checklist</div>' +
+                diligenceList(m) +
+                (access.shortlist
+                    ? '<div style="font-size: 0.95rem; font-weight: 700; color: #fff; margin: 1.25rem 0 0.75rem;">Shortlist — deep diligence pack</div>' +
+                      '<div class="tf-doc-row"><div><div style="color:#fff; font-size:0.85rem; font-weight:600;">Direct deal-team access</div><div class="tf-dim" style="font-size:0.72rem;">Priority channel to the deal team — questions answered first, updates pushed to you.</div></div><span class="tf-badge tf-badge-verified">UNLOCKED — SHORTLIST</span></div>' +
+                      '<div class="tf-doc-row"><div><div style="color:#fff; font-size:0.85rem; font-weight:600;">Priority diligence updates</div><div class="tf-dim" style="font-size:0.72rem;">New diligence posts for this mandate are flagged to shortlisted buyers first.</div></div><span class="tf-badge tf-badge-verified">UNLOCKED — SHORTLIST</span></div>'
+                    : '<p class="tf-dim" style="font-size: 0.75rem; margin-top: 1rem; line-height: 1.6;">The deal team shortlists buyers after approval — shortlisted buyers see the deep diligence pack here (direct deal-team access + priority updates).</p>') +
                 '<div style="margin-top: 1.25rem;"><button class="tf-btn" id="tf-call-btn">REQUEST A VIDEO / PHONE CALL →</button> <span class="tf-dim" style="font-size:0.75rem;" id="tf-call-note"></span></div></div>';
         }
         if (access.approvalRequested && tier < 3) {

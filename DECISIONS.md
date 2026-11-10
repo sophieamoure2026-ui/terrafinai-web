@@ -69,6 +69,32 @@ needs a service or backend. Nothing below has been signed up for.
   verification pipeline runs end-to-end (Adoptions 3 + 4 together, with a human
   check on every figure).
 
+## Demo build-out (Nov 10, 2026 — Gary: "build the demo out", zero-cost)
+
+Gary reviewed the first build, understands it is a demo (not a live site) and that
+hosting would be needed to go live. His order: build the demo out, with a HARD
+zero-cost constraint — no paid services, no sign-ups, no hosting spend, no new
+accounts, no subscriptions. Everything stays static HTML/CSS/JS + browser
+localStorage; simulated flows stay clearly labeled as demo. The demo is a local
+branch only — nothing deployed.
+
+| What was added / polished | Files |
+|---|---|
+| Real sample diligence content at every data-room tier: Tier 1 registered buyer pack (key figures), Tier 2 full verified-figures table, Tier 3 full-diligence checklist (received vs pending), shortlist deep pack (direct deal-team access + priority updates) | `data/mandates.json` (new `figures` + `diligence` per mandate), `js/data-room.js` |
+| Deal rooms: Tier 2 financials document now shows the real figures on file; shortlist document now requires the shortlist flag (distinct SHORTLIST ONLY lock state) | `js/deal-room.js` |
+| Second verification dossier: Germany — 0 of 15 core fields verified (0%). Honest, not a bug: the memorandum is price-only (no operating figures, no named seller entity, Waldorf 152 vs 232 keys unresolved). The score stays honest when the file is thin. | `data/dossiers/germany-hotels.json`, `data/mandates.json` |
+| Second prospectus sample: Germany Hotels OM (extract finds €677.35M / €400M / €2.75M, 12.5%, 152 keys, 232 rooms) | `js/prospectus-builder.js`, `prospectus-builder.html` |
+| Back-office fixes: engagement dashboard called `TF.engagementSummary` with the wrong arguments and read `s.nda` / `s.docviews` / `s.calls` (none exist) — it showed zeros/undefined; fixed. Alert composer could never match buyers (mandates had no `type`); mandates now carry `type` and the CRM demo set (6 fictional buyers) covers all types. Added SIMULATE DEMO ACTIVITY (events tagged DEMO SIMULATION) + RESET DEMO DATA. | `js/back-office.js`, `back-office.html`, `data/buyers-template.json` |
+| Demo walkthrough page + repo doc | `demo.html`, `DEMO.md`; Demo link added to the nav on all new pages + index.html |
+| Anonymity cleanup: the two `david.lempert@idlglobal.net` mailto links in old `docs/` teaser files now point to the tiered data room (https://terrafinai.com/data-room.html) | `docs/project_nyc_pitchdeck.html`, `docs/project_reston_teaser.html` |
+| TF2026 retired: `requestAccessCode`, `validateAccess`, `resetAccessFlow`, `simulateDownload` removed from `app.js`; `closeDD` simplified; the index-page gate is now a CTA to the tiered data room | `app.js`, `index.html` |
+
+Decisions 1–7 above still stand and are unchanged — no new paid-service decision
+was needed for this build-out, and none was made. The only open question the demo
+leaves for Gary is the hosting decision itself (when/if to deploy the branch),
+which he has already deferred under the zero-cost constraint. The hardcoded
+RentCast key in `app.js` was NOT touched (live-site rotation, out of scope).
+
 ## Privacy note
 
 No real buyer personally identifiable information is in this repository. The CRM

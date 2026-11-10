@@ -8,9 +8,37 @@
     'use strict';
 
     var extracted = null;
-    var sampleText = 'Portfolio of hotel properties and development projects. 2025 results: revenue €340M, record EBITDA €108M (~31.8% margin). ' +
-        'Indicative, non-binding acquisition value €3.6B. Group portfolio spans 34 properties and 4,500+ rooms across Italy, London, Paris and New York. ' +
-        '2024 revenue €314.8M, EBITDA €102.7M. Flagship assets in Florence, Rome, Milan and Tuscany.';
+    var SAMPLES = {
+        starhotels: {
+            text: 'Portfolio of hotel properties and development projects. 2025 results: revenue €340M, record EBITDA €108M (~31.8% margin). ' +
+                'Indicative, non-binding acquisition value €3.6B. Group portfolio spans 34 properties and 4,500+ rooms across Italy, London, Paris and New York. ' +
+                '2024 revenue €314.8M, EBITDA €102.7M. Flagship assets in Florence, Rome, Milan and Tuscany.',
+            asset: 'Starhotels — Italian Hotel Portfolio',
+            type: 'Hospitality',
+            geo: 'Italy · Europe',
+            value: '€3.6B indicative'
+        },
+        germany: {
+            text: 'Selected portfolio of 14 hotel acquisition opportunities across Germany — Düsseldorf, Munich, Berlin, Heidelberg, Bonn, Bremen, Dortmund, Koblenz and Heligoland. ' +
+                'Luxury-branded, four- and 4.5-star, business and conference, wellness and mixed-use assets, priced from €2.75M to €400M. ' +
+                'Headline asset: Waldorf Astoria Berlin, €400M indicative, 152 keys per the memorandum; Hilton\'s public listing states 232 rooms/suites. ' +
+                'Aggregate advertised asking prices €677.35M; the itemized prices sum to €677.55M. Dortmund 3-star advertised 12.5% yield, not verified.',
+            asset: 'Germany — Hotel Acquisition Portfolio',
+            type: 'Hospitality',
+            geo: 'Germany · Europe',
+            value: '€677.35M aggregate'
+        }
+    };
+
+    function loadSample(key) {
+        var s = SAMPLES[key];
+        if (!s) return;
+        document.getElementById('pb-text').value = s.text;
+        document.getElementById('pb-asset').value = s.asset;
+        document.getElementById('pb-type').value = s.type;
+        document.getElementById('pb-geo').value = s.geo;
+        document.getElementById('pb-value').value = s.value;
+    }
 
     function fieldRow(label, id, value) {
         return '<div class="tf-field"><label for="' + id + '">' + TF.esc(label) + '</label>' +
@@ -123,11 +151,11 @@
     });
 
     document.getElementById('pb-sample-btn').addEventListener('click', function () {
-        document.getElementById('pb-text').value = sampleText;
-        document.getElementById('pb-asset').value = 'Starhotels — Italian Hotel Portfolio';
-        document.getElementById('pb-type').value = 'Hospitality';
-        document.getElementById('pb-geo').value = 'Italy · Europe';
-        document.getElementById('pb-value').value = '€3.6B indicative';
+        loadSample('starhotels');
+    });
+
+    document.getElementById('pb-sample2-btn').addEventListener('click', function () {
+        loadSample('germany');
     });
 
     document.getElementById('pb-generate-btn').addEventListener('click', buildDocument);

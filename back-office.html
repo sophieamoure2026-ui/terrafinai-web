@@ -70,6 +70,15 @@
         </div>
     </div>
 
+    <div class="mono" style="font-size: 0.65rem; margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <span style="color: var(--text-dim);">DEMO:</span>
+        <a href="demo.html" style="color: var(--accent-cyan);">Walkthrough →</a>
+        <a href="deal-room.html" style="color: var(--accent-cyan);">Deal Rooms</a>
+        <a href="data-room.html" style="color: var(--accent-cyan);">Data Room</a>
+        <a href="dossier.html" style="color: var(--accent-cyan);">Dossiers</a>
+        <a href="prospectus-builder.html" style="color: var(--accent-cyan);">Prospectus Builder</a>
+    </div>
+
     <div class="dashboard-grid">
         <!-- Sidebar: Active Stats -->
         <div class="sidebar">
@@ -223,8 +232,12 @@
         </div>
         <div style="margin-top: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
             <button class="tf-btn ghost" id="eng-copy">COPY SELLER REPORT</button>
+            <button class="tf-btn ghost" id="eng-simulate">SIMULATE DEMO ACTIVITY</button>
+            <button class="tf-btn ghost" id="eng-reset-demo">RESET DEMO DATA</button>
             <span class="tf-dim" style="font-size: 0.75rem; align-self: center;" id="eng-copy-note"></span>
+            <span class="tf-dim" style="font-size: 0.75rem; align-self: center;" id="eng-sim-note"></span>
         </div>
+        <p class="tf-dim" style="font-size: 0.72rem; margin-top: 0.75rem; line-height: 1.6;">Simulate logs 6 sample events for the mandate selected in “Post new diligence” below — tagged DEMO SIMULATION in the activity log, for the walkthrough only. Never present simulated counts to a seller as real buyer activity. Reset clears all demo data in this browser (access tiers, activity log, CRM edits, diligence flags).</p>
 
         <h4 style="color: #fff; margin: 2rem 0 1rem; font-size: 0.95rem;">Pending approvals</h4>
         <div id="approvals-list"><p class="tf-muted" style="font-size: 0.85rem;">Loading…</p></div>

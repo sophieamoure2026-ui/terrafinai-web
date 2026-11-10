@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Demo Walkthrough — TerraFin AI</title>
+<meta name="description" content="TerraFin AI demo walkthrough — click through the tiered data room, virtual deal rooms, verification dossiers, prospectus builder, and private buyer CRM in order."/>
+<link href="assets/logo.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="index.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="bg-grid"></div>
+<nav class="universal-nav">
+<div class="nav-container">
+<div class="nav-tier">
+<a class="parent-brand mono" href="https://titansignal.io">TITAN SIGNAL</a>
+<span style="color: var(--glass-border);">/</span>
+<a href="index.html">TerraFin AI</a>
+<a href="deal-room.html">Deal Rooms</a>
+<a href="data-room.html">Data Room</a>
+<a href="dossier.html?mandate=starhotels">Verification Dossier</a>
+<a href="prospectus-builder.html">Prospectus Builder</a>
+<a class="active" href="demo.html">Demo</a>
+</div>
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<a class="btn-primary" href="index.html" style="font-size: 0.62rem; padding: 0.4rem 0.9rem; border-radius: 4px; background: transparent; border: 1px solid var(--accent-cyan); color: var(--accent-cyan); cursor: pointer; letter-spacing: 1px; font-weight: bold; box-shadow: none; white-space: nowrap; text-decoration: none;">← BACK TO MANDATES</a>
+</div>
+</div>
+</nav>
+
+<div class="container tf-page-head">
+  <p class="tf-kicker mono">DEMO WALKTHROUGH — ZERO-COST BUILD · STATIC SITE · NO BACKEND</p>
+  <h1 class="tf-h1">Demo Walkthrough</h1>
+  <p class="tf-lede">The working demo of the five adopted features — tiered data room, virtual deal rooms, verification dossiers, prospectus builder, private buyer CRM. Click through in order; each step says what to do and what it proves. Everything runs in the browser: no accounts, no paid services, no hosting spend. <strong style="color:#fff;">Reset the demo any time</strong> with the button at the bottom (or in the back office) — it clears access tiers, the activity log, CRM edits, and diligence flags in this browser.</p>
+
+  <div class="tf-callout info"><strong>Demo data only:</strong> buyer records are fictional samples (`.invalid` emails). Mandate figures are the verified figures on file — anything not verified reads UNVERIFIED. Simulated activity is tagged DEMO SIMULATION in the activity log and must never be presented to a seller as real buyer activity.</div>
+
+  <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
+
+    <div class="glass-panel" style="padding: 1.5rem; border-radius: 12px;">
+      <div class="section-title" style="margin-bottom: 1rem;"><span>01</span> Deal rooms — one room per mandate</div>
+      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem;">Open the <a href="deal-room.html" style="color: var(--accent-cyan);">Deal Rooms index</a> and enter the <strong style="color:#fff;">Starhotels</strong> room. You see the teaser, the tiered document library (locked rows show what each tier unlocks), bidder instructions, and the engagement panel. Click VIEW on the Teaser and on the Mandate Summary — both expand in place. Try the <strong style="color:#fff;">Germany</strong> room too: its financials document now shows the real verified figures on file (aggregate, Waldorf, the 152-vs-232 key dispute).</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.7;">What it proves: the RCM-style room works end to end on a static site, and no document link is ever faked — entries without a file on record render as locked / “provided after” states, never as downloads.</p>
+    </div>
+
+    <div class="glass-panel" style="padding: 1.5rem; border-radius: 12px;">
+      <div class="section-title" style="margin-bottom: 1rem;"><span>02</span> Tiered data room — register → e-NDA → approval</div>
+      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem;">Open the <a href="data-room.html?mandate=starhotels" style="color: var(--accent-cyan);">Starhotels data room</a>. <strong style="color:#fff;">Tier 1:</strong> register — try a Gmail address first and watch it be refused, then register with a corporate address (e.g. <span class="mono">jane@axaim.com</span>, firm AXA IM Alts). The registered buyer pack appears with the key figures. <strong style="color:#fff;">Tier 2:</strong> read the NDA template, add a LinkedIn URL, type-to-sign. The full verified-figures table unlocks. <strong style="color:#fff;">Tier 3:</strong> confirm you can provide financial-capability documentation and request approval — the pending state shows.</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.7;">What it proves: the LoopNet-style four-tier gate works, with the corporate-email check and the e-NDA flow. The e-NDA here is a <strong style="color:#fff;">simulated signature</strong> (type-to-sign + checkbox, template text) — a binding signature needs the e-signature service in DECISIONS.md.</p>
+    </div>
+
+    <div class="glass-panel" style="padding: 1.5rem; border-radius: 12px;">
+      <div class="section-title" style="margin-bottom: 1rem;"><span>03</span> Back office — approve, shortlist, post diligence</div>
+      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem;">Open the <a href="back-office.html" style="color: var(--accent-cyan);">back office (Mandate Desk)</a> and scroll to Pending approvals. Approve the Starhotels request — and add it to the shortlist. Then post new diligence for Starhotels (“Verification dossier published”). Go back to the <a href="data-room.html?mandate=starhotels" style="color: var(--accent-cyan);">Starhotels data room</a>: you are now <strong style="color:#fff;">Tier 3 — Approved</strong>, the full diligence checklist is open (received vs pending items), the shortlist deep pack is unlocked, and the new-diligence banner shows.</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.7;">What it proves: the approval workflow closes the loop between buyer and deal team, and the new-diligence alert reaches registered buyers.</p>
+    </div>
+
+    <div class="glass-panel" style="padding: 1.5rem; border-radius: 12px;">
+      <div class="section-title" style="margin-bottom: 1rem;"><span>04</span> Verification dossiers — the honest score</div>
+      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem;">Open the <a href="dossier.html?mandate=starhotels" style="color: var(--accent-cyan);">Starhotels dossier</a>: <strong style="color:#fff;">7 of 15 core fields verified (47%)</strong> — revenue and EBITDA cross-checked against public reports, the 33.3x EBITDA multiple flagged, not hidden. Then open the <a href="dossier.html?mandate=germany-hotels" style="color: var(--accent-cyan);">Germany dossier</a>: <strong style="color:#fff;">0 of 15 core fields verified (0%)</strong>. That is not a bug — the Germany memorandum is price-only (no operating figures, no named seller entity, Waldorf key count disputed 152 vs 232). The dossier system surfaces the gap instead of inventing values.</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.7;">What it proves: the PropertyShark-style dossier with a computed score (never hardcoded) — and that the score stays honest when the file is thin.</p>
+    </div>
+
+    <div class="glass-panel" style="padding: 1.5rem; border-radius: 12px;">
+      <div class="section-title" style="margin-bottom: 1rem;"><span>05</span> Prospectus builder — two samples, extract → generate</div>
+      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem;">Open the <a href="prospectus-builder.html" style="color: var(--accent-cyan);">Prospectus Builder</a>. Click <strong style="color:#fff;">LOAD SAMPLE: STARHOTELS</strong>, then EXTRACT — the rule-based pass finds €340M / €108M / €3.6B, 31.8%, 2025, hotel. Review the structured fields, correct any, then GENERATE — the offering document appears with a verification checklist, downloadable as HTML or text. Then run it again with <strong style="color:#fff;">LOAD SAMPLE: GERMANY HOTELS</strong> — extraction finds €677.35M / €400M / €2.75M, 12.5%, 152 keys, 232 rooms.</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.7;">What it proves: the Crexi-style ingest → extract → generate pipeline. Extraction is <strong style="color:#fff;">rule-based, not AI</strong>, and it is not verification — every generated figure must be checked against source documents.</p>
+    </div>
+
+    <div class="glass-panel" style="padding: 1.5rem; border-radius: 12px;">
+      <div class="section-title" style="margin-bottom: 1rem;"><span>06</span> Buyer CRM + gated alerts + engagement dashboard</div>
+      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem;">Back in the <a href="back-office.html" style="color: var(--accent-cyan);">back office</a>: the CRM holds 6 fictional sample buyers across family office, sovereign wealth, private equity, venture capital, investment bank, and solo fund. Search, filter by type/status, add one (corporate email only — Gmail is refused), edit, delete, export/import JSON. In <strong style="color:#fff;">Gated Alerts</strong>, pick the Germany mandate and compose — the composer lists the matching hospitality buyers and generates copyable alert text (sending stays manual, by design). In the <strong style="color:#fff;">Engagement Dashboard</strong>, click SIMULATE DEMO ACTIVITY to see the per-mandate counts move, then COPY SELLER REPORT for the copyable report.</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.7;">What it proves: the private qualified-buyer CRM with tags, gated alerts, and seller-side engagement reporting — all in the browser, no backend, no real buyer data in the repository.</p>
+    </div>
+
+    <div class="glass-panel" style="padding: 1.5rem; border-radius: 12px;">
+      <div class="section-title" style="margin-bottom: 1rem;"><span>07</span> What is simulated vs live</div>
+      <div style="overflow-x:auto;"><table class="tf-table"><thead><tr><th>Piece</th><th>Status in this demo</th></tr></thead><tbody>
+        <tr><td><strong style="color:#fff;">Tier flow (register → e-NDA → approval)</strong></td><td>Works end to end in the browser (localStorage). e-NDA is type-to-sign, not a binding signature — needs an e-signature service (DECISIONS.md #1).</td></tr>
+        <tr><td><strong style="color:#fff;">Identity verification</strong></td><td>Simulated: corporate-email check + LinkedIn URL on file. Real verification needs a service (DECISIONS.md #2).</td></tr>
+        <tr><td><strong style="color:#fff;">Deal rooms &amp; document library</strong></td><td>Live on the static site. Documents are delivered by the deal team — no file is faked as a download.</td></tr>
+        <tr><td><strong style="color:#fff;">Verification dossiers</strong></td><td>Live, computed scores. Starhotels 47%, Germany 0% — honest readings of the files.</td></tr>
+        <tr><td><strong style="color:#fff;">Prospectus builder</strong></td><td>Live, rule-based extraction (not AI). Two sample OMs included.</td></tr>
+        <tr><td><strong style="color:#fff;">Buyer CRM &amp; alerts</strong></td><td>Live in the browser (localStorage). Sending stays manual. Persistence, automated alerts, and server-side engagement logging need services (DECISIONS.md #3, #4, #6).</td></tr>
+        <tr><td><strong style="color:#fff;">Hosting</strong></td><td>None — this demo is a local branch only, not deployed. Going live needs hosting, which Gary has deferred (zero-cost constraint).</td></tr>
+      </tbody></table></div>
+      <p class="tf-dim" style="font-size: 0.75rem; margin-top: 1rem; line-height: 1.6;">The old TF2026 demo access code in the index-page data-room gate is retired on this branch — the tiered data room supersedes it. See DECISIONS.md for the full decision list.</p>
+    </div>
+
+  </div>
+
+  <div class="glass-panel" style="padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem;">
+    <div style="font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem;">Reset the demo</div>
+    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem;">Clears access tiers, the activity log, CRM edits, and new-diligence flags in this browser, then reloads the walkthrough. The CRM re-seeds from the fictional sample file.</p>
+    <button class="tf-btn" id="demo-reset">RESET DEMO DATA →</button>
+    <span class="tf-dim" style="font-size: 0.75rem; margin-left: 0.75rem;" id="demo-reset-note"></span>
+  </div>
+
+  <footer style="margin-top: 4rem; border-top: 1px solid var(--glass-border); padding-top: 1.5rem;">
+    <p class="mono" style="font-size: 0.62rem; color: var(--text-dim); line-height: 1.7;">
+      DEMO WALKTHROUGH — STATIC-SITE BUILD (NOV 10, 2026). Zero-cost build: no paid services, no sign-ups, no hosting spend, no new accounts.
+      No broker or source is named on this page; terrafinai.com is the contact point. Decisions that need a backend or paid service are in <a href="DECISIONS.md" style="color: var(--accent-cyan);">DECISIONS.md</a>.
+    </p>
+  </footer>
+</div>
+
+<script>
+(function () {
+    var btn = document.getElementById('demo-reset');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+        if (!confirm('Reset all demo data in this browser? Access tiers, activity log, CRM edits, and new-diligence flags will be cleared.')) return;
+        ['tf_access_v1', 'tf_activity_v1', 'tf_buyers_v1', 'tf_new_dd_v1'].forEach(function (k) {
+            try { localStorage.removeItem(k); } catch (e) { /* storage unavailable */ }
+        });
+        document.getElementById('demo-reset-note').textContent = 'Demo data cleared — reloading…';
+        setTimeout(function () { window.location.reload(); }, 400);
+    });
+})();
+</script>
+</body>
+</html>

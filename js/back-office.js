@@ -211,11 +211,10 @@
 
     /* --- Engagement dashboard --- */
     function renderEngagement(mandates) {
-        var act = TF.getActivity();
         var rows = mandates.map(function (m) {
-            var s = TF.engagementSummary(act, m.id);
+            var s = TF.engagementSummary(m.id);
             return '<tr><td><strong style="color:#fff;">' + TF.esc(m.name) + '</strong><br><span class="tf-dim" style="font-size:0.75rem;">' + TF.esc(m.value) + '</span></td>' +
-                '<td>' + s.views + '</td><td>' + s.registrations + '</td><td>' + s.nda + '</td><td>' + s.docviews + '</td><td>' + s.calls + '</td>' +
+                '<td>' + s.views + '</td><td>' + s.registrations + '</td><td>' + s.ndaRequests + '</td><td>' + s.docViews + '</td><td>' + s.callsRequested + '</td>' +
                 '<td><a class="tf-btn small" href="deal-room.html?mandate=' + m.id + '">ROOM →</a></td></tr>';
         }).join('');
         document.getElementById('eng-tbody').innerHTML = rows;
@@ -224,21 +223,30 @@
     function renderApprovals() {
         var access = TF.getAllAccess();
         var pending = [];
+        var approved = [];
         Object.keys(access).forEach(function (mandateId) {
             var a = access[mandateId];
             if (a && a.approvalRequested && !a.approved) pending.push({ id: mandateId, a: a });
+            else if (a && a.approved) approved.push({ id: mandateId, a: a });
         });
-        var el = document.getElementById('approvals-list');
-        if (!pending.length) {
-            el.innerHTML = '<p class="tf-muted" style="font-size: 0.85rem;">No pending Tier 3 approval requests. Requests appear here when a buyer asks for full diligence in the data room.</p>';
-            return;
-        }
-        el.innerHTML = pending.map(function (p) {
-            return '<div class="tf-doc-row"><div><strong style="color:#fff;">' + TF.esc(p.a.name) + ' — ' + TF.esc(p.a.firm) + '</strong> <span class="tf-chip">' + TF.esc(p.id) + '</span><br>' +
-                '<span class="tf-dim" style="font-size:0.75rem;">' + TF.esc(p.a.email) + ' · ticket ' + TF.esc(p.a.ticket || '—') + ' · requested ' + TF.esc(p.a.approvalRequestedAt || '') + (p.a.approvalNote ? ' · “' + TF.esc(p.a.approvalNote) + '”' : '') + '</span></div>' +
-                '<div style="display:flex; gap:0.5rem; flex-wrap:wrap;"><button class="tf-btn small" data-approve="' + TF.esc(p.id) + '">APPROVE → TIER 3</button>' +
+        function row(p, showApprove) {
+            return '<div class="tf-doc-row"><div><strong style="color:#fff;">' + TF.esc(p.a.name) + ' — ' + TF.esc(p.a.firm) + '</strong> <span class="tf-chip">' + TF.esc(p.id) + '</span>' + (p.a.approved ? ' <span class="tf-badge tf-badge-verified">APPROVED</span>' : '') + '<br>' +
+                '<span class="tf-dim" style="font-size:0.75rem;">' + TF.esc(p.a.email) + ' · ticket ' + TF.esc(p.a.ticket || '—') + ' · requested ' + TF.esc(p.a.approvalRequestedAt || '') + (p.a.approvedAt ? ' · approved ' + TF.esc(p.a.approvedAt) : '') + (p.a.approvalNote ? ' · “' + TF.esc(p.a.approvalNote) + '”' : '') + '</span></div>' +
+                '<div style="display:flex; gap:0.5rem; flex-wrap:wrap;">' +
+                (showApprove ? '<button class="tf-btn small" data-approve="' + TF.esc(p.id) + '">APPROVE → TIER 3</button>' : '') +
                 '<button class="tf-btn ghost small" data-shortlist="' + TF.esc(p.id) + '">' + (p.a.shortlist ? 'REMOVE FROM SHORTLIST' : 'ADD TO SHORTLIST') + '</button></div></div>';
-        }).join('');
+        }
+        var el = document.getElementById('approvals-list');
+        var html = '';
+        if (pending.length) html += pending.map(function (p) { return row(p, true); }).join('');
+        if (approved.length) {
+            html += '<h5 style="color:#fff; margin: 1.25rem 0 0.75rem; font-size: 0.85rem;">Approved — shortlist management</h5>' +
+                approved.map(function (p) { return row(p, false); }).join('');
+        }
+        if (!pending.length && !approved.length) {
+            html = '<p class="tf-muted" style="font-size: 0.85rem;">No pending Tier 3 approval requests. Requests appear here when a buyer asks for full diligence in the data room.</p>';
+        }
+        el.innerHTML = html;
     }
 
     document.getElementById('approvals-list').addEventListener('click', function (e) {
@@ -276,15 +284,42 @@
     });
 
     document.getElementById('eng-copy').addEventListener('click', function () {
-        var act = TF.getActivity();
         var lines = ['TERRAFIN AI — ENGAGEMENT REPORT (this browser only, all time)'];
         TF.loadMandates().then(function (data) {
             (data.mandates || []).forEach(function (m) {
-                var s = TF.engagementSummary(act, m.id);
-                lines.push(m.name + ' — ' + s.views + ' room views, ' + s.registrations + ' registrations, ' + s.nda + ' NDA requests, ' + s.docviews + ' doc views, ' + s.calls + ' calls requested');
+                var s = TF.engagementSummary(m.id);
+                lines.push(m.name + ' — ' + s.views + ' room views, ' + s.registrations + ' registrations, ' + s.ndaRequests + ' NDA requests, ' + s.docViews + ' doc views, ' + s.callsRequested + ' calls requested');
             });
             copyText(lines.join('\n'), document.getElementById('eng-copy-note'), 'Seller report copied ✓');
         });
+    });
+
+    /* --- Demo helpers: simulate activity + reset demo data --- */
+    // Simulated activity is for the walkthrough only: every simulated event
+    // is tagged DEMO SIMULATION in the activity log, and the seller report
+    // header already says counts are this-browser only. Never present
+    // simulated counts to a seller as real buyer activity.
+    document.getElementById('eng-simulate').addEventListener('click', function () {
+        var mandateId = document.getElementById('dd-mandate').value;
+        var tag = 'DEMO SIMULATION — not real buyer activity';
+        TF.logActivity(mandateId, 'room-view', tag);
+        TF.logActivity(mandateId, 'room-view', tag);
+        TF.logActivity(mandateId, 'register', tag);
+        TF.logActivity(mandateId, 'nda-signed', tag);
+        TF.logActivity(mandateId, 'doc-view', tag);
+        TF.logActivity(mandateId, 'call-requested', tag);
+        TF.loadMandates().then(function (data) {
+            renderEngagement(data.mandates || []);
+        });
+        document.getElementById('eng-sim-note').textContent = 'Simulated 6 events for ' + mandateId + ' (2 views, 1 registration, 1 NDA, 1 doc view, 1 call). Tagged DEMO SIMULATION in the activity log.';
+    });
+
+    document.getElementById('eng-reset-demo').addEventListener('click', function () {
+        if (!confirm('Reset all demo data in this browser? Access tiers, activity log, CRM edits, and new-diligence flags will be cleared.')) return;
+        ['tf_access_v1', 'tf_activity_v1', 'tf_buyers_v1', 'tf_new_dd_v1'].forEach(function (k) {
+            try { localStorage.removeItem(k); } catch (e) { /* storage unavailable */ }
+        });
+        window.location.reload();
     });
 
     /* --- Init --- */
