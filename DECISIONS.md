@@ -101,3 +101,36 @@ No real buyer personally identifiable information is in this repository. The CRM
 seed is fictional sample data (`.invalid` emails). Buyer records entered in the
 back office live in the local browser only. Any real buyer list must stay in the
 private workspace, never in a commit.
+
+## Co-founder prep (Nov 10, 2026 — branch only, not deployed)
+
+Site made co-founder-ready while the LinkedIn approach to Kathleen McCarthy
+Baldwin is underway. Changes, all in `index.html`:
+- New "Built by Operators. Open to a Co-Founder." team section (before the FAQ):
+  what TerraFin is (access + verification), live mandates €5.1B+ incl. €3.6B
+  Starhotels, the working product, Gary Chen as Founder & Architect, and the
+  co-founder search line mirroring the refreshed deck. No invented revenue,
+  closed deals, buyer NDAs, team members, or credentials.
+- Hero aggregate aligned to the refreshed deck: $3.5B+ → €5.1B+ (hero stat
+  and "All Deals" tab). No mandate figure or price was changed.
+- Hero subline corrected: "off-market American assets" → "off-market trophy
+  assets" (the live mandates are global: Italy, Germany, Spain, Brazil, Japan).
+- BUYER POOL counts softened per Gary's preference for non-numeric language
+  on unverified metrics: "14 INSTITUTIONS" / "8 INSTITUTIONS" →
+  "INSTITUTIONAL DEMAND"; "4 UHNW FAMILY OFFICES" → "FAMILY-OFFICE DEMAND".
+- Index nav now links all five demo pages (Deal Rooms, Data Room, Verification
+  Dossier, Prospectus Builder, Demo); the team section also links all five,
+  so a visitor reaches the product in one click.
+- Audit: no live agent-swarm claim exists anywhere on the site (no "swarm",
+  "230", or "200+ agents" in any HTML/JS) — nothing to remove. No IDL naming
+  on any public page. The "Gary Chen, Founder" footer lines were left alone
+  (his own site, his own name — not a broker naming).
+
+Decisions still needing Gary before deploy:
+1. Confirm the €5.1B+ hero aggregate (deck figure) is the number to show.
+2. Approve the team / co-founder section wording as written.
+3. Hosting decision for the branch (unchanged, still deferred under zero cost).
+4. Note: the refreshed deck itself still says "230+ autonomous agents" for
+   the Titan Signal orchestration layer — the site deliberately does NOT repeat
+   that claim (agents sit on Gary's laptop, not deployed). If the deck line is
+   ever softened, the site needs no change.
