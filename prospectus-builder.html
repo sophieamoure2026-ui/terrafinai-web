@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prospectus Builder — TerraFin AI</title>
+<meta name="description" content="TerraFin AI prospectus builder — ingest offering documents, extract structured data, auto-generate the offering document. Crexi Vault pattern, static-site edition."/>
+<link href="assets/logo.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="index.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="bg-grid"></div>
+<nav class="universal-nav">
+<div class="nav-container">
+<div class="nav-tier">
+<a class="parent-brand mono" href="https://titansignal.io">TITAN SIGNAL</a>
+<span style="color: var(--glass-border);">/</span>
+<a class="active" href="index.html">TerraFin AI</a>
+<a href="deal-room.html">Deal Rooms</a>
+<a href="data-room.html">Data Room</a>
+<a href="dossier.html?mandate=starhotels">Verification Dossier</a>
+<a href="prospectus-builder.html">Prospectus Builder</a>
+</div>
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<a class="btn-primary" href="index.html" style="font-size: 0.62rem; padding: 0.4rem 0.9rem; border-radius: 4px; background: transparent; border: 1px solid var(--accent-cyan); color: var(--accent-cyan); cursor: pointer; letter-spacing: 1px; font-weight: bold; box-shadow: none; white-space: nowrap; text-decoration: none;">← BACK TO MANDATES</a>
+</div>
+</div>
+</nav>
+
+<div class="container tf-page-head">
+  <p class="tf-kicker mono">PROSPECTUS BUILDER — CREXI VAULT PATTERN, STATIC-SITE EDITION</p>
+  <h1 class="tf-h1">Prospectus Builder</h1>
+  <p class="tf-lede">Ingest an offering memorandum, rent roll, or financial summary → extract structured data → auto-generate the offering document.
+  This is the workflow that makes the 48-hour Certified Prospectus operational instead of manual — the same workflow shape as Crexi Vault + Create, applied to off-market trophy assets.</p>
+
+  <div class="tf-callout info"><strong>What this build is:</strong> a rule-based extraction pass (currency amounts, keys, percentages, years, asset types) plus structured fields you confirm — running entirely in the browser.
+  <strong>What it is not:</strong> AI extraction. Production AI document extraction needs a backend service (see <a href="DECISIONS.md" style="color: var(--accent-cyan);">DECISIONS.md</a>). Nothing extracted here is treated as verified until the deal team checks it against source documents — extraction is not verification.</div>
+
+  <div class="tf-room-grid" style="margin-top: 1.5rem;">
+    <div class="glass-panel" style="padding: 1.5rem; border-radius: 12px;">
+      <div class="section-title" style="margin-bottom: 1rem;"><span>01</span> Ingest — paste source text</div>
+      <div class="tf-field">
+        <label for="pb-text">Offering memorandum / rent roll / financial text</label>
+        <textarea id="pb-text" rows="12" placeholder="Paste the OM, rent roll, or financial summary text here. The extractor pulls currency amounts, keys/rooms, percentages, years, and asset types."></textarea>
+        <div class="tf-hint">Pasted text never leaves your browser in this build. Nothing is uploaded anywhere.</div>
+      </div>
+      <div class="tf-field-row">
+        <div class="tf-field"><label for="pb-asset">Asset name</label><input id="pb-asset" type="text" placeholder="e.g. Starhotels — Italian Hotel Portfolio"></div>
+        <div class="tf-field"><label for="pb-type">Asset type</label><select id="pb-type"><option>Hospitality</option><option>Data Center / Infrastructure</option><option>Banking / Financial Services</option><option>Energy</option><option>Operating Company</option><option>Private Markets</option><option>Other</option></select></div>
+      </div>
+      <div class="tf-field-row">
+        <div class="tf-field"><label for="pb-geo">Geography</label><input id="pb-geo" type="text" placeholder="e.g. Italy · Europe"></div>
+        <div class="tf-field"><label for="pb-value">Headline value (as stated)</label><input id="pb-value" type="text" placeholder="e.g. €3.6B indicative"></div>
+      </div>
+      <button class="tf-btn" id="pb-extract-btn">EXTRACT STRUCTURED DATA →</button>
+      <button class="tf-btn ghost" id="pb-sample-btn" style="margin-left: 0.5rem;">LOAD SAMPLE TEXT</button>
+    </div>
+
+    <div class="glass-panel" style="padding: 1.5rem; border-radius: 12px;">
+      <div class="section-title" style="margin-bottom: 1rem;"><span>02</span> Structured data — review &amp; correct</div>
+      <div id="pb-structured">
+        <p class="tf-muted" style="font-size: 0.85rem;">No extraction yet. Paste source text and run the extractor — the structured fields appear here for review and correction before anything is generated.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="glass-panel" style="padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem;">
+    <div class="section-title" style="margin-bottom: 1rem;"><span>03</span> Generated offering document</div>
+    <div id="pb-output">
+      <p class="tf-muted" style="font-size: 0.85rem;">The generated offering document appears here after extraction. It follows the site's offering-document format: teaser, key facts, verification checklist, process. Downloadable as HTML or plain text.</p>
+    </div>
+    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem;">
+      <button class="tf-btn" id="pb-generate-btn" disabled>GENERATE OFFERING DOCUMENT →</button>
+      <button class="tf-btn ghost" id="pb-download-html" disabled>DOWNLOAD HTML</button>
+      <button class="tf-btn ghost" id="pb-download-txt" disabled>DOWNLOAD TEXT</button>
+    </div>
+  </div>
+
+  <footer style="margin-top: 4rem; border-top: 1px solid var(--glass-border); padding-top: 1.5rem;">
+    <p class="mono" style="font-size: 0.62rem; color: var(--text-dim); line-height: 1.7;">
+      PROSPECTUS BUILDER — STATIC-SITE BUILD (NOV 10, 2026). Rule-based extraction only; production AI extraction needs a backend service (see DECISIONS.md).
+      Generated documents are drafts until the deal team verifies every figure against source documents. No broker or source is named on this page; terrafinai.com is the contact point.
+    </p>
+  </footer>
+</div>
+
+<script src="js/terrafin.js"></script>
+<script src="js/prospectus-builder.js"></script>
+</body>
+</html>

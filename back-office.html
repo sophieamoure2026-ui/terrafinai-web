@@ -3,18 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TerraFin AI Back Office — David IDL Partner Portal</title>
+    <title>TerraFin AI — Internal Operations</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <style>
-        :root {
-            --idl-cyan: #06b6d4;
-            --idl-violet: #8b5cf6;
-        }
-
         .partner-header {
             padding: 2rem;
-            border-bottom: 2px solid var(--idl-cyan);
+            border-bottom: 2px solid var(--accent-cyan);
             background: rgba(6, 182, 212, 0.05);
             display: flex;
             justify-content: space-between;
@@ -30,7 +25,7 @@
 
         .stat-card {
             background: var(--panel-bg);
-            border: 1px solid var(--idl-cyan);
+            border: 1px solid var(--accent-cyan);
             padding: 1.5rem;
             border-radius: 1rem;
         }
@@ -52,9 +47,6 @@
             padding-bottom: 0.25rem;
         }
 
-        .tag-idl { color: var(--idl-cyan); font-weight: bold; }
-        .tag-success { color: #10b981; }
-
         .sidebar {
             display: flex;
             flex-direction: column;
@@ -65,16 +57,16 @@
 <body class="container">
     <div class="partner-header glass-panel" style="margin-top: 2rem;">
         <div>
-            <h1 class="mono" style="font-size: 1.5rem;">TerraFin AI Global Hub: Institutional Management</h1>
-            <p style="font-size: 0.8rem; color: var(--text-muted);">IDL Global | Strategic Alliance: Titan Signal x TerraFin AI x PBA</p>
-            <a href="index.html" style="color: var(--idl-cyan); font-size: 0.7rem; text-decoration: none; margin-top: 0.5rem; display: inline-block;">← Back to Master Hub</a>
+            <h1 class="mono" style="font-size: 1.5rem;">TerraFin AI — Mandate Desk</h1>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Internal operations · TerraFin AI</p>
+            <a href="index.html" style="color: var(--accent-cyan); font-size: 0.7rem; text-decoration: none; margin-top: 0.5rem; display: inline-block;">← Back to Master Hub</a>
         </div>
         <div style="text-align: right;">
             <div class="nav-status">
                 <div class="status-pulse"></div>
                 <span class="mono">MANDATE DESK</span>
             </div>
-            <p style="font-size: 0.7rem; color: var(--idl-cyan);">PROTOCOL: SOURCE_MODIFICATION_V1</p>
+            <p style="font-size: 0.7rem; color: var(--accent-cyan);">INTERNAL USE ONLY — NOT A PUBLIC PAGE</p>
         </div>
     </div>
 
@@ -92,7 +84,7 @@
                     <span class="stat-value" id="count-saas">13+ Assets</span>
                 </div>
                  <div style="margin-bottom: 1.5rem;">
-                    <span class="stat-label" style="color: var(--idl-cyan);">GovTech/MedTech</span>
+                    <span class="stat-label" style="color: var(--accent-cyan);">GovTech/MedTech</span>
                     <span class="stat-value" id="count-pba">$145M</span>
                 </div>
             </div>
@@ -113,7 +105,7 @@
                  <span>01</span> Universal Outreach Pulse
             </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">Filtering for: Real Estate | Robotics | SaaS Acquisitions | Extraction Mandates</p>
-            
+
             <div class="log-stream" id="log-stream">
                 <div class="log-entry">Waiting for mandate updates...</div>
             </div>
@@ -124,15 +116,134 @@
         <div class="section-title">
             <span>02</span> RWA Sales Progress
         </div>
-        <div class="deal-grid" id="idl-deal-progress" style="grid-template-columns: 1fr 1fr 1fr;">
-            <!-- Dynamic IDL Deals will load here -->
+        <div class="deal-grid" id="deal-progress" style="grid-template-columns: 1fr 1fr 1fr;">
+            <!-- Dynamic deals will load here -->
         </div>
     </section>
 
+    <!-- ADOPTED (Nov 10, 2026): private qualified-buyer CRM + gated alerts + engagement dashboard -->
+    <section class="glass-panel" style="margin-top: 2rem;">
+        <div class="section-title">
+            <span>03</span> Private Qualified-Buyer CRM
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.7;">
+            Vetted buyers, tagged by mandate type, geography, check size, and engagement. Records live in <strong style="color:#fff;">this browser only</strong> (localStorage) — nothing is uploaded, and no real buyer data is stored in this repository.
+            Seed data is fictional sample rows from <span class="mono" style="font-size: 0.75rem;">data/buyers-template.json</span>. Export is a local file download; import replaces the local set.
+        </p>
+        <div class="tf-callout"><strong>Privacy:</strong> never paste a real buyer list into a shared file or a commit. The live buyer lists stay in the private workspace; this CRM holds only what you enter here.</div>
+
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem;">
+            <input id="crm-search" type="text" placeholder="Search name, firm, email…" style="flex: 1; min-width: 200px; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); color: #fff; padding: 0.6rem 0.9rem; border-radius: 0.5rem; font-size: 0.85rem;">
+            <select id="crm-filter-type" style="background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); color: #fff; padding: 0.6rem; border-radius: 0.5rem; font-size: 0.8rem;">
+                <option value="">All types</option>
+                <option>family-office</option><option>sovereign-wealth</option><option>private-equity</option>
+                <option>venture-capital</option><option>investment-bank</option><option>solo-fund</option><option>strategic</option>
+            </select>
+            <select id="crm-filter-status" style="background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); color: #fff; padding: 0.6rem; border-radius: 0.5rem; font-size: 0.8rem;">
+                <option value="">All statuses</option>
+                <option>prospect</option><option>qualified</option><option>engaged</option><option>nda-signed</option><option>passed</option>
+            </select>
+            <button class="tf-btn ghost" id="crm-export">EXPORT JSON</button>
+            <button class="tf-btn ghost" id="crm-import-btn">IMPORT JSON</button>
+            <input id="crm-import" type="file" accept="application/json" style="display: none;">
+        </div>
+
+        <div style="overflow-x: auto;">
+            <table class="tf-table" id="crm-table">
+                <thead><tr><th>Buyer</th><th>Type</th><th>Geography</th><th>Check size</th><th>Mandates</th><th>Status</th><th>Engagement</th><th></th></tr></thead>
+                <tbody id="crm-tbody"><tr><td colspan="8" class="tf-muted">Loading…</td></tr></tbody>
+            </table>
+        </div>
+
+        <h4 style="color: #fff; margin: 1.5rem 0 1rem; font-size: 0.95rem;">Add / edit buyer</h4>
+        <form id="crm-form" novalidate>
+            <div class="tf-field-row">
+                <div class="tf-field"><label for="crm-name">Contact name</label><input id="crm-name" type="text" required></div>
+                <div class="tf-field"><label for="crm-firm">Firm</label><input id="crm-firm" type="text" required></div>
+            </div>
+            <div class="tf-field-row">
+                <div class="tf-field"><label for="crm-email">Corporate email</label><input id="crm-email" type="email" required></div>
+                <div class="tf-field"><label for="crm-check">Check size</label><select id="crm-check"><option>€10M – €50M</option><option>€50M – €100M</option><option>€100M+</option><option>€500M+</option><option>$25M+</option><option>$100M+</option></select></div>
+            </div>
+            <div class="tf-field-row">
+                <div class="tf-field"><label for="crm-type">Type</label><select id="crm-type"><option>family-office</option><option>sovereign-wealth</option><option>private-equity</option><option>venture-capital</option><option>investment-bank</option><option>solo-fund</option><option>strategic</option></select></div>
+                <div class="tf-field"><label for="crm-geo">Geography</label><input id="crm-geo" type="text" placeholder="e.g. Europe, Middle East"></div>
+            </div>
+            <div class="tf-field">
+                <label>Mandate interests</label>
+                <div id="crm-mandates" style="display: flex; flex-wrap: wrap; gap: 0.75rem; font-size: 0.8rem; color: var(--text-muted);">
+                    <label><input type="checkbox" value="hospitality" style="width:auto;"> Hospitality</label>
+                    <label><input type="checkbox" value="infrastructure" style="width:auto;"> Infrastructure</label>
+                    <label><input type="checkbox" value="banking" style="width:auto;"> Banking</label>
+                    <label><input type="checkbox" value="energy" style="width:auto;"> Energy</label>
+                    <label><input type="checkbox" value="private-markets" style="width:auto;"> Private markets</label>
+                    <label><input type="checkbox" value="gaming" style="width:auto;"> Gaming</label>
+                </div>
+            </div>
+            <div class="tf-field-row">
+                <div class="tf-field"><label for="crm-status">Status</label><select id="crm-status"><option>prospect</option><option>qualified</option><option>engaged</option><option>nda-signed</option><option>passed</option></select></div>
+                <div class="tf-field"><label for="crm-engagement">Engagement</label><select id="crm-engagement"><option>prospect</option><option>qualified</option><option>engaged</option><option>nda-signed</option><option>passed</option></select></div>
+            </div>
+            <div class="tf-field"><label for="crm-notes">Notes</label><input id="crm-notes" type="text" placeholder="e.g. Met at MIPIM; wants Italy hotels; prefers LOI-first."></div>
+            <input type="hidden" id="crm-id">
+            <div class="tf-error" id="crm-error"></div>
+            <button class="tf-btn" type="submit">SAVE BUYER</button>
+            <button class="tf-btn ghost" type="button" id="crm-clear">CLEAR FORM</button>
+        </form>
+    </section>
+
+    <section class="glass-panel" style="margin-top: 2rem;">
+        <div class="section-title">
+            <span>04</span> Gated Alerts — new matching deals for VIPs
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.7;">
+            Private alerts only — no public blast. Pick a mandate; the composer lists the vetted buyers whose mandate interests match, and generates the alert text. Sending stays manual (email), by design.
+        </p>
+        <div class="tf-field-row">
+            <div class="tf-field"><label for="alert-mandate">Mandate</label><select id="alert-mandate"></select></div>
+            <div class="tf-field"><label for="alert-note">Alert note (optional)</label><input id="alert-note" type="text" placeholder="e.g. New diligence posted — verification dossier updated."></div>
+        </div>
+        <button class="tf-btn" id="alert-compose">COMPOSE ALERT →</button>
+        <div id="alert-output" style="margin-top: 1.25rem;"></div>
+    </section>
+
+    <section class="glass-panel" style="margin-top: 2rem;">
+        <div class="section-title">
+            <span>05</span> Engagement Dashboard — seller-side reporting
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.7;">
+            Views, registrations, NDA requests, and calls per mandate — the RCM-style proof-of-work for the seller.
+            <strong style="color:#fff;">Counts reflect activity recorded in this browser only</strong> (static-site build). Production needs a server-side event log (see DECISIONS.md).
+        </p>
+        <div style="overflow-x: auto;">
+            <table class="tf-table">
+                <thead><tr><th>Mandate</th><th>Room views</th><th>Registrations</th><th>NDA requests</th><th>Doc views</th><th>Calls requested</th><th></th></tr></thead>
+                <tbody id="eng-tbody"><tr><td colspan="7" class="tf-muted">Loading…</td></tr></tbody>
+            </table>
+        </div>
+        <div style="margin-top: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button class="tf-btn ghost" id="eng-copy">COPY SELLER REPORT</button>
+            <span class="tf-dim" style="font-size: 0.75rem; align-self: center;" id="eng-copy-note"></span>
+        </div>
+
+        <h4 style="color: #fff; margin: 2rem 0 1rem; font-size: 0.95rem;">Pending approvals</h4>
+        <div id="approvals-list"><p class="tf-muted" style="font-size: 0.85rem;">Loading…</p></div>
+
+        <h4 style="color: #fff; margin: 2rem 0 1rem; font-size: 0.95rem;">Post new diligence (alerts registered buyers)</h4>
+        <div class="tf-field-row">
+            <div class="tf-field"><label for="dd-mandate">Mandate</label><select id="dd-mandate"></select></div>
+            <div class="tf-field"><label for="dd-note">What was posted?</label><input id="dd-note" type="text" placeholder="e.g. Verification dossier published; Q3 financials added."></div>
+        </div>
+        <button class="tf-btn" id="dd-post">POST NEW DILIGENCE →</button>
+        <button class="tf-btn ghost" id="dd-clear" style="margin-left: 0.5rem;">CLEAR FLAG</button>
+        <p class="tf-dim" style="font-size: 0.72rem; margin-top: 0.75rem;" id="dd-status"></p>
+    </section>
+
     <footer style="margin-top: 4rem;">
-        <p class="mono" style="font-size: 0.6rem; color: var(--text-dim) text-align: center;">CONFIDENTIAL ADVISORY: THIS DASHBOARD IS HARDENED FOR IDL PARTNER CONSUMPTION ONLY. DO NOT EXPOSE TO UNACCREDITED ENTITIES.</p>
+        <p class="mono" style="font-size: 0.6rem; color: var(--text-dim); text-align: center;">INTERNAL USE ONLY — NOT A PUBLIC PAGE. DO NOT SHARE. Buyer contact details must never be committed to this repository.</p>
     </footer>
 
-
+    <script src="js/terrafin.js"></script>
+    <script src="js/back-office.js"></script>
 </body>
 </html>
